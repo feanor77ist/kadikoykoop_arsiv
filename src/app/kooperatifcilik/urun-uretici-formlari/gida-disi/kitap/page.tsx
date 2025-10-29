@@ -57,6 +57,7 @@ export default function KitapFormPage() {
                   <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
                 </div>
               </div>
+              </div>
             </div>
 
 
@@ -116,6 +117,7 @@ export default function KitapFormPage() {
                   <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
                 </div>
               </div>
+              </div>
             </div>
 
 
@@ -150,6 +152,7 @@ export default function KitapFormPage() {
                   </label>
                   <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
                 </div>
+              </div>
               </div>
             </div>
 
@@ -198,6 +201,7 @@ export default function KitapFormPage() {
                   <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
                 </div>
               </div>
+              </div>
             </div>
 
 
@@ -232,6 +236,7 @@ export default function KitapFormPage() {
                   </label>
                   <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
                 </div>
+              </div>
               </div>
             </div>
 
