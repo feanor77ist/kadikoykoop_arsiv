@@ -34,9 +34,9 @@ export default function UrunUreticiFormlariPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navigation />
       
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-8">
+        <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
           <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Ana Sayfa</Link>
           <span>/</span>
           <Link href="/kooperatifcilik" className="hover:text-blue-600 dark:hover:text-blue-400">Neden ve Nasıl Kooperatifçilik?</Link>
@@ -45,40 +45,40 @@ export default function UrunUreticiFormlariPage() {
         </div>
 
         {/* Hero Section */}
-        <div className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
             Ürün & Üretici Formları
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300">
             Kooperatifimize ürün tedarik etmek isteyen üreticiler için hazırlanmış bilgi formları. Her ürün kategorisi için detaylı bilgi formu ve üretici iletişim formları.
           </p>
         </div>
 
         {/* Gıda Ürünleri Section */}
-        <div className="mb-16">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-3">
-              <span className="text-4xl">🍎</span>
-              Gıda Ürünleri Bilgi Formları
+        <div className="mb-10 sm:mb-16">
+          <div className="mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3 flex items-center gap-2 sm:gap-3">
+              <span className="text-3xl sm:text-4xl">🍎</span>
+              <span>Gıda Ürünleri Bilgi Formları</span>
             </h2>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
               Taze ve işlenmiş gıda ürünleri için üretici bilgi formları
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {gidaForms.map((form) => (
               <Link
                 key={form.id}
                 href={`/kooperatifcilik/urun-uretici-formlari/gida/${form.id}`}
-                className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-green-500"
+                className="group bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-green-500"
               >
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="text-3xl sm:text-4xl bg-green-50 dark:bg-green-900/20 p-2 sm:p-3 rounded-lg">
                     {form.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
                       {form.title}
                     </h3>
                   </div>
@@ -97,30 +97,30 @@ export default function UrunUreticiFormlariPage() {
         </div>
 
         {/* Gıda Dışı Ürünler Section */}
-        <div className="mb-12">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-3">
-              <span className="text-4xl">🧼</span>
-              Gıda Dışı Ürünler Bilgi Formları
+        <div className="mb-10 sm:mb-12">
+          <div className="mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3 flex items-center gap-2 sm:gap-3">
+              <span className="text-3xl sm:text-4xl">🧼</span>
+              <span>Gıda Dışı Ürünler Bilgi Formları</span>
             </h2>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
               Kozmetik, tekstil, kırtasiye ve diğer gıda dışı ürünler için üretici bilgi formları
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {gidaDisiForms.map((form) => (
               <Link
                 key={form.id}
                 href={`/kooperatifcilik/urun-uretici-formlari/gida-disi/${form.id}`}
-                className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-purple-500"
+                className="group bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-purple-500"
               >
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="text-3xl sm:text-4xl bg-purple-50 dark:bg-purple-900/20 p-2 sm:p-3 rounded-lg">
                     {form.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                       {form.title}
                     </h3>
                   </div>
