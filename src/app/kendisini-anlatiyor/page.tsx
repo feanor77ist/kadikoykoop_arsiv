@@ -13,7 +13,7 @@ export default function Bolum2() {
     {
       id: "b",
       title: "Temeller",
-      description: "Kadıköy Kooperatifi'nin temel yapısı ve ilkeleri",
+      description: "Kadıköy Kooperatifi'nin kuruluş hikâyesi ve ruhu",
       href: "/kendisini-anlatiyor/temeller",
       icon: "🏛️"
     },
@@ -40,8 +40,8 @@ export default function Bolum2() {
     },
     {
       id: "f",
-      title: "Kooperatifi Anlatan Yazılar Derlemesi",
-      description: "Kooperatif hakkında yazılmış yazıların derlemesi",
+      title: "Deneyimler, Tartışmalar, Alternatifler",
+      description: "Krize Karşı Kooperatifler kitabı için kaleme aldığımız yazı",
       href: "/kendisini-anlatiyor/derleme-yazilar",
       icon: "📚"
     }

@@ -36,7 +36,7 @@ export default function Bolum2F() {
         <article className="prose prose-lg dark:prose-invert max-w-none">
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Kadıköy Kooperatifi - Derleme Yazı
+              Kadıköy Kooperatifi Deneyimi
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400">
               Kooperatifin kapsamlı deneyim aktarımı ve değerlendirmesi
@@ -48,31 +48,31 @@ export default function Bolum2F() {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">İçindekiler</h2>
             <ol className="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
               <li className="font-medium">
-                <a href="#giris" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Giriş</a>
+                <a href="#giris" className="text-blue-600 dark:text-blue-400 hover:underline transition-colors">Giriş</a>
               </li>
               <li className="font-medium">
-                <a href="#temeller" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Kadıköy Kooperatifinin Temelleri</a>
+                <a href="#temeller" className="text-blue-600 dark:text-blue-400 hover:underline transition-colors">Kadıköy Kooperatifinin Temelleri</a>
               </li>
               <li className="font-medium">
-                <a href="#siparis-paketleri" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Sipariş Paketleri Dönemi</a>
+                <a href="#siparis-paketleri" className="text-blue-600 dark:text-blue-400 hover:underline transition-colors">Sipariş Paketleri Dönemi</a>
               </li>
               <li className="font-medium">
-                <a href="#bugun" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Kadıköy Kooperatifi'nin Bugünü</a>
+                <a href="#bugun" className="text-blue-600 dark:text-blue-400 hover:underline transition-colors">Kadıköy Kooperatifi'nin Bugünü</a>
               </li>
               <li className="font-medium">
-                <a href="#ilkeler" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Kadıköy Kooperatifi'nin İlkeleri</a>
+                <a href="#ilkeler" className="text-blue-600 dark:text-blue-400 hover:underline transition-colors">Kadıköy Kooperatifi'nin İlkeleri</a>
               </li>
               <li className="font-medium">
-                <a href="#isleyis" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Kadıköy Kooperatifi'nin İşleyişi</a>
+                <a href="#isleyis" className="text-blue-600 dark:text-blue-400 hover:underline transition-colors">Kadıköy Kooperatifi'nin İşleyişi</a>
               </li>
               <li className="font-medium">
-                <a href="#eksikler" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Eksiklerimiz, Hatalarımız, Yapamadıklarımız</a>
+                <a href="#eksikler" className="text-blue-600 dark:text-blue-400 hover:underline transition-colors">Eksiklerimiz, Hatalarımız, Yapamadıklarımız</a>
               </li>
               <li className="font-medium">
-                <a href="#gelecek" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Gelecekte Kadıköy Kooperatifi</a>
+                <a href="#gelecek" className="text-blue-600 dark:text-blue-400 hover:underline transition-colors">Gelecekte Kadıköy Kooperatifi</a>
               </li>
               <li className="font-medium">
-                <a href="#sonsoz" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Sonsöz: Beraber İnşa Etme</a>
+                <a href="#sonsoz" className="text-blue-600 dark:text-blue-400 hover:underline transition-colors">Sonsöz: Beraber İnşa Etme</a>
               </li>
             </ol>
           </div>
@@ -413,6 +413,22 @@ export default function Bolum2F() {
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* Kaynak Notu */}
+          <div className="mt-12 pt-8 border-t border-gray-300 dark:border-gray-700">
+            <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+              Bu yazı ilk olarak kooperatif dostu arkadaşlarımızın kaleme aldığı{" "}
+              <a
+                href="https://www.notabene.com.tr/urun/krize-karsi-kooperatifler"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+              >
+                Krize Karşı Kooperatifler
+              </a>{" "}
+              kitabında yayınlanmıştır.
+            </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
