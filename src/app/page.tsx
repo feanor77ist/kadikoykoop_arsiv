@@ -173,6 +173,55 @@ export default function Home() {
         />
       )}
       
+      {/* Dekoratif görseller - modal çevresinde */}
+      {showMessage && (
+        <div 
+          className={`fixed inset-0 z-[45] pointer-events-none overflow-hidden ${
+            isVisible ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-[2000ms] ease-out`}
+        >
+          {/* modal.png - sol üst, modal'ın üstünde */}
+          <img
+            src="/modal.png"
+            alt=""
+            className={`absolute top-12 left-10 sm:top-20 sm:left-8 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] transition-all duration-[2000ms] ease-out ${
+              isVisible ? "opacity-70 scale-100 rotate-[-4deg] sm:rotate-[-8deg]" : "opacity-0 scale-95 rotate-[-8deg] sm:rotate-[-12deg]"
+            }`}
+            style={{ width: 'auto', height: 'auto' }}
+          />
+          
+          {/* Temmuz 2020.png - sağ üst, modal'ın üstünde */}
+          <img
+            src="/Temmuz 2020.png"
+            alt=""
+            className={`absolute top-20 right-10 sm:top-16 sm:right-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] transition-all duration-[2500ms] ease-out ${
+              isVisible ? "opacity-70 scale-100 rotate-[6deg] sm:rotate-[12deg]" : "opacity-0 scale-95 rotate-[10deg] sm:rotate-[18deg]"
+            }`}
+            style={{ width: 'auto', height: 'auto' }}
+          />
+          
+          {/* modal2.png - sağ alt, modal'ın altında */}
+          <img
+            src="/modal2.png"
+            alt=""
+            className={`absolute bottom-20 right-10 sm:bottom-24 sm:right-16 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] transition-all duration-[3000ms] ease-out ${
+              isVisible ? "opacity-70 scale-100 rotate-[3deg] sm:rotate-[6deg]" : "opacity-0 scale-95 rotate-[6deg] sm:rotate-[12deg]"
+            }`}
+            style={{ width: 'auto', height: 'auto' }}
+          />
+          
+          {/* modal1.png - sol alt */}
+          <img
+            src="/modal1.png"
+            alt=""
+            className={`absolute bottom-24 left-10 sm:bottom-20 sm:left-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] transition-all duration-[2800ms] ease-out ${
+              isVisible ? "opacity-70 scale-100 rotate-[-6deg] sm:rotate-[-10deg]" : "opacity-0 scale-95 rotate-[-10deg] sm:rotate-[-16deg]"
+            }`}
+            style={{ width: 'auto', height: 'auto' }}
+          />
+        </div>
+      )}
+      
       {/* Kooperatif Kapanış Mesajı - Modal */}
       {showMessage && (
         <div
