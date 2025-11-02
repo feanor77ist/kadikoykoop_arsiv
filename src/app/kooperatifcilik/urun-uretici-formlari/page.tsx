@@ -5,7 +5,7 @@ export default function UrunUreticiFormlariPage() {
   const gidaDisiForms = [
     { id: "cicek", title: "Çiçek Ürün Bilgi Formu", icon: "🌸" },
     { id: "defter", title: "Defter Ürün Bilgi Formu", icon: "📓" },
-    { id: "gida-saklama-kumasi", title: "Gıda Saklama Kuması Ürün Bilgi Formu", icon: "🧺" },
+    { id: "gida-saklama-kumasi", title: "Gıda Saklama Kumaşı Ürün Bilgi Formu", icon: "🧺" },
     { id: "kitap", title: "Kitap Ürün Bilgi Formu", icon: "📚" },
     { id: "mum-balmumu", title: "Mum, Balmumu ve Yan Ürünleri Bilgi Formu", icon: "🕯️" },
     { id: "sabun", title: "Sabun Ürün Bilgi Formu", icon: "🧼" },

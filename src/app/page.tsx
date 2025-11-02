@@ -1,7 +1,55 @@
+"use client";
+
 import Link from "next/link";
 import Navigation from "./components/Navigation";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [showMessage, setShowMessage] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const closeModal = () => {
+    setIsVisible(false);
+    setTimeout(() => {
+      setShowMessage(false);
+      sessionStorage.setItem('kadikoy-koop-message-shown', 'true');
+    }, 1000);
+  };
+
+  useEffect(() => {
+    // SessionStorage'da mesajın daha önce gösterilip gösterilmediğini kontrol et
+    const messageShown = sessionStorage.getItem('kadikoy-koop-message-shown');
+    
+    // Eğer daha önce gösterildiyse, hiç gösterme
+    if (messageShown) {
+      return;
+    }
+
+    // 1 saniye sonra mesajı göster
+    const showTimer = setTimeout(() => {
+      setShowMessage(true);
+      // Animasyon için kısa bir delay
+      setTimeout(() => {
+        setIsVisible(true);
+      }, 50);
+    }, 1000);
+
+    // 7 saniye sonra mesajı gizlemeye başla (1 saniye bekleme + 6 saniye görünür)
+    const hideTimer = setTimeout(() => {
+      setIsVisible(false);
+      // Fade out animasyonu sonrası tamamen gizle (1 saniye animasyon)
+      setTimeout(() => {
+        setShowMessage(false);
+        // Mesajın gösterildiğini sessionStorage'a kaydet
+        sessionStorage.setItem('kadikoy-koop-message-shown', 'true');
+      }, 1000);
+    }, 7000);
+
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
   const mainSections = [
     {
       number: "1",
@@ -105,6 +153,35 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navigation />
       
+      {/* Kooperatif Kapanış Mesajı - Modal */}
+      {showMessage && (
+        <div
+          className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-1000 ease-out ${
+            isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+          onClick={closeModal}
+        >
+          <div className={`absolute inset-0 bg-black/30 backdrop-blur-sm transition-opacity duration-1000 cursor-pointer ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`} />
+          <div
+            className={`relative max-w-2xl w-full bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/30 dark:to-blue-900/30 rounded-2xl p-6 sm:p-8 shadow-2xl border-2 border-green-200 dark:border-green-800 transform transition-all duration-1000 ease-out ${
+              isVisible
+                ? "scale-100 translate-y-0 opacity-100"
+                : "scale-[0.98] translate-y-2 opacity-0"
+            }`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="text-center space-y-4">
+              <div className="text-5xl sm:text-6xl mb-4 animate-pulse">🌱</div>
+              <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-800 dark:text-gray-200 leading-relaxed">
+                Biliyoruz ki hikâyemiz burada bitmiyor. Birlikte kurduğumuz değerlerin, dayanışma ruhunun ve kolektif emeğin gittiğimiz her yerde başka zeminlerde yeniden filizleneceğine inanıyoruz.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+      
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
         {/* Hero Section */}
         <div className="mb-8 sm:mb-12">
@@ -162,6 +239,55 @@ export default function Home() {
           </p>
         </div>
       </main>
+
+      {/* Social Media Links - Fixed Bottom Right */}
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-3">
+        <a
+          href="https://www.instagram.com/kadikoykooperatifi/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700"
+          aria-label="Instagram"
+        >
+          <svg
+            className="w-6 h-6 text-pink-600 dark:text-pink-400"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+        <a
+          href="https://www.facebook.com/KadikoyKoop/?_rdr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700"
+          aria-label="Facebook"
+        >
+          <svg
+            className="w-6 h-6 text-blue-600 dark:text-blue-400"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        </a>
+        <a
+          href="https://x.com/kadikoykoop"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700"
+          aria-label="X (Twitter)"
+        >
+          <svg
+            className="w-6 h-6 text-gray-900 dark:text-gray-100"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+        </a>
+      </div>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default function GidaSaklamaKumasiFormPage() {
           <span>/</span>
           <Link href="/kooperatifcilik/urun-uretici-formlari" className="hover:text-blue-600 dark:hover:text-blue-400">Ürün & Üretici Formları</Link>
           <span>/</span>
-          <span className="text-gray-900 dark:text-white font-medium">Gıda Saklama Kuması Ürün Bilgi Formu</span>
+          <span className="text-gray-900 dark:text-white font-medium">Gıda Saklama Kumaşı Ürün Bilgi Formu</span>
         </div>
 
         <div className="mb-12">
@@ -22,7 +22,7 @@ export default function GidaSaklamaKumasiFormPage() {
             <span className="text-5xl">🧺</span>
             <div>
               <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-                GIDA SAKLAMA KUMASI ÜRÜN BILGI FORMU
+                GIDA SAKLAMA KUMAŞI ÜRÜN BİLGİ FORMU
               </h1>
             </div>
           </div>
@@ -30,7 +30,62 @@ export default function GidaSaklamaKumasiFormPage() {
 
         <div className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-sm border border-gray-200 dark:border-gray-700">
           <div className="prose prose-lg dark:prose-invert max-w-none">
+            
+            {/* Genel Bilgiler */}
+            <div className="mb-12">
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Ürünün adı:
+                  </label>
+                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Ürün ne olarak kullanılır:
+                  </label>
+                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Üretici:
+                  </label>
+                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Üretim/işleme yapılan yer (tam adres):
+                  </label>
+                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Telefon:
+                  </label>
+                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    (Varsa) E-posta adresi:
+                  </label>
+                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    (Varsa) Web sayfası:
+                  </label>
+                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Üyesi olunan bir üretici örgütü var mı:
+                  </label>
+                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                </div>
+              </div>
+            </div>
 
+            {/* 1. ÜRÜN İLE İLGİLİ BİLGİLER */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-3 border-b-2 border-purple-600">
                 1. ÜRÜN İLE İLGİLİ BİLGİLER
@@ -48,94 +103,118 @@ export default function GidaSaklamaKumasiFormPage() {
                   </label>
                   <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
                 </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Ürün yapımında sizin tarafınızdan üretilmeyen maddeler var mı?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+
+                {/* 1.a: Ürün yapımında kullanılan hammadeler ile ilgili */}
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                    1.a: Ürün yapımında kullanılan hammadeler ile ilgili
+                  </h3>
+                  <div className="space-y-4 ml-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Ürün yapımında sizin tarafınızdan üretilmeyen maddeler var mı?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Var ise, bunları nereden temin ediyorsunuz?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Varsa ürün yapımında kullanılan yağlar nelerdir? Bitkisel() Hayvansal()
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Varsa ürün yapımında kullanılan yağın üretimi nasıl yapıldı?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Kullanılan yağ nasıl tedarik edildi?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Kullanılan bitkisel yağlar ise bu bitkilerin hasada kadar ne gibi rutin ve rutin dışı toprak zenginleştirme, zararlı ve yabani ot mücadelesi yapılıyor?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Üründe kullanılan su nereden temin edildi? Kaynak suyu ise içilebilir su mu?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Ürün hazırlanırken renk verici herhangi bir madde kullanıldı mı?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Kıvam için herhangi bir katkı maddesi kullanıldı mı?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Balmumu kullanıldıysa bal nereden temin edildi? Balın içeriğine dair nasıl bir bilginiz var?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Var ise, bunları nereden temin ediyorsunuz?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Varsa ürün yapımında kullanılan yağın üretimi nasıl yapıldı?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Kullanılan yağ nasıl tedarik edildi?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Kullanılan bitkisel yağlar ise bu bitkilerin hasada kadar ne gibi rutin ve rutin dışı toprak zenginleştirme, zararlı ve yabani ot mücadelesi yapılıyor?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Üründe kullanılan su nereden temin edildi? Kaynak suyu ise içilebilir su mu?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Ürün hazırlanırken renk verici herhangi bir madde kullanıldı mı?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Kıvam için herhangi bir katkı maddesi kullanıldı mı?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Balmumu kullanıldıysa bal nereden temin edildi? Balın içeriğine dair nasıl bir bilginiz var?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Ürün ne yöntemle işleniyor?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Ürünü İşlemede kullanılan makine ve tenkin yöntemin belirli bir menşei var mı?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Ürün kullanılmadan önce herhangi bir testten geçiriliyor mu?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Ürünün herhangi bir alerjik reaksiyona yol açtığına dair bilginiz var mı? Kimler kullanmamalı?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Yaptığınız ürünün her üretiminden sonra analizlerini yaptırıyor musunuz? Yaptırıyorsanız bizimle paylaşır mısınız?
-                  </label>
-                  <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+
+                {/* 1.b: Ürün İşleme Süreci ile İlgili Bilgiler */}
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                    1.b: Ürün İşleme Süreci ile İlgili Bilgiler
+                  </h3>
+                  <div className="space-y-4 ml-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Ürün ne yöntemle işleniyor?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Ürünü İşlemede kullanılan makine ve tenkin yöntemin belirli bir menşei var mı?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Ürün kullanılmadan önce herhangi bir testten geçiriliyor mu?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Ürünün herhangi bir alerjik reaksiyona yol açtığına dair bilginiz var mı? Kimler kullanmamalı?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        Yaptığınız ürünün her üretiminden sonra analizlerini yaptırıyor musunuz? Yaptırıyorsanız bizimle paylaşır mısınız?
+                      </label>
+                      <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-
+            {/* 2. SAKLAMA BİLGİLERİ */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-3 border-b-2 border-purple-600">
                 2. SAKLAMA BİLGİLERİ
@@ -168,7 +247,7 @@ export default function GidaSaklamaKumasiFormPage() {
               </div>
             </div>
 
-
+            {/* 3. LOJİSTİK İLE İLGİLİ BİLGİLER */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-3 border-b-2 border-purple-600">
                 3. LOJİSTİK İLE İLGİLİ BİLGİLER
@@ -194,14 +273,14 @@ export default function GidaSaklamaKumasiFormPage() {
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Kooperatifi'ne yollanabilir?
+                    Ürünü hangi aydan itibaren, ne miktarda ve ne süreyle (bütün sene, mevsimlik vs.) Kadıköy Kooperatifi'ne yollanabilir?
                   </label>
                   <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
                 </div>
               </div>
             </div>
 
-
+            {/* 4. ETİKET İLE İLGİLİ SORULAR */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-3 border-b-2 border-purple-600">
                 4. ETİKET İLE İLGİLİ SORULAR
@@ -215,7 +294,7 @@ export default function GidaSaklamaKumasiFormPage() {
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                    Ürünün uygunluğuna dair hangi kurumlardan izin alınıyır ve sizin ürün için  onayınız var mı?
+                    Ürünün uygunluğuna dair hangi kurumlardan izin alınıyır ve sizin ürün için onayınız var mı?
                   </label>
                   <p className="text-gray-600 dark:text-gray-400 italic">[Boş bırakılacak]</p>
                 </div>
@@ -228,7 +307,7 @@ export default function GidaSaklamaKumasiFormPage() {
               </div>
             </div>
 
-
+            {/* 5. ÇALIŞANLAR İLE İLGİLİ BİLGİLER */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-3 border-b-2 border-purple-600">
                 5. ÇALIŞANLAR İLE İLGİLİ BİLGİLER
@@ -261,7 +340,7 @@ export default function GidaSaklamaKumasiFormPage() {
               </div>
             </div>
 
-
+            {/* Info Box */}
             <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border-l-4 border-purple-600">
               <p className="text-sm text-purple-800 dark:text-purple-200">
                 <strong>📋 Not:</strong> Bu form, Kadıköy Kooperatifi'ne ürün tedarik etmek isteyen üreticiler tarafından doldurulmalıdır. 
