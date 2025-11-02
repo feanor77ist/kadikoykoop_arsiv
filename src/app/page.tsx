@@ -38,7 +38,7 @@ export default function Home() {
       }, 50);
     }, 1000);
 
-    // 7 saniye sonra mesajı gizlemeye başla (1 saniye bekleme + 6 saniye görünür)
+    // 9 saniye sonra mesajı gizlemeye başla (1 saniye bekleme + 8 saniye görünür)
     const hideTimer = setTimeout(() => {
       setIsClosing(true);
       setIsVisible(false);
@@ -49,7 +49,7 @@ export default function Home() {
         // Mesajın gösterildiğini sessionStorage'a kaydet
         sessionStorage.setItem('kadikoy-koop-message-shown', 'true');
       }, 2000);
-    }, 7000);
+    }, 9000);
 
     return () => {
       clearTimeout(showTimer);
