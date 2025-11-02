@@ -52,7 +52,7 @@ export default function SSS() {
       answer: (
         <>
           Üretim kooperatifleri üretim amaçlı kurulan kooperatiftir. Üreticilere sunulan çeşitli teşvik ve desteklerden faydalanır. Dolayısıyla faaliyet itibariyle bir fark olduğu söylenebilir. Detaylı bilgi için aşağıdaki linke bakınız;<br/>
-          <a href="http://koop.gtb.gov.tr/kooperatifler-hakkinda/kooperatif-nedir" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+          <a href="http://koop.gtb.gov.tr/kooperatifler-hakkinda/kooperatif-nedir" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline break-all">
             http://koop.gtb.gov.tr/kooperatifler-hakkinda/kooperatif-nedir
           </a>
         </>
@@ -94,10 +94,10 @@ export default function SSS() {
       answer: (
         <>
           Kooperatifin de herhangi bir şirket gibi vergi numarası, ticaret sicil kaydı, tutması gereken resmi defterleri ve ödemesi gereken vergileri var. Ayrıca her yıl genel kurul yapıyor. Kooperatif kurulması için 7 kurucu ortak olması gerekiyor. Bunların yanı sıra gıda tedarik eden her şirket gibi etiket ve ambalaj mevzuatı, hijyen kuralları gibi ilgili yasal mevzuatlara uymamız gerekiyor. İlgili mevzuatlar;<br/>
-          <a href="https://www.resmigazete.gov.tr/eskiler/2017/01/20170126M1-6.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline block mt-2">
+          <a href="https://www.resmigazete.gov.tr/eskiler/2017/01/20170126M1-6.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline block mt-2 break-all">
             https://www.resmigazete.gov.tr/eskiler/2017/01/20170126M1-6.htm
           </a>
-          <a href="https://www.resmigazete.gov.tr/eskiler/2011/12/20111217-5.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline block mt-2">
+          <a href="https://www.resmigazete.gov.tr/eskiler/2011/12/20111217-5.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline block mt-2 break-all">
             https://www.resmigazete.gov.tr/eskiler/2011/12/20111217-5.htm
           </a>
         </>
@@ -152,10 +152,10 @@ export default function SSS() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 overflow-x-hidden">
       <Navigation />
       
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 overflow-x-hidden">
         {/* Breadcrumb */}
         <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
           <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Ana Sayfa</Link>
@@ -186,13 +186,15 @@ export default function SSS() {
                 <span className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-sm sm:text-base font-bold text-blue-600 dark:text-blue-400">
                   {q.id}
                 </span>
-                <span className="flex-1">{q.question}</span>
+                <span className="flex-1 break-words">{q.question}</span>
               </h2>
-              <div className="ml-10 sm:ml-12 sm:ml-14 text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              <div className="ml-10 sm:ml-12 sm:ml-14 text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed break-words">
                 {typeof q.answer === 'string' ? (
-                  <p className="whitespace-pre-wrap">{q.answer}</p>
+                  <p className="whitespace-pre-wrap break-words">{q.answer}</p>
                 ) : (
-                  q.answer
+                  <div className="break-words">
+                    {q.answer}
+                  </div>
                 )}
               </div>
             </div>
