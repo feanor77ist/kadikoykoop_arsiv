@@ -156,7 +156,17 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 relative">
+      {/* Arka plan görseli */}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <img
+          src="/modal2.webp"
+          alt=""
+          className="fixed inset-0 w-full h-full object-cover opacity-[0.18] blur-[1px] dark:opacity-[0.22]"
+        />
+      </div>
+      
+      <div className="relative z-10">
       <Navigation />
       
       {/* Backdrop - hemen görünür ve blur'lu (showMessage true olduğunda) */}
@@ -184,7 +194,7 @@ export default function Home() {
           <img
             src="/modal.webp"
             alt=""
-            className={`absolute top-4 left-4 sm:top-20 sm:left-8 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] transition-all duration-[2000ms] ease-out ${
+            className={`absolute top-4 left-4 sm:top-20 sm:left-8 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] rounded-lg transition-all duration-[2000ms] ease-out ${
               isVisible ? "opacity-70 scale-100 rotate-[-4deg] sm:rotate-[-8deg]" : "opacity-0 scale-95 rotate-[-8deg] sm:rotate-[-12deg]"
             }`}
             style={{ width: 'auto', height: 'auto' }}
@@ -194,7 +204,7 @@ export default function Home() {
           <img
             src="/Temmuz 2020.webp"
             alt=""
-            className={`absolute top-4 right-4 sm:top-16 sm:right-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] transition-all duration-[2500ms] ease-out ${
+            className={`absolute top-4 right-4 sm:top-16 sm:right-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] rounded-lg transition-all duration-[2500ms] ease-out ${
               isVisible ? "opacity-70 scale-100 rotate-[6deg] sm:rotate-[12deg]" : "opacity-0 scale-95 rotate-[10deg] sm:rotate-[18deg]"
             }`}
             style={{ width: 'auto', height: 'auto' }}
@@ -204,7 +214,7 @@ export default function Home() {
           <img
             src="/modal2.webp"
             alt=""
-            className={`absolute bottom-12 right-4 sm:bottom-24 sm:right-16 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] transition-all duration-[3000ms] ease-out ${
+            className={`absolute bottom-12 right-4 sm:bottom-24 sm:right-16 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] rounded-lg transition-all duration-[3000ms] ease-out ${
               isVisible ? "opacity-70 scale-100 rotate-[3deg] sm:rotate-[6deg]" : "opacity-0 scale-95 rotate-[6deg] sm:rotate-[12deg]"
             }`}
             style={{ width: 'auto', height: 'auto' }}
@@ -214,7 +224,7 @@ export default function Home() {
           <img
             src="/modal1.webp"
             alt=""
-            className={`absolute bottom-12 left-4 sm:bottom-20 sm:left-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] transition-all duration-[2800ms] ease-out ${
+            className={`absolute bottom-12 left-4 sm:bottom-20 sm:left-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] rounded-lg transition-all duration-[2800ms] ease-out ${
               isVisible ? "opacity-70 scale-100 rotate-[-6deg] sm:rotate-[-10deg]" : "opacity-0 scale-95 rotate-[-10deg] sm:rotate-[-16deg]"
             }`}
             style={{ width: 'auto', height: 'auto' }}
@@ -454,6 +464,7 @@ export default function Home() {
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
           </svg>
         </a>
+      </div>
       </div>
     </div>
   );

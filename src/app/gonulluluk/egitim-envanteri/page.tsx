@@ -20,10 +20,10 @@ export default function EgitimEnvanteri() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 overflow-x-hidden">
       <Navigation />
       
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 overflow-x-hidden">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-8">
           <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Ana Sayfa</Link>
@@ -44,13 +44,13 @@ export default function EgitimEnvanteri() {
         </div>
 
         {/* Content Sections */}
-        <div className="space-y-12">
+        <div className="space-y-12 overflow-x-hidden">
           {/* Nöbet Nasıl Tutulur */}
-          <div id="nobet-nasil-tutulur" className="scroll-mt-24 bg-white dark:bg-gray-800 rounded-lg p-8 shadow-sm border border-gray-200 dark:border-gray-700">
+          <div id="nobet-nasil-tutulur" className="scroll-mt-24 bg-white dark:bg-gray-800 rounded-lg p-8 shadow-sm border border-gray-200 dark:border-gray-700 overflow-x-hidden">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Nöbet Nasıl Tutulur:
             </h2>
-            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed break-words overflow-x-hidden">
               <ol className="list-decimal list-inside space-y-2 ml-4">
                 <li>Koordinasyon biriminin hazırladığı 2 haftalık nöbet listesi linkinden (Doodle'dan) uygun gün seçilir</li>
                 <li>Anahtar Kadıköy Muaf'tan (Osmanağa Mahallesi, Kırtasiyeci Sk. 15/A, Kadıköy/İstanbul) ya da Dükkân yakınında oturan bir Koop Gönüllüsünden alınır.
@@ -167,11 +167,11 @@ export default function EgitimEnvanteri() {
           </div>
 
           {/* Yeni Gönüllü Katılım Dosyası */}
-          <div id="yeni-gonullu-katilim" className="scroll-mt-24 bg-white dark:bg-gray-800 rounded-lg p-8 shadow-sm border border-gray-200 dark:border-gray-700">
+          <div id="yeni-gonullu-katilim" className="scroll-mt-24 bg-white dark:bg-gray-800 rounded-lg p-8 shadow-sm border border-gray-200 dark:border-gray-700 overflow-x-hidden">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Yeni Gönüllü Katılım Dosyası
             </h2>
-            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed break-words overflow-x-hidden">
               <p>Bu dosya, Kadıköy Kooperatifine yeni katılan gönüllülerin işleyişi anlamak ve çalışmalarını kolaylaştırmak amacıyla hazırlanmıştır. Yeni katılan gönüllülerin, eşlikçileriyle birlikte inceleyerek ve tartışarak süreçlere ve işleyişe hakim olana kadar yardımcı olması hedeflenmiştir.</p>
               
               <p>Elbette ki, zaman içerisinde bazı bilgileri tekrar hatırlamak isteyen tüm gönüllülerin de faydalanması yararlı olacaktır. Daha ayrıntılı bilgi ve destek ihtiyacı halinde, başta gönüllünün eşlikçisi olmak üzere tüm kooperatif gönüllülerinden destek istenebilir.</p>

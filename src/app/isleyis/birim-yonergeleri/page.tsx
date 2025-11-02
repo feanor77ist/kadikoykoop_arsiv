@@ -79,25 +79,31 @@ export default function BirimYonergeleri() {
         </div>
 
         {/* Yönergeler Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {yonergeler.map((yönerge) => (
             <Link
               key={yönerge.id}
               href={yönerge.href}
-              className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-blue-500 transform hover:-translate-y-1"
             >
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                {yönerge.icon}
-              </div>
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                {yönerge.title}
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                {yönerge.description}
-              </p>
-              <div className="mt-4 flex items-center text-blue-600 dark:text-blue-400 font-medium text-sm group-hover:translate-x-2 transition-transform">
-                <span>İncele</span>
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="text-3xl sm:text-4xl bg-blue-50 dark:bg-blue-900/20 p-2 sm:p-3 rounded-lg">
+                  {yönerge.icon}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {yönerge.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                    {yönerge.description}
+                  </p>
+                </div>
+                <svg 
+                  className="w-6 h-6 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex-shrink-0" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
