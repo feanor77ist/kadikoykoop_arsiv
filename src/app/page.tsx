@@ -359,7 +359,7 @@ export default function Home() {
       </main>
 
       {/* Social Media Links - Fixed Bottom Right */}
-      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-3">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-30 flex flex-col gap-3">
         <a
           href="https://www.instagram.com/kadikoykooperatifi/"
           target="_blank"
