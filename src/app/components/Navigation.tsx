@@ -23,7 +23,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-slate-100/95 backdrop-blur-sm border-b border-slate-300 shadow-sm">
+    <nav className="sticky top-0 z-30 bg-slate-100/95 backdrop-blur-sm border-b border-slate-300 shadow-sm">
       {/* Top Bar: Logo (left) + Desktop Nav (right) + Hamburger (mobile) */}
       <div className="border-b border-slate-300 bg-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:max-w-none md:mx-0 md:px-0">

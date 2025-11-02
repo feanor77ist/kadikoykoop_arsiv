@@ -7,13 +7,16 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const [showMessage, setShowMessage] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   const closeModal = () => {
+    setIsClosing(true);
     setIsVisible(false);
     setTimeout(() => {
       setShowMessage(false);
+      setIsClosing(false);
       sessionStorage.setItem('kadikoy-koop-message-shown', 'true');
-    }, 1000);
+    }, 2000);
   };
 
   useEffect(() => {
@@ -28,7 +31,8 @@ export default function Home() {
     // 1 saniye sonra mesajı göster
     const showTimer = setTimeout(() => {
       setShowMessage(true);
-      // Animasyon için kısa bir delay
+      // Backdrop hemen blur'lu görünür (showMessage true olduğunda)
+      // Modal içeriği biraz sonra animasyonlu gelir
       setTimeout(() => {
         setIsVisible(true);
       }, 50);
@@ -36,13 +40,15 @@ export default function Home() {
 
     // 7 saniye sonra mesajı gizlemeye başla (1 saniye bekleme + 6 saniye görünür)
     const hideTimer = setTimeout(() => {
+      setIsClosing(true);
       setIsVisible(false);
-      // Fade out animasyonu sonrası tamamen gizle (1 saniye animasyon)
+      // Fade out animasyonu sonrası tamamen gizle (2 saniye animasyon)
       setTimeout(() => {
         setShowMessage(false);
+        setIsClosing(false);
         // Mesajın gösterildiğini sessionStorage'a kaydet
         sessionStorage.setItem('kadikoy-koop-message-shown', 'true');
-      }, 1000);
+      }, 2000);
     }, 7000);
 
     return () => {
@@ -153,19 +159,31 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navigation />
       
+      {/* Backdrop - hemen görünür ve blur'lu (showMessage true olduğunda) */}
+      {showMessage && (
+        <div 
+          className={`fixed inset-0 z-40 bg-black/30 cursor-pointer transition-all duration-[1500ms] ease-out ${
+            isClosing 
+              ? "opacity-0 backdrop-blur-none" 
+              : isVisible 
+                ? "opacity-100 backdrop-blur-sm" 
+                : "opacity-100 backdrop-blur-none"
+          }`}
+          onClick={closeModal}
+        />
+      )}
+      
       {/* Kooperatif Kapanış Mesajı - Modal */}
       {showMessage && (
         <div
-          className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-1000 ease-out ${
-            isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+          className={`fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none ${
+            isVisible ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-[2000ms] ease-out`}
           onClick={closeModal}
         >
-          <div className={`absolute inset-0 bg-black/30 backdrop-blur-sm transition-opacity duration-1000 cursor-pointer ${
-            isVisible ? "opacity-100" : "opacity-0"
-          }`} />
+          {/* Modal içeriği - daha sonra görünür */}
           <div
-            className={`relative max-w-2xl w-full bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/30 dark:to-blue-900/30 rounded-2xl p-6 sm:p-8 shadow-2xl border-2 border-green-200 dark:border-green-800 transform transition-all duration-1000 ease-out ${
+            className={`relative max-w-2xl w-full bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/30 dark:to-blue-900/30 rounded-2xl p-6 sm:p-8 shadow-2xl border-2 border-green-200 dark:border-green-800 transform transition-all duration-[2000ms] ease-out pointer-events-auto ${
               isVisible
                 ? "scale-100 translate-y-0 opacity-100"
                 : "scale-[0.98] translate-y-2 opacity-0"
@@ -203,7 +221,107 @@ export default function Home() {
             >
               {/* Icon */}
               <div className="text-4xl sm:text-5xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
-                {section.icon}
+                {section.number === "3" ? (
+                  <svg
+                    viewBox="0 0 120 120"
+                    className="w-12 h-12 sm:w-16 sm:h-16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    {/* Dayanışma Halkası - Toplumsal Cinsiyet Farkındalığı ve Çeşitlilik */}
+                    
+                    {/* Person 1 - Uzun saçlı, elbise (üstte - Yeşil) */}
+                    <g fill="#22c55e">
+                      <circle cx="60" cy="28" r="7" />
+                      <ellipse cx="60" cy="42" rx="6" ry="10" />
+                      {/* Uzun düz saç */}
+                      <path d="M52 28 L52 20 Q54 18 56 20 L56 22 Q58 20 60 22 Q62 20 64 22 L64 20 Q66 18 68 20 L68 28" fill="#16a34a" />
+                      {/* El */}
+                      <circle cx="67" cy="40" r="2.5" fill="#15803d" />
+                    </g>
+                    
+                    {/* Person 2 - Kısa saçlı, pantolon (sağ üst - Mavi) */}
+                    <g fill="#3b82f6">
+                      <circle cx="88" cy="42" r="7" />
+                      <rect x="85" y="52" width="6" height="8" rx="1.5" />
+                      {/* Kısa saç */}
+                      <ellipse cx="88" cy="40" rx="8" ry="3" fill="#2563eb" />
+                      {/* El */}
+                      <circle cx="94" cy="52" r="2.5" fill="#1d4ed8" />
+                      <circle cx="84" cy="52" r="2.5" fill="#1d4ed8" />
+                    </g>
+                    
+                    {/* Person 3 - Dalgalı saçlı, elbise (sağ alt - Mor) */}
+                    <g fill="#a855f7">
+                      <circle cx="93" cy="82" r="7" />
+                      <ellipse cx="93" cy="96" rx="6" ry="10" />
+                      {/* Dalgalı saç */}
+                      <path d="M86 82 Q87 78 88 80 Q89 77 90 79 Q91 76 92 78 Q93 75 94 77 Q95 74 96 76 Q97 73 98 75 Q99 72 100 74 L100 82 Z" fill="#9333ea" />
+                      {/* El */}
+                      <circle cx="87" cy="92" r="2.5" fill="#7e22ce" />
+                      <circle cx="86" cy="98" r="2.5" fill="#7e22ce" />
+                    </g>
+                    
+                    {/* Person 4 - Kısa saçlı, pantolon (alt - Turuncu) */}
+                    <g fill="#f97316">
+                      <circle cx="60" cy="92" r="7" />
+                      <rect x="57" y="102" width="6" height="8" rx="1.5" />
+                      {/* Kısa saç */}
+                      <ellipse cx="60" cy="90" rx="8" ry="3" fill="#ea580c" />
+                      {/* El */}
+                      <circle cx="53" cy="102" r="2.5" fill="#c2410c" />
+                      <circle cx="67" cy="102" r="2.5" fill="#c2410c" />
+                    </g>
+                    
+                    {/* Person 5 - Topuz saçlı, elbise (sol alt - Pembe) */}
+                    <g fill="#ec4899">
+                      <circle cx="27" cy="82" r="7" />
+                      <ellipse cx="27" cy="96" rx="6" ry="10" />
+                      {/* Topuz saç */}
+                      <circle cx="27" cy="77" r="5" fill="#db2777" />
+                      <ellipse cx="27" cy="79" rx="5" ry="3" fill="#be185d" />
+                      {/* El */}
+                      <circle cx="33" cy="92" r="2.5" fill="#9f1239" />
+                      <circle cx="34" cy="98" r="2.5" fill="#9f1239" />
+                    </g>
+                    
+                    {/* Person 6 - Kısa saçlı, pantolon (sol üst - Teal) */}
+                    <g fill="#14b8a6">
+                      <circle cx="32" cy="42" r="7" />
+                      <rect x="29" y="52" width="6" height="8" rx="1.5" />
+                      {/* Kısa saç */}
+                      <ellipse cx="32" cy="40" rx="8" ry="3" fill="#0d9488" />
+                      {/* El */}
+                      <circle cx="25" cy="52" r="2.5" fill="#0f766e" />
+                      <circle cx="39" cy="52" r="2.5" fill="#0f766e" />
+                    </g>
+                    
+                    {/* El ele tutuşma halkası - Dayanışma (Çeşitli renklerde) */}
+                    <path 
+                      d="M67 40 Q75 38 87 46 Q95 54 95 62 Q95 70 89 77 Q83 84 73 87 Q63 90 53 87 Q43 84 31 77 Q25 70 25 62 Q25 54 33 46 Q41 38 53 40 Q57 34 63 34 Q69 34 67 40 Z" 
+                      stroke="url(#solidarityGradient)" 
+                      strokeWidth="4" 
+                      fill="none" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                      opacity="0.5"
+                    />
+                    
+                    {/* Gradient tanımı */}
+                    <defs>
+                      <linearGradient id="solidarityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#22c55e" />
+                        <stop offset="20%" stopColor="#3b82f6" />
+                        <stop offset="40%" stopColor="#a855f7" />
+                        <stop offset="60%" stopColor="#f97316" />
+                        <stop offset="80%" stopColor="#ec4899" />
+                        <stop offset="100%" stopColor="#14b8a6" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                ) : (
+                  section.icon
+                )}
               </div>
               
               {/* Title */}
