@@ -180,41 +180,41 @@ export default function Home() {
             isVisible ? "opacity-100" : "opacity-0"
           } transition-opacity duration-[2000ms] ease-out`}
         >
-          {/* modal.png - sol üst, modal'ın üstünde */}
+          {/* modal.webp - sol üst, modal'ın üstünde */}
           <img
-            src="/modal.png"
+            src="/modal.webp"
             alt=""
-            className={`absolute top-12 left-10 sm:top-20 sm:left-8 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] transition-all duration-[2000ms] ease-out ${
+            className={`absolute top-4 left-4 sm:top-20 sm:left-8 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] transition-all duration-[2000ms] ease-out ${
               isVisible ? "opacity-70 scale-100 rotate-[-4deg] sm:rotate-[-8deg]" : "opacity-0 scale-95 rotate-[-8deg] sm:rotate-[-12deg]"
             }`}
             style={{ width: 'auto', height: 'auto' }}
           />
           
-          {/* Temmuz 2020.png - sağ üst, modal'ın üstünde */}
+          {/* Temmuz 2020.webp - sağ üst, modal'ın üstünde */}
           <img
-            src="/Temmuz 2020.png"
+            src="/Temmuz 2020.webp"
             alt=""
-            className={`absolute top-20 right-10 sm:top-16 sm:right-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] transition-all duration-[2500ms] ease-out ${
+            className={`absolute top-4 right-4 sm:top-16 sm:right-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] transition-all duration-[2500ms] ease-out ${
               isVisible ? "opacity-70 scale-100 rotate-[6deg] sm:rotate-[12deg]" : "opacity-0 scale-95 rotate-[10deg] sm:rotate-[18deg]"
             }`}
             style={{ width: 'auto', height: 'auto' }}
           />
           
-          {/* modal2.png - sağ alt, modal'ın altında */}
+          {/* modal2.webp - sağ alt, modal'ın altında */}
           <img
-            src="/modal2.png"
+            src="/modal2.webp"
             alt=""
-            className={`absolute bottom-20 right-10 sm:bottom-24 sm:right-16 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] transition-all duration-[3000ms] ease-out ${
+            className={`absolute bottom-12 right-4 sm:bottom-24 sm:right-16 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] transition-all duration-[3000ms] ease-out ${
               isVisible ? "opacity-70 scale-100 rotate-[3deg] sm:rotate-[6deg]" : "opacity-0 scale-95 rotate-[6deg] sm:rotate-[12deg]"
             }`}
             style={{ width: 'auto', height: 'auto' }}
           />
           
-          {/* modal1.png - sol alt */}
+          {/* modal1.webp - sol alt */}
           <img
-            src="/modal1.png"
+            src="/modal1.webp"
             alt=""
-            className={`absolute bottom-24 left-10 sm:bottom-20 sm:left-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] transition-all duration-[2800ms] ease-out ${
+            className={`absolute bottom-12 left-4 sm:bottom-20 sm:left-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] transition-all duration-[2800ms] ease-out ${
               isVisible ? "opacity-70 scale-100 rotate-[-6deg] sm:rotate-[-10deg]" : "opacity-0 scale-95 rotate-[-10deg] sm:rotate-[-16deg]"
             }`}
             style={{ width: 'auto', height: 'auto' }}
@@ -232,7 +232,7 @@ export default function Home() {
         >
           {/* Modal içeriği - daha sonra görünür */}
           <div
-            className={`relative max-w-2xl w-full bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/30 dark:to-blue-900/30 rounded-2xl p-6 sm:p-8 shadow-2xl border-2 border-green-200 dark:border-green-800 transform transition-all duration-[2000ms] ease-out pointer-events-auto ${
+            className={`relative max-w-2xl w-full bg-gradient-to-br from-green-50/80 to-blue-50/80 dark:from-green-900/50 dark:to-blue-900/50 rounded-2xl p-6 sm:p-8 shadow-2xl border-2 border-green-200/60 dark:border-green-800/60 transform transition-all duration-[2000ms] ease-out pointer-events-auto ${
               isVisible
                 ? "scale-100 translate-y-0 opacity-100"
                 : "scale-[0.98] translate-y-2 opacity-0"
