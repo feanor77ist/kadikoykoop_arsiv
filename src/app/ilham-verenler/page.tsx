@@ -3,7 +3,17 @@ import Navigation from "../components/Navigation";
 
 export default function Bolum6() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 relative">
+      {/* Arka plan görseli */}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <img
+          src="/bg3.webp"
+          alt=""
+          className="fixed inset-0 w-full h-full object-cover opacity-[0.18] blur-[1px] dark:opacity-[0.22]"
+        />
+      </div>
+      
+      <div className="relative z-10">
       <Navigation />
       
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -48,6 +58,7 @@ export default function Bolum6() {
           </div>
         </div>
       </main>
+      </div>
     </div>
   );
 }
