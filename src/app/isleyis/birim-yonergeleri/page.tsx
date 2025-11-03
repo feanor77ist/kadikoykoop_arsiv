@@ -29,7 +29,7 @@ export default function BirimYonergeleri() {
       title: "Koordinasyon Birimi Yönergesi",
       description: "Koordinasyon birimi işleyişi ve sorumlulukları",
       href: "/isleyis/birim-yonergeleri/koordinasyon",
-      icon: "🔄"
+      icon: "🐢"
     },
     {
       id: "stok",
@@ -37,6 +37,125 @@ export default function BirimYonergeleri() {
       description: "Stok sayımı ve yönetimi",
       href: "/isleyis/birim-yonergeleri/stok",
       icon: "📦"
+    },
+    {
+      id: "arabuluculuk-ekibi",
+      title: "Arabuluculuk Ekibi Yönergesi",
+      description: "Çatışma çözümü ve arabuluculuk süreçleri",
+      href: "/isleyis/birim-yonergeleri/arabuluculuk-ekibi",
+      icon: "🤝"
+    },
+    {
+      id: "askida-uygulamasi",
+      title: "Askıda Uygulaması Yönergesi",
+      description: "Dayanışma pratiği ve askıda ürün sistemi",
+      href: "/isleyis/birim-yonergeleri/askida-uygulamasi",
+      icon: "🎁"
+    },
+    {
+      id: "basinla-iliskiler",
+      title: "Basınla İlişkiler Yönergesi",
+      description: "Basın kuruluşları ile iletişim ve temsiliyet",
+      href: "/isleyis/birim-yonergeleri/basinla-iliskiler",
+      icon: "📰"
+    },
+    {
+      id: "toplanti-usulu",
+      title: "Toplantı Usulü Hakkında Yönerge",
+      description: "Toplantı düzeni, gündem belirleme ve karar alma",
+      href: "/isleyis/birim-yonergeleri/toplanti-usulu",
+      icon: "📋"
+    },
+    {
+      id: "calistay-usulu",
+      title: "Çalıştay Usulü Hakkında Yönerge",
+      description: "Çalıştay düzeni, gündem belirleme ve karar alma",
+      href: "/isleyis/birim-yonergeleri/calistay-usulu",
+      icon: "👥"
+    },
+    {
+      id: "dukkan",
+      title: "Dükkan Yönergesi",
+      description: "Dükkan düzeni, nöbet ve satış işlemleri",
+      href: "/isleyis/birim-yonergeleri/dukkan",
+      icon: "🏪"
+    },
+    {
+      id: "eposta-whatsapp-iletisim",
+      title: "E-Posta ve WhatsApp Kanallarında İletişim Yönergesi",
+      description: "Elektronik iletişim kuralları ve yazışma usulleri",
+      href: "/isleyis/birim-yonergeleri/eposta-whatsapp-iletisim",
+      icon: "💬"
+    },
+    {
+      id: "etiketleme-yeniden-ambalajlama",
+      title: "Etiketleme ve Yeniden Ambalajlama Kriterleri Yönergesi",
+      description: "Etiketleme ve yeniden ambalajlama kriterleri ve mevzuat",
+      href: "/isleyis/birim-yonergeleri/etiketleme-yeniden-ambalajlama",
+      icon: "🏷️"
+    },
+    {
+      id: "gida-urun-uretici-birimi",
+      title: "Gıda Ürün Üretici Birimi İşleyiş Yönergesi",
+      description: "Gıda ürün üretici birimi yapısı, görevleri ve işleyiş",
+      href: "/isleyis/birim-yonergeleri/gida-urun-uretici-birimi",
+      icon: "🌾"
+    },
+    {
+      id: "gida-dis-urun-uretici",
+      title: "Gıda Dışı Ürün ve Üreticileriyle İlişkiler Birimi İşleyiş Yönergesi",
+      description: "Gıda dışı ürün araştırması, değerlendirme ve takip süreçleri",
+      href: "/isleyis/birim-yonergeleri/gida-dis-urun-uretici",
+      icon: "🧴"
+    },
+    {
+      id: "urun-uretici-bilgileri-paylasim",
+      title: "Ürün Üretici Bilgileri Paylaşımı Hakkında Yönerge",
+      description: "Ürün ve üretici bilgilerinin paylaşım kriterleri",
+      href: "/isleyis/birim-yonergeleri/urun-uretici-bilgileri-paylasim",
+      icon: "📤"
+    },
+    {
+      id: "gorusme-talepleri",
+      title: "Görüşme Talepleri Hakkında Yönerge",
+      description: "Mülakat, görüşme ve etkinlik katılım talepleri",
+      href: "/isleyis/birim-yonergeleri/gorusme-talepleri",
+      icon: "🎤"
+    },
+    {
+      id: "sosyal-medya-iletisim",
+      title: "Sosyal Medya ve İletişim Birimi Yönergesi",
+      description: "Sosyal medya, iletişim kanalları ve içerik yönetimi",
+      href: "/isleyis/birim-yonergeleri/sosyal-medya-iletisim",
+      icon: "📱"
+    },
+    {
+      id: "iletisim-paylasim",
+      title: "İletişim Birimi Paylaşım Yönergesi",
+      description: "Paylaşım yöntemleri ve sorumluluklar",
+      href: "/isleyis/birim-yonergeleri/iletisim-paylasim",
+      icon: "📢"
+    },
+    {
+      id: "mali-birim",
+      title: "Mali Birim Yönergesi",
+      description: "Mali süreçler, görevler ve işleyiş",
+      href: "/isleyis/birim-yonergeleri/mali-birim",
+      icon: "🧾"
+    },
+    {
+      id: "yonetim-kurulu",
+      title: "Yönetim Kurulu Yönergesi",
+      description: "Yönetim kurulu yapısı, görevleri ve işleyiş",
+      href: "/isleyis/birim-yonergeleri/yonetim-kurulu",
+      icon: "⚖️"
+    },
+    {
+      id: "orgutlenme-birimi",
+      title: "Örgütlenme Birimi Yönergesi",
+      description: "Örgütlenme etkinlikleri, KKKA ve yerel faaliyetler",
+      href: "/isleyis/birim-yonergeleri/orgutlenme-birimi",
+      icon: "🕸️"
     },
     {
       id: "toplanti-notu-sablonu",
