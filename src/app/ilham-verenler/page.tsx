@@ -1,7 +1,97 @@
 import Link from "next/link";
 import Navigation from "../components/Navigation";
 
-export default function Bolum6() {
+export default function IlhamVerenler() {
+  const kitaplar = [
+    "GIDA KRİZİ - Tarım, Ekoloji ve Egemenlik - Abdullah Aysu (syf. 271-287)",
+    "TERRA MADRE - Carlo Petrini (syf.13-23)",
+    "ETOBUR - OTOBUR İKİLEMİ - Michael Pollan (syf. 63-70)",
+    "EKOKÖYLER - Sürdürülebilirliğin Yeni Ufukları - Jonathan Dawson",
+    "DEĞİŞEN KARADENİZ'İ ANLAMAK - Deniz Yıldırım, Evren Haspolat (syf.421-443, 485-500)",
+    "YEREL YÖNETİM KENT ve EKOLOJİ - Aykut Çoban (syf. 399-452)",
+    "ÖLÜM TOHUMLARI - Genetik Biliminin Arkasındaki Karanlık Oyunlar - F.William Engdahl",
+    "ORGANİK ÖTESİ TARIM - Hakan Ozan Erzincanlı",
+    "GIDA TOPLULUKLARI ÇALIŞTAYI - Yeryüzü Derneği",
+    "EKOKÖYLER - Yeni Rotamız - Julian Rose",
+    "FOOD SOVEREIGNTY NOW! - A Guide to Food Sovereignty - European Coordination Via Campesina",
+    "DÜNYA TARIM TARİHİ - Neolitik Çağ'dan günümüzdeki Krize - Marcel Mazoyer & Laurence Roudart",
+    "KÜÇÜK KÖYLÜLÜĞE SERMAYE KAPANI - Türkiye'de Tarım Çalışmaları ve Köylülük Üzerine Gözlemler - Metin Özuğurlu",
+    "SÜTLE GELEN EMEĞİN DAYANIŞMASI - Tire Süt Kooperatifi",
+    "THE MYTH OF MONDRAGON - Cooperatives, Politics and Working-Class Life in a Basque Town - Sharryn Kasmir",
+    "TOOLKIT - Peasant Agroecology Schools and the Peasant-to-Peasant Method of Horizontal Learning - La Via Campesina",
+    "YEMEKTE TARİH VAR - Yemek Kültürü ve Tarihçiliği - Ayşe Avcı, Seda Erkoç, Elvin Otman (syf. 223-230)",
+    "DEMOCRACY IN SMALL GROUPS - Participation, Decision Making and Communication - John Gastil",
+    "TOOL KIT FOR WORKING IN A FEMINIST ORGANISATION - Women's Health West",
+    "WORLD HUNGER - Frances Moore Lappe, Joseph Collins"
+  ].sort((a, b) => a.localeCompare(b, 'tr', { sensitivity: 'base' }));
+
+  const makaleler = [
+    { title: "Sofradaki Yemeğin Ötesi: Gıda Müşterekleri ve Feminizm Üzerine", author: "Bengi Akbulut" },
+    { title: "Bildiğimiz Ekonominin Sonuna Bir Örnek: İntegral Kooperatifi", author: "Bengi Akbulut" },
+    { title: "Yerel / Doğal Üretim ve Aracısız Erişim", author: "Ceyhan Temürcü & Durukan Dudu" },
+    { title: "Ekoloji Mücadelesinin Sınıfsallığı", author: "Mehmet HORUŞ" },
+    { title: "İŞÇİ KOOPERATİFLERİ YENİ BİR TOPLUMUN TEMELİ OLABİLİR Mİ?", author: "Abstrakt Dergi, Çeviri: Canan Kaplan" },
+    { title: "İŞÇİ YÖNETİMİNDEKİ KOOPERATİF İŞLETMELER ÜZERİNE", author: "marxists.org, Çeviri: Canan Kaplan" },
+    { title: "Sosyolojik Açıdan Kooperatifçilik Teorisinin Niteliğine İlişkin Düşünceler", author: "Zeynep SINA & Serap SOYER" },
+    { title: "KOOPERATİFÇİLİĞİN DÜNYADA VE TÜRKİYE'DEKİ NİCEL GELİŞİMİ", author: "Prof. Dr. Cevat GERAY" },
+    { title: "TÜRKİYE'DE KOOPERATİFÇİLİK DÜŞÜNCESİNİN GELİŞİMİ", author: "Özlem YILDIRIR KOCABAŞ" },
+    { title: "Anarşistlerin Ekonomi Tartışmaları(7) : \"Görünmez Eli Kesmek: Pazarların İçsel Problemleri ve Anarşist Teori, Strateji ve Vizyon\"", author: "Deric Shannon (Çeviri:Özgür Oktay)" },
+    { title: "Direnişi Kooperatifte Dokumak", author: "Umut Kocagöz" },
+    { title: "Kooperatif Fikrini Strateji Bağlamında Düşünebilir Miyiz?", author: "Umut Kocagöz" },
+    { title: "Gıdanın Müşterekler Siyaseti", author: "Umut Kocagöz" },
+    { title: "Tüketiciler gıda sistemini nasıl değiştirebilir?", author: "Umut Kocagöz" },
+    { title: "Tüketici Topluluklarından Gıda Egemenliğine: Tüketim Kooperatiflerinin İmkânı", author: "Umut Kocagöz" },
+    { title: "Gıda Toplulukları ve Aracısız Ürün Ağı Analizi", author: "Zerrin Çelik" },
+    { title: "Tarımda Alternatif Kamusallığın Olanakları: İzmir Tire Süt Kooperatifi Örneği", author: "Uygar Dursun Yıldırım" },
+    { title: "Böcek Öldüren Klorpirifos Stoğunu Çocuklarımıza Yedirecek miyiz?", author: "Bülent Şık" },
+    { title: "Ekmekte Pestisit ve Ağartıcı Madde Kalıntısı Var mı?", author: "Bülent Şık" },
+    { title: "GDO'lar Üç Yıl Önce Zararlıydı, Şimdi Zararsız Oldu", author: "Bülent Şık" },
+    { title: "Gıdada Pestisit Kalıntısı ve Sağlık", author: "Bülent Şık" },
+    { title: "Gıdalardaki Antibiyotik: Sorular ve Sorunlar", author: "Bülent Şık" },
+    { title: "Glifosat Kalıntısı GDO'lu Ekmek Kadar Önemli Bir Halk Sağlığı Sorunu", author: "Bülent Şık" },
+    { title: "Küresel Isınma Çağında Pestisitler ve Gıda Güvenliği", author: "Bülent Şık" },
+    { title: "Ot Öldürücü Glifosat Sorununda Bilinmesi Gerekenler", author: "Bülent Şık" },
+    { title: "Sivil Toplum Örgütleri Bir Araştırma Laboratuvarı Kurabilir mi?", author: "Bülent Şık" },
+    { title: "Tarladan Çatala Glifosat Sorunu", author: "Bülent Şık" },
+    { title: "Mesele Sadece Zeytin Ağaçları Değil", author: "Bülent Şık" },
+    { title: "Zeytin Yasasının Değiştirilmesine 7. Kez Karşı Çıkmazsak Ne Olacak?", author: "Bülent Şık" },
+    { title: "Oyuncaklarda Az Bilinen Tehlike - Fitalatlar", author: "Bülent Şık" },
+    { title: "Palm Yağı ve Nutella Yemeli mi Meselesi", author: "Bülent Şık" },
+    { title: "Streç Filmler, Alkil Fenoller ve İyi bir Hayat", author: "Bülent Şık" },
+    { title: "Barbarlık Çağına Doğru Koşar Adım", author: "Bülent Şık" },
+    { title: "Biberon ve Damacana Sulardaki Bisfenol A Sorunu Çözüldü mü?", author: "Bülent Şık" },
+    { title: "Evde Konserve Yapmalı mı?", author: "Bülent Şık" },
+    { title: "Gıdalarda At ve Eşek Eti Bulunması Gerçek Bir Sorun mu?", author: "Bülent Şık" },
+    { title: "Non-hierarchical Organizing and International Women's NGO's: An Exploratory Study", author: "Natalya Timoshkina" },
+    { title: "The Collectivist Organization: An Alternative To Rational-Bureaucratic Models", author: "Joyce Rothschild-Whitt" },
+    { title: "The Tyranny of Structurelessness", author: "Jo Freeman" },
+    { title: "Collective Organisation", author: "John Englart" },
+    { 
+      title: "Japon Kooperatifçilik Hareketi ve Toyohiko Kagawa", 
+      author: "Kaynak",
+      link: "http://blog.milliyet.com.tr/japon-kooperatifcilik-hareketi-ve-toyohiko-kagawa/Blog/?BlogNo=390914"
+    },
+    { title: "Hayvansal Üretim-Çevre İlişkileri ve Organik Hayvancılık", author: "Nihat Özen, Yılmaz Şayan, İbrahim Ak, İ.Yaman Yurtman, Muazzez Polat" },
+    { title: "Hayvancılık ve Küresel Isınma", author: "M. Görgülü, N.Koluman Darcan, S.Göncü" },
+    { title: "Çiftlik Hayvanları ve Küresel İklim Değişikliği Arasındaki Etkileşim", author: "Mehmet Koyuncu, Hilal Akgün" },
+    { title: "Boğaziçi Üniversitesi Mensupları Tüketim Kooperatifi Bülteni", author: "Sayı 7, 9" },
+    { title: "Özyönetimsel Müşterek Yapılarda Temel Sorunsallar", author: "FelsefeLogos Dergisi - Fikret Adaman" },
+    { title: "Katalonya Kooperatifçilik Tarihinden Güncel Sosyal Ekonomi ve Dayanışma Ekonomisi Pratiklerine: Mücadeleler Arası Köprü Kurmak", author: "Birikim Dergisi - Pelin Doğan, Irmak Ertör, Baybars Kulebi" },
+    { title: "Konvansiyonel ve Ekolojik Hayvancılık Sistemlerinin Sürdürülebilirliği ve Türkiye Üzerine Bir Değerlendirme", author: "ADÜ Ziraat Fakültesi Dergisi 2005 - Figen Çukur, Gamze Saner" },
+    { 
+      title: "Dayanışma Ekonomisi Temelinde Bütünleşik Bir Ekonomik Sistem Önerisi", 
+      author: "Arda Arlı - İlk yayın: Yeniemek.org / Temmuz 2020",
+      link: "https://www.academia.edu/75817491/Dayan%C4%B1%C5%9Fma_Ekonomisi_Temelinde_B%C3%BCt%C3%BCnle%C5%9Fik_Bir_Ekonomik_Sistem_%C3%96nerisi?source=swp_share"
+    }
+  ].sort((a, b) => a.title.localeCompare(b.title, 'tr', { sensitivity: 'base' }));
+
+  const dijitalPlatformlar = [
+    {
+      title: "Stories Coop",
+      link: "https://ica.coop/en/online-library/resources"
+    }
+  ].sort((a, b) => a.title.localeCompare(b.title, 'tr', { sensitivity: 'base' }));
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 relative">
       {/* Arka plan görseli */}
@@ -30,32 +120,143 @@ export default function Bolum6() {
         <div className="mb-12 text-center">
           <div className="text-6xl mb-6">📚✨</div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            İlham Verenler / Olanlar
+            İlham Verenler
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">
             Kooperatifçilik ve gıda egemenliği üzerine okuma listesi
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-lg p-8 border border-yellow-200 dark:border-yellow-800">
-            <div className="flex items-start gap-4">
-              <svg className="w-8 h-8 text-yellow-600 dark:text-yellow-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
+        <div className="space-y-12">
+          {/* Kitaplar */}
+          <section className="bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200 dark:border-gray-700">
+              <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg px-4 py-2 shadow-md">
+                <span className="text-2xl">📚</span>
+              </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  Okuma Listesi
-                </h3>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                  Kooperatifçilik, gıda egemenliği, ekolojik tarım ve dayanışma ekonomisi üzerine önerilen kitaplar, makaleler ve kaynaklar.
-                </p>
-                <p className="text-gray-600 dark:text-gray-400 text-sm italic">
-                  Bu içerik şu anda hazırlanma aşamasındadır. Yakında eklenecektir.
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Kitaplar
+                </h2>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  {kitaplar.length} kitap
                 </p>
               </div>
             </div>
-          </div>
+            
+            <ul className="space-y-3">
+              {kitaplar.map((kitap, index) => (
+                <li 
+                  key={index}
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors group"
+                >
+                  <span className="text-blue-500 dark:text-blue-400 mt-1 flex-shrink-0">•</span>
+                  <span className="text-gray-700 dark:text-gray-300 leading-relaxed flex-1">
+                    {kitap}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Makaleler / Köşe Yazıları / Sunumlar */}
+          <section className="bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200 dark:border-gray-700">
+              <div className="bg-gradient-to-br from-green-500 to-emerald-600 text-white rounded-lg px-4 py-2 shadow-md">
+                <span className="text-2xl">📄</span>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Makaleler / Köşe Yazıları / Sunumlar
+                </h2>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  {makaleler.length} makale
+                </p>
+              </div>
+            </div>
+            
+            <ul className="space-y-4">
+              {makaleler.map((makale, index) => (
+                <li 
+                  key={index}
+                  className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-green-400 dark:hover:border-green-600 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all group"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 dark:text-green-400 mt-1 flex-shrink-0">•</span>
+                    <div className="flex-1 min-w-0">
+                      {makale.link ? (
+                        <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                          <a 
+                            href={makale.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:underline inline-flex items-center gap-1"
+                          >
+                            {makale.title}
+                            <svg className="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
+                        </h3>
+                      ) : (
+                        <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                          {makale.title}
+                        </h3>
+                      )}
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {makale.author}
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Dijital Platformlar */}
+          <section className="bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-200 dark:border-gray-700">
+              <div className="bg-gradient-to-br from-purple-500 to-pink-600 text-white rounded-lg px-4 py-2 shadow-md">
+                <span className="text-2xl">🌐</span>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Dijital Platformlar
+                </h2>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  {dijitalPlatformlar.length} platform
+                </p>
+              </div>
+            </div>
+            
+            <ul className="space-y-4">
+              {dijitalPlatformlar.map((platform, index) => (
+                <li 
+                  key={index}
+                  className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-600 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all group"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-purple-500 dark:text-purple-400 mt-1 flex-shrink-0">•</span>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                        <a 
+                          href={platform.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:underline inline-flex items-center gap-2"
+                        >
+                          {platform.title}
+                          <svg className="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      </h3>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
       </main>
       </div>
