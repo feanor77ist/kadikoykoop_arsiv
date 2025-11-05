@@ -349,15 +349,15 @@ export default function IlhamVerenler() {
                     <span className="text-green-500 dark:text-green-400 mt-1 flex-shrink-0">•</span>
                     <div className="flex-1 min-w-0">
                       {makale.link ? (
-                        <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                        <h3 className="text-base sm:text-lg font-semibold mb-1">
                           <a 
                             href={makale.link} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="hover:underline inline-flex items-center gap-1"
+                            className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 hover:underline inline-flex items-start gap-2 transition-colors"
                           >
-                            {makale.title}
-                            <svg className="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <span className="flex-1">{makale.title}</span>
+                            <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                             </svg>
                           </a>
