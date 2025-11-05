@@ -95,9 +95,6 @@ export default function Hafiza() {
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Kolektif Hafıza
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400">
-            Hafıza sandığı - Aramızda kalan anlar
-          </p>
         </div>
 
         {/* Galeri Grid */}
