@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, use } from "react";
+import { useState, useEffect, use, useRef } from "react";
 import Link from "next/link";
 import Navigation from "../../components/Navigation";
 import Image from "next/image";
@@ -19,6 +19,119 @@ export default function GalleryPage({ params }: { params: Promise<{ id: string }
   const [images, setImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  // Carousel refs/helpers
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const ignoreScrollUntil = useRef(0);
+  const scrollToIndex = (idx: number) => {
+    const container = scrollRef.current;
+    if (!container) return;
+    const track = container.firstElementChild as HTMLElement | null;
+    const slide = track?.children?.[idx] as HTMLElement | undefined;
+    // Guard scroll-sync for a short period while we perform programmatic scroll
+    ignoreScrollUntil.current = Date.now() + 500;
+    slide?.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+  };
+
+  // Minimal swipe/keyboard state
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const wheelAccum = useRef(0);
+  const wheelTimer = useRef<NodeJS.Timeout | null>(null);
+  const navLock = useRef(false);
+
+  const navigateBy = (delta: 1 | -1) => {
+    if (navLock.current) return;
+    setSelectedImage((prev) => {
+      if (prev === null) return prev;
+      const next = Math.max(0, Math.min(prev + delta, images.length - 1));
+      if (next !== prev) {
+        navLock.current = true;
+        setTimeout(() => {
+          navLock.current = false;
+        }, 250);
+      }
+      return next;
+    });
+  };
+
+  // Keyboard navigation using carousel
+  useEffect(() => {
+    if (selectedImage === null) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        const next = Math.min(selectedImage + 1, images.length - 1);
+        scrollToIndex(next);
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const prev = Math.max(selectedImage - 1, 0);
+        scrollToIndex(prev);
+      } else if (e.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [selectedImage, images.length]);
+
+  // Sync selectedImage on scroll
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    if (Date.now() < ignoreScrollUntil.current) return; // ignore programmatic scrolls
+    const width = el.clientWidth || 1;
+    const idx = Math.round(el.scrollLeft / width);
+    const clamped = Math.max(0, Math.min(idx, images.length - 1));
+    if (clamped !== selectedImage) setSelectedImage(clamped);
+  };
+
+  // Ensure carousel shows clicked index when opening / when index changes
+  useEffect(() => {
+    if (selectedImage === null) return;
+    const id = requestAnimationFrame(() => scrollToIndex(selectedImage));
+    return () => cancelAnimationFrame(id);
+  }, [selectedImage]);
+
+  // Touch handlers (on inner container)
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const endX = e.changedTouches[0].clientX;
+    const endY = e.changedTouches[0].clientY;
+    const deltaX = touchStartX.current - endX;
+    const deltaY = Math.abs(touchStartY.current - endY);
+    // yatay > dikey ve 50px üzeri
+    if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > deltaY) {
+      if (deltaX > 0) navigateBy(1); // sola kaydırma -> sonraki
+      else navigateBy(-1); // sağa kaydırma -> önceki
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
+
+  // Touchpad wheel (on inner container)
+  const handleWheel = (e: React.WheelEvent) => {
+    if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return; // sadece yatay
+    wheelAccum.current += e.deltaX;
+    if (wheelTimer.current) clearTimeout(wheelTimer.current);
+    const threshold = 220;
+    if (wheelAccum.current >= threshold) {
+      navigateBy(1);
+      wheelAccum.current = 0;
+    } else if (wheelAccum.current <= -threshold) {
+      navigateBy(-1);
+      wheelAccum.current = 0;
+    } else {
+      wheelTimer.current = setTimeout(() => {
+        wheelAccum.current = 0;
+      }, 180);
+    }
+  };
 
   useEffect(() => {
     // Görselleri yükle
@@ -145,7 +258,7 @@ export default function GalleryPage({ params }: { params: Promise<{ id: string }
           >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+              className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10 cursor-pointer"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -156,9 +269,10 @@ export default function GalleryPage({ params }: { params: Promise<{ id: string }
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  setSelectedImage(selectedImage - 1);
+                  const prev = Math.max((selectedImage ?? 0) - 1, 0);
+                  scrollToIndex(prev);
                 }}
-                className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10"
+                className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10 cursor-pointer"
               >
                 <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -170,9 +284,10 @@ export default function GalleryPage({ params }: { params: Promise<{ id: string }
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  setSelectedImage(selectedImage + 1);
+                  const next = Math.min((selectedImage ?? 0) + 1, images.length - 1);
+                  scrollToIndex(next);
                 }}
-                className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10"
+                className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10 cursor-pointer"
               >
                 <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -180,15 +295,29 @@ export default function GalleryPage({ params }: { params: Promise<{ id: string }
               </button>
             )}
             
-            <div className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center">
-              <Image
-                src={`/hafiza/${resolvedParams.id}/full/${images[selectedImage]}`}
-                alt={`${gallery.title} ${selectedImage + 1}`}
-                width={1200}
-                height={1200}
-                className="max-w-full max-h-[90vh] object-contain"
-                priority
-              />
+            {/* Scroll-snap carousel */}
+            <div 
+              className="relative w-full h-full max-w-7xl max-h-[90vh] overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth touch-pan-x"
+              style={{ touchAction: 'pan-x pinch-zoom' }}
+              onClick={(e) => e.stopPropagation()}
+              ref={scrollRef}
+              onScroll={handleScroll}
+            >
+              <div className="flex h-full">
+                {images.map((image, index) => (
+                  <div key={index} className="snap-start flex-shrink-0 w-full h-full flex items-center justify-center">
+                    <Image
+                      src={`/hafiza/${resolvedParams.id}/full/${image}`}
+                      alt={`${gallery.title} ${index + 1}`}
+                      width={1200}
+                      height={1200}
+                      className="max-w-full max-h-full object-contain select-none"
+                      priority={index === selectedImage}
+                      draggable={false}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
             
             <div className="absolute bottom-4 text-white text-sm">
