@@ -8,10 +8,18 @@ export default function Home() {
   const [showMessage, setShowMessage] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [image1Visible, setImage1Visible] = useState(false); // modal.webp
+  const [image2Visible, setImage2Visible] = useState(false); // modal2.webp
+  const [image3Visible, setImage3Visible] = useState(false); // Temmuz 2020.webp
+  const [image4Visible, setImage4Visible] = useState(false); // modal1.webp
 
   const closeModal = () => {
     setIsClosing(true);
     setIsVisible(false);
+    setImage1Visible(false);
+    setImage2Visible(false);
+    setImage3Visible(false);
+    setImage4Visible(false);
     setTimeout(() => {
       setShowMessage(false);
       setIsClosing(false);
@@ -35,6 +43,15 @@ export default function Home() {
       // Modal içeriği biraz sonra animasyonlu gelir
       setTimeout(() => {
         setIsVisible(true);
+        // Görselleri sırayla göster
+        // 1. modal.webp - hemen
+        setTimeout(() => setImage1Visible(true), 100);
+        // 2. modal2.webp - 1000ms sonra
+        setTimeout(() => setImage2Visible(true), 1100);
+        // 3. Temmuz 2020.webp - 2000ms sonra
+        setTimeout(() => setImage3Visible(true), 2100);
+        // 4. modal1.webp - 3000ms sonra
+        setTimeout(() => setImage4Visible(true), 3100);
       }, 50);
     }, 1000);
 
@@ -42,6 +59,10 @@ export default function Home() {
     const hideTimer = setTimeout(() => {
       setIsClosing(true);
       setIsVisible(false);
+      setImage1Visible(false);
+      setImage2Visible(false);
+      setImage3Visible(false);
+      setImage4Visible(false);
       // Fade out animasyonu sonrası tamamen gizle (2 saniye animasyon)
       setTimeout(() => {
         setShowMessage(false);
@@ -190,42 +211,42 @@ export default function Home() {
             isVisible ? "opacity-100" : "opacity-0"
           } transition-opacity duration-[2000ms] ease-out`}
         >
-          {/* modal.webp - sol üst, modal'ın üstünde */}
+          {/* modal.webp - sol üst, modal'ın üstünde - 1. sırada */}
           <img
             src="/modal.webp"
             alt=""
-            className={`absolute top-4 left-4 sm:top-20 sm:left-8 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] rounded-lg transition-all duration-[2000ms] ease-out ${
-              isVisible ? "opacity-70 scale-100 rotate-[-4deg] sm:rotate-[-8deg]" : "opacity-0 scale-95 rotate-[-8deg] sm:rotate-[-12deg]"
+            className={`absolute top-4 left-4 sm:top-20 sm:left-8 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] rounded-lg transition-all duration-[800ms] ease-out ${
+              image1Visible ? "opacity-70 scale-100 rotate-[-4deg] sm:rotate-[-8deg]" : "opacity-0 scale-95 rotate-[-8deg] sm:rotate-[-12deg]"
             }`}
             style={{ width: 'auto', height: 'auto' }}
           />
           
-          {/* Temmuz 2020.webp - sağ üst, modal'ın üstünde */}
-          <img
-            src="/Temmuz 2020.webp"
-            alt=""
-            className={`absolute top-4 right-4 sm:top-16 sm:right-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] rounded-lg transition-all duration-[2500ms] ease-out ${
-              isVisible ? "opacity-70 scale-100 rotate-[6deg] sm:rotate-[12deg]" : "opacity-0 scale-95 rotate-[10deg] sm:rotate-[18deg]"
-            }`}
-            style={{ width: 'auto', height: 'auto' }}
-          />
-          
-          {/* modal2.webp - sağ alt, modal'ın altında */}
+          {/* modal2.webp - sağ alt, modal'ın altında - 2. sırada */}
           <img
             src="/modal2.webp"
             alt=""
-            className={`absolute bottom-12 right-4 sm:bottom-24 sm:right-16 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] rounded-lg transition-all duration-[3000ms] ease-out ${
-              isVisible ? "opacity-70 scale-100 rotate-[3deg] sm:rotate-[6deg]" : "opacity-0 scale-95 rotate-[6deg] sm:rotate-[12deg]"
+            className={`absolute bottom-12 right-4 sm:bottom-24 sm:right-16 w-auto h-auto max-w-[180px] max-h-[198px] sm:max-w-[300px] sm:max-h-[330px] rounded-lg transition-all duration-[800ms] ease-out ${
+              image2Visible ? "opacity-70 scale-100 rotate-[3deg] sm:rotate-[6deg]" : "opacity-0 scale-95 rotate-[6deg] sm:rotate-[12deg]"
             }`}
             style={{ width: 'auto', height: 'auto' }}
           />
           
-          {/* modal1.webp - sol alt */}
+          {/* Temmuz 2020.webp - sağ üst, modal'ın üstünde - 3. sırada */}
+          <img
+            src="/Temmuz 2020.webp"
+            alt=""
+            className={`absolute top-4 right-4 sm:top-16 sm:right-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] rounded-lg transition-all duration-[800ms] ease-out ${
+              image3Visible ? "opacity-70 scale-100 rotate-[6deg] sm:rotate-[12deg]" : "opacity-0 scale-95 rotate-[10deg] sm:rotate-[18deg]"
+            }`}
+            style={{ width: 'auto', height: 'auto' }}
+          />
+          
+          {/* modal1.webp - sol alt - 4. sırada */}
           <img
             src="/modal1.webp"
             alt=""
-            className={`absolute bottom-12 left-4 sm:bottom-20 sm:left-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] rounded-lg transition-all duration-[2800ms] ease-out ${
-              isVisible ? "opacity-70 scale-100 rotate-[-6deg] sm:rotate-[-10deg]" : "opacity-0 scale-95 rotate-[-10deg] sm:rotate-[-16deg]"
+            className={`absolute bottom-12 left-4 sm:bottom-20 sm:left-12 w-auto h-auto max-w-[170px] max-h-[170px] sm:max-w-[280px] sm:max-h-[280px] rounded-lg transition-all duration-[800ms] ease-out ${
+              image4Visible ? "opacity-70 scale-100 rotate-[-6deg] sm:rotate-[-10deg]" : "opacity-0 scale-95 rotate-[-10deg] sm:rotate-[-16deg]"
             }`}
             style={{ width: 'auto', height: 'auto' }}
           />
