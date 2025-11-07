@@ -1,0 +1,402 @@
+[
+  {
+    "slug": "1-tadim-gunu",
+    "title": "Tadım Günü",
+    "images": [
+      {
+        "name": "moda_gezi_koop_v01_003_sosyal.jpg",
+        "path": "/etkinlikler/1-tadim-gunu/modagezikoopv01003sosyal.webp"
+      }
+    ],
+    "content": "/etkinlikler/1-tadim-gunu/tadm-gn-etkinlii.txt",
+    "content_type": "text",
+    "date": null,
+    "pdf_pages": []
+  },
+  {
+    "slug": "2-gida-krizi",
+    "title": "Gıda Krizi",
+    "images": [
+      {
+        "name": "gida_krizi_afis.jpg",
+        "path": "/etkinlikler/2-gida-krizi/gidakriziafis.webp"
+      }
+    ],
+    "content": "/etkinlikler/2-gida-krizi/abdullahaysusoylesi.txt",
+    "content_type": "text",
+    "date": null,
+    "pdf_pages": []
+  },
+  {
+    "slug": "root-3",
+    "title": "Viome İşçi Kooperatifi Belgeseli",
+    "images": [
+      {
+        "name": "3 Viome-işçi-kooperatifi-belgeseli.jpg",
+        "path": "/etkinlikler/root-3/3-viome-isci-kooperatifi-belgeseli.webp"
+      }
+    ],
+    "content": null,
+    "content_type": null,
+    "date": null,
+    "pdf_pages": [],
+    "thumbnail": "/etkinlikler/root-3/3-viome-isci-kooperatifi-belgeseli.webp"
+  },
+  {
+    "slug": "4-mst",
+    "title": "MST",
+    "images": [
+      {
+        "name": "MTS-facebook-banner.jpg",
+        "path": "/etkinlikler/4-mst/mts-facebook-banner.webp"
+      }
+    ],
+    "content": null,
+    "content_type": null,
+    "date": null,
+    "pdf_pages": [],
+    "thumbnail": "/etkinlikler/4-mst/mts-facebook-banner.webp"
+  },
+  {
+    "slug": "5-dukkan",
+    "title": "Dükkan",
+    "images": [
+      {
+        "name": "Dosya_000.jpeg",
+        "path": "/etkinlikler/5-dukkan/dosya000.webp"
+      },
+      {
+        "name": "banner_dukkan_acilis_2.jpg",
+        "path": "/etkinlikler/5-dukkan/bannerdukkanacilis2.webp"
+      }
+    ],
+    "content": null,
+    "content_type": null,
+    "date": null,
+    "pdf_pages": [],
+    "thumbnail": "/etkinlikler/5-dukkan/dosya000.webp"
+  },
+  {
+    "slug": "6-nyeleni",
+    "title": "Nyeleni",
+    "images": [],
+    "content": "/etkinlikler/6-nyeleni/nyeleni-rapor.txt",
+    "content_type": "text",
+    "date": null,
+    "pdf_pages": [
+      "/etkinlikler/6-nyeleni/nyeleni-2011-avrupa-gida-egemenligi-deklarasyonu-1-page-1.webp",
+      "/etkinlikler/6-nyeleni/nyeleni-2011-avrupa-gida-egemenligi-deklarasyonu-1-page-2.webp",
+      "/etkinlikler/6-nyeleni/nyeleni-2011-avrupa-gida-egemenligi-deklarasyonu-1-page-3.webp"
+    ],
+    "thumbnail": "/etkinlikler/6-nyeleni/nyeleni-2011-avrupa-gida-egemenligi-deklarasyonu-1-page-1.webp"
+  },
+  {
+    "slug": "root-7",
+    "title": "Kadıköy Kooperatifi 1. Yılını Kutluyor",
+    "images": [],
+    "content": "/etkinlikler/root-7/7-kadikoy-kooperatifi-1yilini-kutluyor-page-1.webp",
+    "content_type": "pdf",
+    "date": null,
+    "pdf_pages": [
+      "/etkinlikler/root-7/7-kadikoy-kooperatifi-1yilini-kutluyor-page-1.webp"
+    ],
+    "thumbnail": "/etkinlikler/root-7/7-kadikoy-kooperatifi-1yilini-kutluyor-page-1.webp"
+  },
+  {
+    "slug": "8-gida-krizi-atolye",
+    "title": "Gıda Krizi Atölye",
+    "images": [
+      {
+        "name": "Dosya_000.jpeg",
+        "path": "/etkinlikler/8-gida-krizi-atolye/dosya000.webp"
+      },
+      {
+        "name": "Dosya_001.jpeg",
+        "path": "/etkinlikler/8-gida-krizi-atolye/dosya001.webp"
+      }
+    ],
+    "content": "/etkinlikler/8-gida-krizi-atolye/1-gda-krizi-ve-gda-egemenlii.txt",
+    "content_type": "text",
+    "date": null,
+    "pdf_pages": []
+  },
+  {
+    "slug": "root-9",
+    "title": "Tarımın Geleceği Kısa Film Gösterimi",
+    "images": [
+      {
+        "name": "9-tarımın-geleceği-kısa-film-gösterimi.jpg",
+        "path": "/etkinlikler/root-9/9-tarimin-gelecegi-kisa-film-gosterimi.webp"
+      }
+    ],
+    "content": null,
+    "content_type": null,
+    "date": null,
+    "pdf_pages": [],
+    "thumbnail": "/etkinlikler/root-9/9-tarimin-gelecegi-kisa-film-gosterimi.webp"
+  },
+  {
+    "slug": "11-ekolojik-tarim-aracisiz-tuketim-atolyesi",
+    "title": "Ekolojik Tarım Aracısız Tüketim Atölyesi",
+    "images": [
+      {
+        "name": "IMG_3470.JPG",
+        "path": "/etkinlikler/11-ekolojik-tarim-aracisiz-tuketim-atolyesi/img3470.webp"
+      }
+    ],
+    "content": "/etkinlikler/11-ekolojik-tarim-aracisiz-tuketim-atolyesi/3-atlye-ekolojik-tarm-aracsz-tketim-atlye-raporu.txt",
+    "content_type": "text",
+    "date": null,
+    "pdf_pages": []
+  },
+  {
+    "slug": "12-gida-politikalari-ve-kooperatiflesme-atolyesi",
+    "title": "Gıda Politikaları Ve Kooperatifleşme Atölyesi",
+    "images": [
+      {
+        "name": "poster_atolye_alt1.jpg",
+        "path": "/etkinlikler/12-gida-politikalari-ve-kooperatiflesme-atolyesi/posteratolyealt1.webp"
+      }
+    ],
+    "content": "/etkinlikler/12-gida-politikalari-ve-kooperatiflesme-atolyesi/4kooperatifcilik.txt",
+    "content_type": "text",
+    "date": null,
+    "pdf_pages": []
+  },
+  {
+    "slug": "13-katilimci-sertifikasyon-egitimi",
+    "title": "Katılımcı Sertifikasyon Eğitimi",
+    "images": [
+      {
+        "name": "_DSC1854.JPG",
+        "path": "/etkinlikler/13-katilimci-sertifikasyon-egitimi/dsc1854.webp"
+      },
+      {
+        "name": "program.jpg",
+        "path": "/etkinlikler/13-katilimci-sertifikasyon-egitimi/program.webp"
+      }
+    ],
+    "content": null,
+    "content_type": null,
+    "date": null,
+    "pdf_pages": [],
+    "thumbnail": "/etkinlikler/13-katilimci-sertifikasyon-egitimi/dsc1854.webp"
+  },
+  {
+    "slug": "14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu",
+    "title": "Tüyap Artist 2017 Sanat Fuarı Gerçekçi Ütopyalar Katılım Raporu",
+    "images": [
+      {
+        "name": "NVLLVIS IN VERBA kiÅisinden fotoÄraf (3).jpg",
+        "path": "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/nvllvis-in-verba-kiisinden-fotoraf-3.webp"
+      },
+      {
+        "name": "NVLLVIS IN VERBA kiÅisinden fotoÄraf (2).jpg",
+        "path": "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/nvllvis-in-verba-kiisinden-fotoraf-2.webp"
+      },
+      {
+        "name": "NVLLVIS IN VERBA kiÅisinden fotoÄraf (5).jpg",
+        "path": "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/nvllvis-in-verba-kiisinden-fotoraf-5.webp"
+      },
+      {
+        "name": "NVLLVIS IN VERBA kiÅisinden fotoÄraf (4).jpg",
+        "path": "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/nvllvis-in-verba-kiisinden-fotoraf-4.webp"
+      },
+      {
+        "name": "NVLLVIS IN VERBA kiÅisinden fotoÄraf (7).jpg",
+        "path": "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/nvllvis-in-verba-kiisinden-fotoraf-7.webp"
+      },
+      {
+        "name": "NVLLVIS IN VERBA kiÅisinden fotoÄraf.jpg",
+        "path": "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/nvllvis-in-verba-kiisinden-fotoraf.webp"
+      },
+      {
+        "name": "NVLLVIS IN VERBA kiÅisinden fotoÄraf (6).jpg",
+        "path": "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/nvllvis-in-verba-kiisinden-fotoraf-6.webp"
+      },
+      {
+        "name": "NVLLVIS IN VERBA kiÅisinden fotoÄraf (1).jpg",
+        "path": "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/nvllvis-in-verba-kiisinden-fotoraf-1.webp"
+      }
+    ],
+    "content": "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/esas-oneri-rapor-page-1.webp",
+    "content_type": "pdf",
+    "date": null,
+    "pdf_pages": [
+      "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/esas-oneri-rapor-page-1.webp",
+      "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/esas-oneri-rapor-page-2.webp",
+      "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/esas-oneri-rapor-page-3.webp",
+      "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/esas-oneri-rapor-page-4.webp",
+      "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/esas-oneri-rapor-page-5.webp",
+      "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/esas-oneri-rapor-page-6.webp",
+      "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/esas-oneri-rapor-page-7.webp",
+      "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/esas-oneri-rapor-page-8.webp",
+      "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/esas-oneri-rapor-page-9.webp"
+    ],
+    "thumbnail": "/etkinlikler/14-tuyap-artist-2017-sanat-fuari-gercekci-utopyalar-katilim-raporu/esas-oneri-rapor-page-1.webp"
+  },
+  {
+    "slug": "root-15",
+    "title": "Üretici Denetim Çalıştayı Hazırlık Toplantısı",
+    "images": [],
+    "content": "/etkinlikler/root-15/15-ureticidenetimcalistayhazirliktoplantisi-page-1.webp",
+    "content_type": "pdf",
+    "date": null,
+    "pdf_pages": [
+      "/etkinlikler/root-15/15-ureticidenetimcalistayhazirliktoplantisi-page-1.webp",
+      "/etkinlikler/root-15/15-ureticidenetimcalistayhazirliktoplantisi-page-2.webp"
+    ],
+    "thumbnail": "/etkinlikler/root-15/15-ureticidenetimcalistayhazirliktoplantisi-page-1.webp"
+  },
+  {
+    "slug": "root-16",
+    "title": "Üretici Denetim Çalıştayı Hazırlık Toplantısı 2",
+    "images": [],
+    "content": "/etkinlikler/root-16/16-ureticidenetimcalistayhazirliktoplantisi2-page-1.webp",
+    "content_type": "pdf",
+    "date": null,
+    "pdf_pages": [
+      "/etkinlikler/root-16/16-ureticidenetimcalistayhazirliktoplantisi2-page-1.webp",
+      "/etkinlikler/root-16/16-ureticidenetimcalistayhazirliktoplantisi2-page-2.webp"
+    ],
+    "thumbnail": "/etkinlikler/root-16/16-ureticidenetimcalistayhazirliktoplantisi2-page-1.webp"
+  },
+  {
+    "slug": "root-17",
+    "title": "Gıda Toplulukları Çalıştayı",
+    "images": [
+      {
+        "name": "17 Gıda Toplulukları ÇAlıştayı.jpg",
+        "path": "/etkinlikler/root-17/17-gida-topluluklari-calistayi.webp"
+      }
+    ],
+    "content": null,
+    "content_type": null,
+    "date": null,
+    "pdf_pages": [],
+    "thumbnail": "/etkinlikler/root-17/17-gida-topluluklari-calistayi.webp"
+  },
+  {
+    "slug": "root-18",
+    "title": "Ürün Üretici Denetimi Çalıştayı",
+    "images": [],
+    "content": "/etkinlikler/root-18/18-urun-uretici-denetimi-calistayi.txt",
+    "content_type": "text",
+    "date": null,
+    "pdf_pages": []
+  },
+  {
+    "slug": "root-19",
+    "title": "Halk İçin Kooperatifleşme Çalıştayı",
+    "images": [
+      {
+        "name": "19 Halk için kooperatifleşme çalıştayı.jpg",
+        "path": "/etkinlikler/root-19/19-halk-icin-kooperatiflesme-calistayi.webp"
+      }
+    ],
+    "content": null,
+    "content_type": null,
+    "date": null,
+    "pdf_pages": [],
+    "thumbnail": "/etkinlikler/root-19/19-halk-icin-kooperatiflesme-calistayi.webp"
+  },
+  {
+    "slug": "root-20",
+    "title": "Karaburun Kongresi Raporu",
+    "images": [],
+    "content": "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-1.webp",
+    "content_type": "pdf",
+    "date": null,
+    "pdf_pages": [
+      "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-1.webp",
+      "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-2.webp",
+      "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-3.webp",
+      "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-4.webp",
+      "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-5.webp",
+      "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-6.webp",
+      "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-7.webp",
+      "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-8.webp",
+      "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-9.webp",
+      "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-10.webp"
+    ],
+    "thumbnail": "/etkinlikler/root-20/20-karaburun-kongresi-raporu-2-page-1.webp"
+  },
+  {
+    "slug": "21-zehirsiz-kisisel-bakim-ve-temizlik-urunleri-calistayi",
+    "title": "Zehirsiz Kişisel Bakım Ve Temizlik Ürünleri Çalıştayı",
+    "images": [
+      {
+        "name": "Ã§al1.jpeg",
+        "path": "/etkinlikler/21-zehirsiz-kisisel-bakim-ve-temizlik-urunleri-calistayi/al1.webp"
+      },
+      {
+        "name": "Ã§alÄ±Åtay1.jpeg",
+        "path": "/etkinlikler/21-zehirsiz-kisisel-bakim-ve-temizlik-urunleri-calistayi/altay1.webp"
+      }
+    ],
+    "content": "/etkinlikler/21-zehirsiz-kisisel-bakim-ve-temizlik-urunleri-calistayi/zehirsiz-kiisel-bakm-ve-temizlik-rnleri-altay-1-2-mart-2019-page-1.webp",
+    "content_type": "pdf",
+    "date": null,
+    "pdf_pages": [
+      "/etkinlikler/21-zehirsiz-kisisel-bakim-ve-temizlik-urunleri-calistayi/zehirsiz-kiisel-bakm-ve-temizlik-rnleri-altay-1-2-mart-2019-page-1.webp",
+      "/etkinlikler/21-zehirsiz-kisisel-bakim-ve-temizlik-urunleri-calistayi/zehirsiz-kiisel-bakm-ve-temizlik-rnleri-altay-1-2-mart-2019-page-2.webp",
+      "/etkinlikler/21-zehirsiz-kisisel-bakim-ve-temizlik-urunleri-calistayi/zehirsiz-kiisel-bakm-ve-temizlik-rnleri-altay-1-2-mart-2019-page-3.webp",
+      "/etkinlikler/21-zehirsiz-kisisel-bakim-ve-temizlik-urunleri-calistayi/zehirsiz-kiisel-bakm-ve-temizlik-rnleri-altay-1-2-mart-2019-page-4.webp",
+      "/etkinlikler/21-zehirsiz-kisisel-bakim-ve-temizlik-urunleri-calistayi/zehirsiz-kiisel-bakm-ve-temizlik-rnleri-altay-1-2-mart-2019-page-5.webp"
+    ],
+    "thumbnail": "/etkinlikler/21-zehirsiz-kisisel-bakim-ve-temizlik-urunleri-calistayi/zehirsiz-kiisel-bakm-ve-temizlik-rnleri-altay-1-2-mart-2019-page-1.webp"
+  },
+  {
+    "slug": "22-belgesel-gosterimi-topraktan-goge-devrimci-halkci-yerel-yonetim-deneyimleri",
+    "title": "Belgesel Gösterimi Topraktan Göğe Devrimci Halkçı Yerel Yönetim Deneyimleri",
+    "images": [
+      {
+        "name": "f8377b60-4349-44df-8312-d49fa81dddba.JPG",
+        "path": "/etkinlikler/22-belgesel-gosterimi-topraktan-goge-devrimci-halkci-yerel-yonetim-deneyimleri/f8377b60-4349-44df-8312-d49fa81dddba.webp"
+      },
+      {
+        "name": "b25c3eb1-62a5-4d9c-ad82-778e95e1c729.JPG",
+        "path": "/etkinlikler/22-belgesel-gosterimi-topraktan-goge-devrimci-halkci-yerel-yonetim-deneyimleri/b25c3eb1-62a5-4d9c-ad82-778e95e1c729.webp"
+      }
+    ],
+    "content": null,
+    "content_type": null,
+    "date": null,
+    "pdf_pages": [],
+    "thumbnail": "/etkinlikler/22-belgesel-gosterimi-topraktan-goge-devrimci-halkci-yerel-yonetim-deneyimleri/f8377b60-4349-44df-8312-d49fa81dddba.webp"
+  },
+  {
+    "slug": "root-23",
+    "title": "Şirketlerden Kooperatiflere Rekabetten Dayanışmaya Kitabı Yazarlarla Söyleşi",
+    "images": [
+      {
+        "name": "23-Şirketlerden Kooperatiflere Rekabetten Dayanışmaya Kitabı-Yazarlarla söyleşi.png",
+        "path": "/etkinlikler/root-23/23-sirketlerden-kooperatiflere-rekabetten-dayanismaya-kitabi-yazarlarla-soylesi.webp"
+      }
+    ],
+    "content": null,
+    "content_type": null,
+    "date": null,
+    "pdf_pages": [],
+    "thumbnail": "/etkinlikler/root-23/23-sirketlerden-kooperatiflere-rekabetten-dayanismaya-kitabi-yazarlarla-soylesi.webp"
+  },
+  {
+    "slug": "24-fatih-mehmet-macoglu-kooperatif-ziyareti",
+    "title": "Fatih Mehmet Maçoğlu Kooperatif Ziyareti",
+    "images": [
+      {
+        "name": "WhatsApp Image 2024-02-18 at 18.37.28.jpeg",
+        "path": "/etkinlikler/24-fatih-mehmet-macoglu-kooperatif-ziyareti/whatsapp-image-2024-02-18-at-183728.webp"
+      },
+      {
+        "name": "20240218_172420.jpg",
+        "path": "/etkinlikler/24-fatih-mehmet-macoglu-kooperatif-ziyareti/20240218172420.webp"
+      }
+    ],
+    "content": null,
+    "content_type": null,
+    "date": null,
+    "pdf_pages": [],
+    "thumbnail": "/etkinlikler/24-fatih-mehmet-macoglu-kooperatif-ziyareti/whatsapp-image-2024-02-18-at-183728.webp"
+  }
+]

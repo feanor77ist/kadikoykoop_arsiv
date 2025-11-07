@@ -1,0 +1,87 @@
+Ürün Üretici Denetimi Çalıştayı
+Tarih: 03.12.2017
+Katılımcılar: Kadıköy Kooperatifi, Yeryüzü Derneği, Bükoop, Anadoluda Yaşam Kooperatifi, Koşuyolu Kooperatifi Girişimi, Beşiktaş Kooperatifi Girişimi, Göztepe Mahalle Birimi, Yeşil Gıda Topluluğu, KMO
+Gündemler:
+1-Ortak bilgi havuzu nasıl oluşturulur?
+2-Temizlik ürünlerinde nelere dikkat edilmeli?
+3-Gıda ürünleri nasıl tasnif edilmeli, hangi kurumlarla ortak çalışılmalı?
+4-Ortak lojistik nasıl sağlanabilir?
+Tanışma sonrası ilk gündeme geçildi, Utku arkadaşımız konuyla ilgili Bükoop ile ortak olarak oluşturdukları sunumu yaptı…
+1-Ortak bilgi havuzu nasıl oluşturulur?
+Ortak bilgi havuzu istenen bilginin rahatlıkla çekilebileceği excelde yapılacak makro bir yazılımla yapılabilir.
+Üretici ile ilgili bilgilere üreticinin kimden öğrenildiği kısmı eklenebilir.
+Google uzun vadede hantal kalabilir, web tabanlı bir uygulama geliştirilebilir. Ortak veri tabanı için çalışma yapabiliriz.
+Ortak veri tabanında ziyaret raporlarında mükerrerlik olabilir, konvansiyonel tarım konusunda sorun yaşayabiliriz bu sorunları nasıl aşacağız?
+Web tabanlı hazır bir uygulama var, ihtiyacı belirleyip onlardan destek isteyebiliriz, bu konuda çalışan Özgür Narin iletişim konusunda bize destek olabilir. 
+Bazen tek eposta yeterli olmuyor, ikinci eposta bilgisi eklenebilir, iletişim tercihi diye bir sekme eklenebilir (kimi üreticiler eposta kullanmıyor, kimleri whatsapp tercih edebiliyor vb.) Dosya adı ve genel bir klasör formatı oluşturulabilir ki dosya adı referansıyla birlikte açılabilir, son güncelleme tarihi konulabilir, üretici ziyaretleriyle ilgili bir iletişim ağı kurulabilir, hali hazırda topluluk destekli tarım ağı sayfası var yürütücülüğünü Yeryüzü Derneği yapıyor, bu sayfada farklı gruplara editörlük verilebilir, üreticilerle ilgili bilgiler bu sayfaya girilebilir, ortak bir eposta grubu kurulursa üretici ziyaretlerine gidecekler için sorular ortaklaştırılabilir. Üreticilerle yaşanan sorunlarla ilgili olarak güven temelli bir ilişki kuruyoruz üreticilerle, hepimiz sorumluyuz…
+Özellikle bu dönemde artan bilgi kirliliğine karşı gıda toplulukları ve kooperatifler çok önemli bir noktada yer alıyorlar. Gıda konusunda çalışan aktivist ve toplulukların artması ile ortak bilgiyi oluşturma ve hiyerarşik olmadan paylaşma gibi bir sorumluluğumuz var. Gıda meselesi bir çekim merkezi olabilirse, kentte komşuluk ilişkileri yeniden tesis edilebilir.
+Yeryüzü Derneği tüm çalışmalarını excel üzerinden yapıyor, ara bir yazılım yaptık. Dilerseniz bu yazılımı da ortaklaştırabiliriz.
+Tarım modelini kategori etmek zor, komple kaldırabiliriz, ürün-üretici formlarında ayrıntılı olarak verebiliriz.
+Form ve referans sürecini görebilmeliyiz.
+Klasörler üretici değil ürün bazlı olabilir. Örneğin peynir, bal klasörü gibi… Bir eposta grubu kurup onun üzerinden klasörlere erişim yetkisi tanımlanabilir.
+Ürünlerle ilgili olarak her bir grubun üretici sorumlusu da listeye eklenebilir…
+Sonuçlar: Her grubun kurumsal epostasının olacağı ama aynı zamanda eklenmek isteyen kişilerin de ekleneceği bir eposta grubu kurulacak. Her bir grup kendi içinde mail grubuna eklenmek isteyen kişileri belirleyip gönderecek… Bu konularla ilgili öneriler doğrultusunda, kısa, orta ve uzun vadeli bir program çıkarılarak bir sonraki toplantıda yeniden ele alınacak. 
+Kısa bir ara verildi ardından KMO’dan Işıl arkadaşımız bir sunum yaptı…
+2-Temizlik ürünlerinde nelere dikkat edilmeli?
+Yağlar yüksek sıcaklıkta distilasyona uğrarsa trans yağa dönüşürler. Yağların presleme yöntemiyle üretilmesi tercih edilmeli.
+Zehirsiz evde boraks içeren temizlik ürünleri kullanılıyor, boraks tehlikeli bir kimyasal kullanılmamalı.
+Lavabo açıcı yerine sirke karbonat karışımı kullanılıyor, burada da sirke oranını biraz fazla tutmak gerekir.
+Katı sabun üzerinde (özellikle renkli sabunlarda) çok beyazlama varsa kullanmamak gerekir, NaOH oranı fazla demektir. 
+Kullanılan ürünlerin doğada ayrışabiliyor olması önemli, aslına bakarsanız yüzümüze sürdüğümüz kremi bile yiyebiliyor olmamız gerekir…
+Islak mendil eli dezenfekte etmiyor, bakterilerin daha fazla yayılmasını sağlıyor, alkol bazlı ürünleri kullanarak bakterileri öldürebiliriz. Sirkeli su dezenfektan olarak kullanılıyor. 
+Cola pas temizleyici olarak kullanılır mı? İçerisinde CO2, fosforik asit var, asidik yapısı nedeniyle kullanılıyor olabilir.
+Zeytinyağı sabunu içinde kostik kullanmakta pek bir sorun yok ama ortamda kostik kalmaması lazım, miktar önemli. Salt yağ ile yapılan sabun köpürmez, kül oranına göre değişir.
+Şebeke suyuna klor katılması dezenfeksiyon için yapılıyor ama klor zararlı bir kimyasal, filtre kullanılırsa da filtre diğer mineralleri de götürüyor…
+Kooperatifte yer alan temizlik ürünleri ile ilgili üretici ziyaretlerinde nelere dikkat etmeliyiz? Temizlik ürününün üretildiği kaplara, saklandığı kaplara dikkat etmek gerekir. Ürün ile ilgili stabilize çalışmalarının yapılması gerekir. Ürün beklerken 3 ayda, 6 ayda, 1 yılda ne gibi değişikliklere uğruyor, ürün çözünümü ne zaman oluyor gibi analiz sertifikasyonlarının sağlanması gerekiyor. 
+Ürün etiketlerinde genellikle bileşimindeki maddelerin yüzde oranı yazmıyor, asıl zarar buradan geliyor.
+Temizlik ürünlerinde analiz raporu istenmeli mi? Analiz raporları oldukça pahalı, ölçülen değerler nem, ortam sıcaklığı gibi faktörlere bağlı olarak değişebiliyor. Etiket üzerinde şu sıcaklıkta, şu nemde saklanmalıdır gibi bir bilginin mutlaka olması lazım.
+Zarar gören ambalajlı ürünleri ortamdan uzaklaştırmak lazım.
+İSİG uzmanları gelip dükkana bakabilir ve dükkanın İSİG açısından ne riskleri içerdiğine dair rapor sunabilir.
+Temizlik ürünleri ile ilgili kullanıcılardan olumsuz bir geri bildirim gelirse karşılığında ne yapılması gerektiğinin de bilgisini edinmek lazım. Üreticilerin bu konuyla ilgili bilgi verebiliyor olması lazım.
+Sonuçlar: Temizlik ürünlerinde bir alternatif önerilmesi pek mümkün değil, üretim koşulları, analiz testleri yapılması lazım. Ürün etiketi üzerinde detaylı bilgilerin olması gerekiyor. KMO ürün etiketleri konusunda destek olacağını belirtti.
+Temizlik ürünleri sunumu ardından Elif arkadaşımız ürün-üreticilerle nasıl çalışıldığına ve yeni formların oluşturulmasına dair bir sunum yaptı.
+3-Gıda ürünleri nasıl tasnif edilmeli, hangi kurumlarla ortak çalışılmalı?
+Kadıköy Kooperatifi ürün-üretici formu oluşturma süreçlerine dair bilgi aktarımında neler sorulduğu, sorarken neleri öğrendiklerini, üreticileri gönderilen formları, bu formları hangi kurumlarla neleri gözeterek hazırladıklarını aktardı.
+Kadıköy Kooperatifi aktarımını ''Bu formları ortak bir birikim ve çalışmayla bir standarda bağlayabilir miyiz?'' sorusuyla tartışmaya açtı.
+Üreticilerden gelen beyan üzerine Çiftçi-Sen ve ZMO’yu arıyoruz ama bu yapılarında yaygın ve geniş bir ağları yok. Değerlendirmeyi neye göre yapacağız? Diğer illerdeki oluşumlarla bir grup kurulabilir.
+Formlarla ilgili kafamızda sorular oluştuğunda odalar ve sendikadan bilgi alabiliyoruz.
+Gıda meselesi politikleşti. Alanda çalışan bizlerin sıkıştığı konu onlarca üreticiden talep gelmesi meselesi. Birbirimizin üretici havuzunu ortaklaştırdığımız zaman alım süreci diğer kooperatifler içinde kolaylaşır. Bu alanda çalışanların farklılıklarını, üretici formlarında nelere dikkat ettiklerini her bir grubun kendi formlarını paylaşmasıyla anlayabileceğiz. Türkiye ölçeğinden önce İstanbul ölçeğinde bir araya gelip gelecek dönem ortaklaşa yapabileceklerimizi önümüze koymalıyız.
+Formlara her grup kendi önceliğine göre bakabilir.
+Küçük üreticiyi destekliyoruz ama bilmeliyiz ki küçük üreticide çocuk işçiliği vardır. Örgütlü üretici ile çalışmayı ilkesel bir tutum olarak hedefleyebilir miyiz? Bir araya gelmekle birlikte merkezileşme hiyerarşiyi getirecektir.
+Deneyimlerimizi ortaklaştırmalı, denetimi toplumsallaştırmalıyız. Tek başına bir örgüt veya sendikanın denetimi değil, üretici ve tüketicilerin yerelini denetlemesi, birbirinden öğrenmesi ve bu bilgileri arşivlemesi önemli. Kentte zaman ayırmak zor oluyor ama üretici ziyaretleri en önemli nokta, bu konuyu ortaklaştırmamız çok önemli, üretici ile organik bağları ziyaretlerle pekiştirmeli, güven ilişkisini sağlamlaştırmalıyız.
+Yerellerle konuşup farklı bölgelerdeki gruplarla etkileşimi artıralım. Bizim deneyimlerimizi, bilgilerimizi o gruplarla paylaşalım.
+Üretici denetiminde son nokta güvene kalıyor. Belki bazı ürünlere test yaptırabiliriz.
+Bugün konuştuğumuz böyle bir sistemi hayata geçirebilirsek içimiz rahat olur.
+Her kurum kendi güvenini sağladığı üreticiyi ortak bilgi havuzuna attığında toplamda güven sağlanmış olabilir. Üreticiyle konuşurken kapasite meselesi önemli. Kendi kapasitesinin üzerinde ürün yolluyorsa düşünmek lazım. Bir de ekosistem bir bütün, küçük üreticinin tek başına ekolojik/organik tarım yapması ne kadar mümkün?
+Bizden ürün alanlara bu çalışmalarda gönüllü olduğumuzu ve tek sorumlunun bizler olmadığımızı söylemeliyiz.
+Güven oluşturmalı, ortaklaşa üretici ziyareti düzenlemeli ama aynı zamanda üreticiyi ekolojik üretim konusunda teşvik de etmek gerekir.
+Katılımcı sertifikasyon eğitimi aldık, birlikte çalışmayı ve bu sistemi geliştirmeyi birlikte konuşalım. Tüm bileşenlerin dahil olduğu böyle bir sistemi bizler hayata geçirebiliriz.
+Gıda meselesine tek taraflı bakmamak lazım, kontrol edilmesi güç bir alan.
+Türetici ve üreticileri sisteme dahil etmek lazım. Şeffaf ve herkese açık bir uygulama olması katılımcılığı artırır. Sadece kendi eksenimizde bakmamak gerekir. Sosyal medyadan duyurarak üreticilerin ziyaret edilmesine hizmet edebiliriz.
+Örgütlü, küçük üreticilerle çalışmak Çiftçi-senin dediği gibi köylüyü birbirine zimmetlemek ve karşılıklı güveni geliştirmek, tekil üreticileri örgütlenmeye teşvik etmek gibi bir sonucu olacaktır bir araya gelmenin ve ortak alım yapmanın.
+Ekolojik ürün kısmı gözümüzü korkutmasın, tüketici zaten marketten alıyor kentte, bizim ürünlerimiz market ürünlerine göre en az yüzde 50 ekolojik ürün.
+Sorunun bir parçası olmak lazım. Etik değerleri ortaya koymak lazım. Fon veya bütçe yaratıp ürünlerin analizlerini yaptırmak lazım. Gıda maddelerine ilaç muamelesi yapmak gerekiyor.
+Sonuçlar: Bu konuda ilk gündem maddesi gibi ortak ürün havuzu oluşturulmasına bağlı olarak gelen öneriler doğrultusunda yeniden konuşulacak.
+
+Kısa bir ara sonrası Selma D. arkadaşımız ortak lojistik konusunda bir giriş konuşması yaptı, Bükoop ile ortak mercimek alımı ile ilgili Elif ve Çetin arkadaşlar da bilgilendirme yaptılar…
+4-Ortak lojistik nasıl sağlanabilir?
+Kadıköy Kooperatifinin yaşadığı deneyimlerden yola çıkarak ve öncelikle nakliye konusundaki örnekleri vermeye çalıştık. Bu örneklerde Mercimekte yaşadığımız BÜKoop ile ortak alımımız ve mercimek dışında fındık ile ilgilide Koşuyolu Kooperatif Girişimi ile ortaklaşılan ürün alım sürecini aktardık. Daha sonra form tarzında konuşmalar başladı.
+Nakliyenin ortaklaştırılması ortak sipariş verilmesi ile paralel gidebilir. Bu konuda Anadoluda Yaşam, 2 ad deposunun ortak kullanılabileceğini söyledi. Daha önce Anadoluda Yaşam Tümtis ile çalışmış. “Onların bizim ürün alacağımız yerden gelen boş kamyonuna ürün yükledik ve getirttik. Yeniden Tümtis ile ilişki kurulabilir. Bizler ürünü depolama değil gelir gelmez ortaklara dağıtma şeklinde çalışıyoruz. Ortak alım hem kargo maliyetlerini düşürür hem de üreticinin ürünü elinde kalmamış olur.” diye eklediler.
+Eğer ürünleri toplu siparişle alımını gerçekleştirip ürünleri depolayacaksak saklama koşulları ile ilgili bilgi toplamalıyız. Bu konuda bilgileri toparlayabiliriz. Ortak alımla toplu alım garantisi verilebilir ve bu sayede yerli tohumlarla üretilsin, üretici için taban fiyatını karşılayabiliriz. Ön alım garantisi vermek üreticiyi dönüştürmenin bir yolu olabilir. Belki bu konuda çalışan kooperatifler bir araya gelerek bir üst birlik oluşturabilir.
+Dükkan açılmadan önce anket yapıp yerelimizde hangi ürünlere talep oluyor onu belirledik. Dükkana gelen taleplerden de üretici arayışına girdik. Bu konuda çalışmaya başlayanlar anket yapabilirler.
+Bu çalıştaya katılan gruplar olarak ortak bir depo tutabiliriz, saklama koşulları uygunsa Anadoluda Yaşam Kooperatifinin deposunu da kullanabiliriz. Her birimiz kısa zamanlı depoya ihtiyaç duyuyoruz. Mevsiminde tüketmek gibi bir argümanımız var.
+Soğuk hava deposu olabilir mi? İkisi bir arada olabiliyor mu?
+Ortak lojistik ve depolama konusu hepimizin ortak sorunu bunu ötelemeyelim bir program yapalım.
+Her ay verdiğimiz siparişlerde ortaklaşabiliriz. Yine sezonluk ürünlerde ortak alım yapabilir, ortak nakliye ile getirebiliriz.
+Katılımcılardan bir arkadaş, toplu alımın, mono kültürü arttırıp tek tipleştirir endişesinde bir eleştiri sundu. Küçük üreticinin üretim kapasitesi yeterli değilse diğer üreticilerden alıp göndermesini tetikleyebilir.
+Sonuçlar: Bu konuda çeşitli görüşler ortaya atılsa da net bir sonuç çıkarılamadı. İletişim grubu üzerinden önerilere ve somutlamaya devam edebiliriz dendi. Ancak aşağıdaki öneriler sıralandı;
+· Somut bir ürün belirleyip, ortak çalışmaya başlamakta fayda var. Bu ürün hasatı gelen ve yılın belli döneminde alınması gereken ürünler olabilir
+· Hali hazırda aldığımız ve katılımcı olan tüm kooperatif ve kolektiflerin aldığı bir ürün seçilip ortak alım ve nakliye yolları denenebilir.
+· Ortak depo maliyetleri bakılabilir belki soğuk hava deposu ve kira bedelleri bakılabilir.
+· Ürünlerin depolama koşulları hakkında bilgi toplanabilir.
+· Nakliye için Tümtis ve Nakliye-iş ile görüşülebilir.
+· Buradan bir çalışma grubu kuralım ve ileriye yönelik çalışma hazırlıkları oluşturulabilir
+
+
+
+
