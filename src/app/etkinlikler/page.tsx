@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Navigation from "../components/Navigation";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import Script from "next/script";
 import etkinliklerData from "../../../public/etkinlikler/etkinlikler.json";
 
 interface Etkinlik {
@@ -25,6 +26,39 @@ export default function Etkinlikler() {
   const itemsPerPage = 12; // Her sayfada gösterilecek öğe sayısı
   const [loadedEmbeds, setLoadedEmbeds] = useState<Set<string>>(new Set());
   const embedRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+
+  const processInstagramEmbeds = useCallback(() => {
+    if (typeof window === "undefined") return;
+    const instgrm = (window as any).instgrm;
+    if (instgrm && instgrm.Embeds) {
+      try {
+        instgrm.Embeds.process();
+      } catch (error) {
+        // ignore
+      }
+    }
+  }, []);
+
+  const processFacebookEmbeds = useCallback(() => {
+    if (typeof window === "undefined") return;
+    const FB = (window as any).FB;
+    if (FB && FB.XFBML) {
+      try {
+        FB.XFBML.parse();
+      } catch (error) {
+        // ignore
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!document.getElementById("fb-root")) {
+      const fbRoot = document.createElement("div");
+      fbRoot.id = "fb-root";
+      document.body.appendChild(fbRoot);
+    }
+  }, []);
   
   const etkinlikler = etkinliklerData as Etkinlik[];
   const toplamEtkinlik = etkinlikler.length;
@@ -121,293 +155,201 @@ export default function Etkinlikler() {
     };
   }, [currentPage]); // Sadece sayfa değiştiğinde yeniden kur
 
-  // Embed script'lerini yükle (sadece görünür embed'ler olduğunda)
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    
-    // Instagram embed script
-    const loadInstagram = () => {
-      const processEmbeds = () => {
-        if ((window as any).instgrm && (window as any).instgrm.Embeds) {
-          try {
-            // Instagram script'i tüm sayfadaki embed'leri işler
-            // Hata yakalama ile güvenli hale getiriyoruz
-            (window as any).instgrm.Embeds.process();
-          } catch (e) {
-            // Hata olursa görmezden gel (muhtemelen element zaten kaldırılmış veya DOM değişmiş)
-            // Bu normal bir durum, sayfa değişirken olabilir
-          }
-        }
-      };
-      
-      if ((window as any).instgrm) {
-        // Zaten yüklüyse direkt process et
-        setTimeout(processEmbeds, 200);
-        return;
-      }
-      
-      // Script yüklü değilse yükle
-      const existingScript = document.querySelector('script[src*="instagram.com/embed.js"]');
-      if (existingScript) {
-        // Script yükleniyor, bekle
-        const checkInterval = setInterval(() => {
-          if ((window as any).instgrm) {
-            processEmbeds();
-            clearInterval(checkInterval);
-          }
-        }, 300);
-        setTimeout(() => {
-          clearInterval(checkInterval);
-          processEmbeds(); // Son bir deneme
-        }, 5000);
-        return;
-      }
-      
-      const script = document.createElement("script");
-      script.src = "https://www.instagram.com/embed.js";
-      script.async = true;
-      script.onload = () => {
-        setTimeout(processEmbeds, 300);
-      };
-      script.onerror = () => {
-        console.error('Instagram embed script yüklenemedi');
-      };
-      document.body.appendChild(script);
-    };
-    
-    // Facebook SDK
-    const loadFacebook = () => {
-      // fb-root oluştur
-      if (!document.getElementById('fb-root')) {
-        const fbRoot = document.createElement('div');
-        fbRoot.id = 'fb-root';
-        document.body.appendChild(fbRoot);
-      }
-      
-      if ((window as any).FB) {
-        // Zaten yüklüyse direkt parse et
-        setTimeout(() => {
-          (window as any).FB.XFBML.parse();
-        }, 100);
-        return;
-      }
-      
-      // fbAsyncInit zaten tanımlı mı kontrol et
-      if ((window as any).fbAsyncInit) {
-        // SDK yükleniyor, bekle
-        const checkInterval = setInterval(() => {
-          if ((window as any).FB) {
-            (window as any).FB.XFBML.parse();
-            clearInterval(checkInterval);
-          }
-        }, 200);
-        setTimeout(() => clearInterval(checkInterval), 10000);
-        return;
-      }
-      
-      (window as any).fbAsyncInit = function() {
-        (window as any).FB.init({
-          xfbml: true,
-          version: "v18.0"
-        });
-        setTimeout(() => {
-          (window as any).FB.XFBML.parse();
-        }, 100);
-      };
-      
-      const existingScript = document.querySelector('script[src*="facebook.net"]');
-      if (existingScript) {
-        return;
-      }
-      
-      const script = document.createElement("script");
-      script.src = "https://connect.facebook.net/tr_TR/sdk.js";
-      script.async = true;
-      script.defer = true;
-      script.crossOrigin = "anonymous";
-      document.body.appendChild(script);
-    };
-    
-    // Sadece görünür embed'ler varsa script'leri yükle
-    if (loadedEmbeds.size > 0) {
-      loadInstagram();
-      loadFacebook();
-      
-      // Biraz sonra tekrar dene (embed'ler render edildikten sonra)
-      const timer1 = setTimeout(() => {
-        loadInstagram();
-        loadFacebook();
-      }, 500);
-      
-      // Daha sonra tekrar dene (embed'ler tam yüklensin diye)
-      const timer2 = setTimeout(() => {
-        loadInstagram();
-        loadFacebook();
-      }, 2000);
-      
-      return () => {
-        clearTimeout(timer1);
-        clearTimeout(timer2);
-      };
+    if (loadedEmbeds.size === 0) {
+      return;
     }
-  }, [currentPage, loadedEmbeds]); // Sayfa değiştiğinde veya yeni embed'ler görünür olduğunda
 
-  // Sosyal medya postları (ters sırada - en eskiden en yeniye)
-  const socialMediaPosts: SocialMediaPost[] = [
-    // Instagram (ters sırada)
-    { type: "instagram", url: "https://www.instagram.com/p/BgbMiI-AFOA/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BfnlthhAeom/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BfYS-3UgL6z/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bb69vLPAOkh/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BceauqPljK1/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bcesd_El9An/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BbFJFkxgf4G/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BbRNtLfg3id/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BbHDeuag9Gk/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BbHJdvkAxJg/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BbCnbdKgPVc/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BbHACJ5gZ-U/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BbHBZ-2Amtb/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BiB6rA3hwgw/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BiUPSr2hkl7/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BimUmVRBG14/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BiweUYWhAhp/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BiZqmuJh8cu/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bjhsf1mhRDs/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bjui9MABP5_/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Blxi77rhhtu/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BlnLWM2hkeK/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bnd9y_whx59/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BndTvXph_fs/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bna-p8nhIjx/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BnVw_s2Bkd6/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BnVX6E-BsyU/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BnUFjkMhw5z/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BnvkeiXhjTD/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BnlggKchvfw/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BnyyfMYBTKz/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bn5wFZBBV_C/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BoTaCfIhuwn/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Boq3zpChd_L/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BpGtQOJBxCL/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BpHHpkAhWMM/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BpRbLfGhcnV/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BqSCpEpBrsR/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BqSCA-3hqQM/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BqMzVocBlE6/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BqnUk3zlkSB/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BrLWyzKh6jB/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BrSrhlDh5oz/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BrU6DVih_ul/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bq_0GNegJon/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BrcfrUcBK26/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BrcxxPehRRP/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BrpcXcfhEAS/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/Brhnq5SBTVL/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BrsepAwhl-x/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/Br-e1DSBWjb/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BsM9qPvhGjL/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BsjUdHuhJP-/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bsd05ZPhxl_/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bs21QV1BWX9/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bs3WuQkhnlJ/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BvCD6eGgMp2/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/BuKDgKggXBL/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bw7bSydAa-y/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BxAXPAiAhYc/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BxsNgQ7BF9j/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bx7EOgsgCnQ/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bx47PhfgR9v/" },
-    { type: "instagram", url: "https://www.instagram.com/p/BzLs12SgaVC/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Bz-2OukAV_7/" },
-    { type: "instagram", url: "https://www.instagram.com/p/B1wdY1Ig_i5/" },
-    { type: "instagram", url: "https://www.instagram.com/p/B184AMTgEhg/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/B2H3y3MACvn/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/B2Eo4f-gm5y/" },
-    { type: "instagram", url: "https://www.instagram.com/p/B2EbWi4gb1y/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/B1s3yEOgImz/" },
-    { type: "instagram", url: "https://www.instagram.com/p/B2WyHQ3ABwS/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/B2mU0KFA2uU/" },
-    { type: "instagram", url: "https://www.instagram.com/p/B2y0FZ7A17c/" },
-    { type: "instagram", url: "https://www.instagram.com/p/B4DfA69A8i7/" },
-    { type: "instagram", url: "https://www.instagram.com/p/B3gxHnyAAVN/" },
-    { type: "instagram", url: "https://www.instagram.com/p/B3CNfbGAADW/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/B5xHDOqAabc/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/B55W9VVg2z_/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/B4hSKvDA7aZ/" },
-    { type: "instagram", url: "https://www.instagram.com/p/B9ELYUGAgfU/" },
-    { type: "instagram", url: "https://www.instagram.com/p/B_qLKiNAVVh/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CBNSYe9gVMg/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CBkvU81Ad6s/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CCTlDeOg9n9/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CIyXfsMg8b6/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CJ1bnKugj2C/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CKrABIzAJn9/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CLXD3HlAkYx/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CLoQxTmgcFq/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CMeVOxwgn__/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CMosJxJAuS5/" },
-    { type: "instagram", url: "https://www.instagram.com/p/COUp5wVAyLm/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CPQCqOGgjKW/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CPTN7NLAhzP/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CUPbrrIgBC4/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/CUlEmbLg9dS/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CUhGI1bgzRA/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CWxlxZQgkuP/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/Cakx_b3ggkr/?img_index=6" },
-    { type: "instagram", url: "https://www.instagram.com/p/CaffbzOgzRx/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CdyFEsaIgyk/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CdyHHuVAkQM/" },
-    { type: "instagram", url: "https://www.instagram.com/p/Cd3BIghgWC_/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/Cd2yXqcgUYl/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CdsXlOQo1ov/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/Cfgx9NXN3xO/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CgE_11FjNUv/?img_index=1" },
-    { type: "instagram", url: "https://www.instagram.com/p/ChHkuyEsgrc/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CjC8_Y3gnuq/" },
-    { type: "instagram", url: "https://www.instagram.com/p/ClbbKo7ITwG/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CmObgnVIDKZ/" },
-    { type: "instagram", url: "https://www.instagram.com/p/CrBtHZsImjQ/?img_index=1" },
-    
-    // Facebook (ters sırada)
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=503253196502896&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/539950582833157/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/624327367728811/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=671735896321291&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=671735852987962&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=671735842987963&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/711096515718562/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=722770471217833&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/722763884551825/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/759358317559048/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=759824510845762&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/783741218454091/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/954780418016836/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/965086120319599/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=1084385011723042&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=1084384901723053&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=1084384898389720&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=1191460144348861&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1191460067682202/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1191460007682208/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1344643882363819/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=1406382116189995&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=1406382036190003&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=1406344052860468&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1433904750104398/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1665756756919195/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1902890536539148/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=2061953180632882&set=pb.100064533318835.-2207520000" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/2263829583778573/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/2298477860313745/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/2341720615989469/?type=3" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=634352045392567&set=a.551917883635984" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=668531765307928&set=pcb.668531765307928" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=784979283663175&set=pcb.784979283663175" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=800078732153230&set=pcb.800078732153230" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=800151898812580&set=pcb.800151898812580" },
-    { type: "facebook", url: "https://www.facebook.com/photo/?fbid=828660225961747&set=pcb.828660225961747" },
+    const instagramRetry = setTimeout(() => {
+      processInstagramEmbeds();
+    }, 250);
+
+    const facebookRetry = setTimeout(() => {
+      processFacebookEmbeds();
+    }, 250);
+
+    return () => {
+      clearTimeout(instagramRetry);
+      clearTimeout(facebookRetry);
+    };
+  }, [loadedEmbeds, processFacebookEmbeds, processInstagramEmbeds]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      processInstagramEmbeds();
+      processFacebookEmbeds();
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [currentPage, processFacebookEmbeds, processInstagramEmbeds]);
+
+  const instagramPostUrls = [
+    "https://www.instagram.com/p/CrBtHZsImjQ/?img_index=1",
+    "https://www.instagram.com/p/CmObgnVIDKZ/",
+    "https://www.instagram.com/p/ClbbKo7ITwG/",
+    "https://www.instagram.com/p/CjC8_Y3gnuq/",
+    "https://www.instagram.com/p/ChHkuyEsgrc/",
+    "https://www.instagram.com/p/CgE_11FjNUv/?img_index=1",
+    "https://www.instagram.com/p/Cfgx9NXN3xO/",
+    "https://www.instagram.com/p/CdsXlOQo1ov/?img_index=1",
+    "https://www.instagram.com/p/Cd2yXqcgUYl/",
+    "https://www.instagram.com/p/Cd3BIghgWC_/?img_index=1",
+    "https://www.instagram.com/p/CdyHHuVAkQM/",
+    "https://www.instagram.com/p/CdyFEsaIgyk/",
+    "https://www.instagram.com/p/CaffbzOgzRx/",
+    "https://www.instagram.com/p/Cakx_b3ggkr/?img_index=6",
+    "https://www.instagram.com/p/CWxlxZQgkuP/?img_index=1",
+    "https://www.instagram.com/p/CUhGI1bgzRA/",
+    "https://www.instagram.com/p/CUlEmbLg9dS/",
+    "https://www.instagram.com/p/CUPbrrIgBC4/?img_index=1",
+    "https://www.instagram.com/p/CPTN7NLAhzP/",
+    "https://www.instagram.com/p/CPQCqOGgjKW/",
+    "https://www.instagram.com/p/COUp5wVAyLm/",
+    "https://www.instagram.com/p/CMosJxJAuS5/",
+    "https://www.instagram.com/p/CMeVOxwgn__/",
+    "https://www.instagram.com/p/CLoQxTmgcFq/",
+    "https://www.instagram.com/p/CLXD3HlAkYx/",
+    "https://www.instagram.com/p/CKrABIzAJn9/",
+    "https://www.instagram.com/p/CJ1bnKugj2C/",
+    "https://www.instagram.com/p/CIyXfsMg8b6/",
+    "https://www.instagram.com/p/CCTlDeOg9n9/",
+    "https://www.instagram.com/p/CBkvU81Ad6s/",
+    "https://www.instagram.com/p/CBNSYe9gVMg/",
+    "https://www.instagram.com/p/B_qLKiNAVVh/",
+    "https://www.instagram.com/p/B9ELYUGAgfU/",
+    "https://www.instagram.com/p/B4hSKvDA7aZ/",
+    "https://www.instagram.com/p/B55W9VVg2z_/?img_index=1",
+    "https://www.instagram.com/p/B5xHDOqAabc/?img_index=1",
+    "https://www.instagram.com/p/B3CNfbGAADW/?img_index=1",
+    "https://www.instagram.com/p/B3gxHnyAAVN/",
+    "https://www.instagram.com/p/B4DfA69A8i7/",
+    "https://www.instagram.com/p/B2y0FZ7A17c/",
+    "https://www.instagram.com/p/B2mU0KFA2uU/",
+    "https://www.instagram.com/p/B2WyHQ3ABwS/?img_index=1",
+    "https://www.instagram.com/p/B1s3yEOgImz/",
+    "https://www.instagram.com/p/B2EbWi4gb1y/?img_index=1",
+    "https://www.instagram.com/p/B2Eo4f-gm5y/",
+    "https://www.instagram.com/p/B2H3y3MACvn/?img_index=1",
+    "https://www.instagram.com/p/B184AMTgEhg/?img_index=1",
+    "https://www.instagram.com/p/B1wdY1Ig_i5/",
+    "https://www.instagram.com/p/Bz-2OukAV_7/",
+    "https://www.instagram.com/p/BzLs12SgaVC/",
+    "https://www.instagram.com/p/Bx47PhfgR9v/",
+    "https://www.instagram.com/p/Bx7EOgsgCnQ/?img_index=1",
+    "https://www.instagram.com/p/BxsNgQ7BF9j/",
+    "https://www.instagram.com/p/BxAXPAiAhYc/",
+    "https://www.instagram.com/p/Bw7bSydAa-y/",
+    "https://www.instagram.com/p/BuKDgKggXBL/",
+    "https://www.instagram.com/p/BvCD6eGgMp2/?img_index=1",
+    "https://www.instagram.com/p/Bs3WuQkhnlJ/",
+    "https://www.instagram.com/p/Bs21QV1BWX9/",
+    "https://www.instagram.com/p/Bsd05ZPhxl_/",
+    "https://www.instagram.com/p/BsjUdHuhJP-/?img_index=1",
+    "https://www.instagram.com/p/BsM9qPvhGjL/?img_index=1",
+    "https://www.instagram.com/p/Br-e1DSBWjb/",
+    "https://www.instagram.com/p/BrsepAwhl-x/?img_index=1",
+    "https://www.instagram.com/p/Brhnq5SBTVL/",
+    "https://www.instagram.com/p/BrpcXcfhEAS/?img_index=1",
+    "https://www.instagram.com/p/BrcxxPehRRP/?img_index=1",
+    "https://www.instagram.com/p/BrcfrUcBK26/?img_index=1",
+    "https://www.instagram.com/p/Bq_0GNegJon/",
+    "https://www.instagram.com/p/BrU6DVih_ul/?img_index=1",
+    "https://www.instagram.com/p/BrSrhlDh5oz/",
+    "https://www.instagram.com/p/BrLWyzKh6jB/",
+    "https://www.instagram.com/p/BqnUk3zlkSB/",
+    "https://www.instagram.com/p/BqMzVocBlE6/",
+    "https://www.instagram.com/p/BqSCA-3hqQM/",
+    "https://www.instagram.com/p/BqSCpEpBrsR/?img_index=1",
+    "https://www.instagram.com/p/BpRbLfGhcnV/",
+    "https://www.instagram.com/p/BpHHpkAhWMM/?img_index=1",
+    "https://www.instagram.com/p/BpGtQOJBxCL/?img_index=1",
+    "https://www.instagram.com/p/Boq3zpChd_L/?img_index=1",
+    "https://www.instagram.com/p/BoTaCfIhuwn/",
+    "https://www.instagram.com/p/Bn5wFZBBV_C/",
+    "https://www.instagram.com/p/BnyyfMYBTKz/?img_index=1",
+    "https://www.instagram.com/p/BnlggKchvfw/",
+    "https://www.instagram.com/p/BnvkeiXhjTD/?img_index=1",
+    "https://www.instagram.com/p/BnUFjkMhw5z/",
+    "https://www.instagram.com/p/BnVX6E-BsyU/",
+    "https://www.instagram.com/p/BnVw_s2Bkd6/?img_index=1",
+    "https://www.instagram.com/p/Bna-p8nhIjx/",
+    "https://www.instagram.com/p/BndTvXph_fs/?img_index=1",
+    "https://www.instagram.com/p/Bnd9y_whx59/",
+    "https://www.instagram.com/p/BlnLWM2hkeK/",
+    "https://www.instagram.com/p/Blxi77rhhtu/",
+    "https://www.instagram.com/p/Bjui9MABP5_/",
+    "https://www.instagram.com/p/Bjhsf1mhRDs/",
+    "https://www.instagram.com/p/BiZqmuJh8cu/",
+    "https://www.instagram.com/p/BiweUYWhAhp/",
+    "https://www.instagram.com/p/BimUmVRBG14/",
+    "https://www.instagram.com/p/BiUPSr2hkl7/",
+    "https://www.instagram.com/p/BiB6rA3hwgw/",
+    "https://www.instagram.com/p/BgbMiI-AFOA/",
+    "https://www.instagram.com/p/BfnlthhAeom/",
+    "https://www.instagram.com/p/BfYS-3UgL6z/",
+    "https://www.instagram.com/p/Bb69vLPAOkh/?img_index=1",
+    "https://www.instagram.com/p/BceauqPljK1/",
+    "https://www.instagram.com/p/Bcesd_El9An/",
+    "https://www.instagram.com/p/BbFJFkxgf4G/?img_index=1",
+    "https://www.instagram.com/p/BbRNtLfg3id/?img_index=1",
+    "https://www.instagram.com/p/BbHDeuag9Gk/",
+    "https://www.instagram.com/p/BbHJdvkAxJg/",
+    "https://www.instagram.com/p/BbCnbdKgPVc/",
+    "https://www.instagram.com/p/BbHACJ5gZ-U/",
+    "https://www.instagram.com/p/BbHBZ-2Amtb/?img_index=1"
   ];
+
+  const facebookPostUrls = [
+    "https://www.facebook.com/photo/?fbid=828660202628416&set=pcb.828660225961747",
+    "https://www.facebook.com/photo/?fbid=800151855479251&set=pcb.800151898812580",
+    "https://www.facebook.com/photo/?fbid=800078695486567&set=pcb.800078732153230",
+    "https://www.facebook.com/photo/?fbid=784979233663180&set=pcb.784979283663175",
+    "https://www.facebook.com/photo/?fbid=668531715307933&set=pcb.668531765307928",
+    "https://www.facebook.com/photo/?fbid=634352045392567&set=a.551917883635984",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/2341720615989469/?type=3",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/2298477860313745/?type=3",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/2263829583778573/?type=3",
+    "https://www.facebook.com/photo/?fbid=2061953180632882&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1902890536539148/?type=3",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1665756756919195/?type=3",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1433904750104398/?type=3",
+    "https://www.facebook.com/photo/?fbid=1406344052860468&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/photo/?fbid=1406382036190003&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/photo/?fbid=1406382116189995&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1344643882363819/?type=3",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1191460007682208/?type=3",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/1191460067682202/?type=3",
+    "https://www.facebook.com/photo/?fbid=1191460144348861&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/photo/?fbid=1084384898389720&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/photo/?fbid=1084384901723053&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/photo/?fbid=1084385011723042&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/965086120319599/?type=3",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/954780418016836/?type=3",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/783741218454091/?type=3",
+    "https://www.facebook.com/photo/?fbid=759824510845762&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/759358317559048/?type=3",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/722763884551825/?type=3",
+    "https://www.facebook.com/photo/?fbid=722770471217833&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/711096515718562/?type=3",
+    "https://www.facebook.com/photo/?fbid=671735842987963&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/photo/?fbid=671735852987962&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/photo/?fbid=671735896321291&set=pb.100064533318835.-2207520000",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/624327367728811/?type=3",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/539950582833157/?type=3",
+    "https://www.facebook.com/KadikoyKoop/photos/pb.100064533318835.-2207520000/503253196502896/?type=3"
+  ];
+
+  const instagramPosts: SocialMediaPost[] = instagramPostUrls
+    .slice()
+    .reverse()
+    .map((url) => ({ type: "instagram" as const, url }));
+
+  const facebookPosts: SocialMediaPost[] = facebookPostUrls
+    .slice()
+    .reverse()
+    .map((url) => ({ type: "facebook" as const, url }));
+
+  const socialMediaPosts: SocialMediaPost[] = [...instagramPosts, ...facebookPosts];
 
   // Tüm öğeleri birleştir (ilk 23 etkinlik + sosyal medya postları)
   const allItems = [
@@ -429,7 +371,37 @@ export default function Etkinlikler() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 relative overflow-x-hidden">
+    <>
+      <Script
+        id="instagram-embed"
+        src="https://www.instagram.com/embed.js"
+        strategy="afterInteractive"
+        onLoad={() => {
+          processInstagramEmbeds();
+        }}
+      />
+      <Script id="facebook-sdk-init" strategy="afterInteractive">
+        {`
+          window.fbAsyncInit = function() {
+            if (window.FB) {
+              window.FB.init({
+                xfbml: true,
+                version: 'v18.0'
+              });
+            }
+          };
+        `}
+      </Script>
+      <Script
+        id="facebook-sdk"
+        src="https://connect.facebook.net/tr_TR/sdk.js#xfbml=1&version=v18.0"
+        strategy="afterInteractive"
+        onLoad={() => {
+          processFacebookEmbeds();
+        }}
+      />
+
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 relative overflow-x-hidden">
       {/* Arka plan görseli */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
         <img
@@ -439,7 +411,7 @@ export default function Etkinlikler() {
         />
       </div>
       
-      <div className="relative z-10">
+        <div className="relative z-10">
         <Navigation />
         
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 overflow-x-hidden">
@@ -701,7 +673,8 @@ export default function Etkinlikler() {
         </main>
       </div>
       
-      <div id="fb-root"></div>
-    </div>
+        <div id="fb-root"></div>
+      </div>
+    </>
   );
 }
