@@ -70,7 +70,7 @@ export default function EtkinlikDetay({
       {/* Arka plan görseli */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
         <img
-          src="/modal2.webp"
+          src="/bg6.webp"
           alt=""
           className="fixed inset-0 w-full h-full object-cover opacity-[0.18] blur-[1px] dark:opacity-[0.22]"
         />
