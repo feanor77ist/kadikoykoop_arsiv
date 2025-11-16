@@ -1,0 +1,536 @@
+{
+  "common": {
+    "home": "Ana Sayfa",
+    "explore": "İncele",
+    "back": "Geri",
+    "backToHome": "Ana Sayfaya Dön",
+    "page": "Sayfa",
+    "of": "/",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "total": "Toplam",
+    "items": "öğe",
+    "loading": "Yükleniyor...",
+    "scrollToLoad": "Kaydırınca yüklenecek...",
+    "translationNotice": "Bazı içerikler çeviri aşamasındadır, sabrınız için teşekkür ederiz."
+  },
+  "nav": {
+    "cooperativism": "Kooperatifçilik",
+    "about": "Kendisini Anlatıyor",
+    "volunteering": "Gönüllülük",
+    "operations": "İşleyiş",
+    "thoughts": "Düşündüklerimiz",
+    "inspiration": "İlham Verenler",
+    "conversations": "Sohbetler",
+    "events": "Etkinlikler",
+    "publications": "Yayınlar",
+    "memory": "Hafıza"
+  },
+  "home": {
+    "title": "Kadıköy Kooperatifi Arşivi",
+    "description": "Kadıköy Kooperatifi'nin belgeleri, yayınları ve kooperatifçilik kaynaklarına buradan erişebilirsiniz.",
+    "modalMessage": "Biliyoruz ki hikâyemiz burada bitmiyor. Birlikte kurduğumuz değerlerin, dayanışma ruhunun ve kolektif emeğin gittiğimiz her yerde başka zeminlerde yeniden filizleneceğine inanıyoruz.",
+    "aboutArchive": "Arşiv Hakkında",
+    "aboutArchiveText": "Bu arşiv, Kadıköy Kooperatifi'nin belgelerini, yayınlarını ve kooperatifçilik hakkında topladığı kaynakları içermektedir. 10 ana bölüm altında düzenlenmiş olan içeriklere kartlara tıklayarak erişebilirsiniz. Her bölümde ilgili alt başlıklar ve dokümanlara ulaşabilirsiniz.",
+    "sections": {
+      "1": {
+        "title": "Neden ve Nasıl Kooperatifçilik?",
+        "description": "Kooperatifçiliğin temelleri, yasal süreç, mevzuat ve formlar"
+      },
+      "2": {
+        "title": "Kadıköy Kooperatifi Kendisini Anlatıyor",
+        "description": "Kooperatifin tarihçesi, temelleri, ilkeleri ve dokümantasyonu"
+      },
+      "3": {
+        "title": "Gönüllülük",
+        "description": "Gönüllü katılım, eğitim materyalleri ve pratik bilgiler"
+      },
+      "4": {
+        "title": "İşleyiş",
+        "description": "Kooperatif modeli ve birim yönergeleri"
+      },
+      "5": {
+        "title": "Üzerine Düşündüklerimiz",
+        "description": "Çalıştay raporları ve kavramlar sözlüğü"
+      },
+      "6": {
+        "title": "İlham Verenler",
+        "description": "Okuma listesi ve kaynak materyaller"
+      },
+      "7": {
+        "title": "Kooperatifçilik Sohbetleri",
+        "description": "Podcast ve ses kayıtları"
+      },
+      "8": {
+        "title": "Bir Araya Gelince",
+        "description": "Etkinlikler ve organizasyonlar"
+      },
+      "9": {
+        "title": "Kooperatif Yayında",
+        "description": "Yayınlar ve medyada çıkan haberler"
+      },
+      "10": {
+        "title": "Kolektif Hafıza",
+        "description": "Görseller ve belge arşivi"
+      }
+    }
+  },
+  "events": {
+    "title": "Bir Araya Gelince...",
+    "subtitle": "Kooperatif etkinlikleri ve bir arada olma anları",
+    "count": "etkinlik",
+    "instagramPost": "Instagram Duyurusu",
+    "facebookPost": "Facebook Duyurusu",
+    "text": "Metin",
+    "images": "görsel",
+    "breadcrumb": "Bir Araya Gelince"
+  },
+  "cooperativism": {
+    "title": "Neden ve Nasıl Kooperatifçilik?",
+    "subtitle": "Kooperatifçiliğin temelleri ve pratik uygulamalar",
+    "read": "Oku",
+    "back": "Geri Dön",
+    "backToSection": "Kooperatifçilik Bölümüne Dön",
+    "sections": {
+      "a": {
+        "title": "Neden Kooperatifçilik?",
+        "description": "Küresel gıda krizi, kooperatifçiliğin gerekliliği ve Kadıköy Kooperatifi'nin doğuşu",
+        "subtitle": "Küresel gıda sistemi ve kooperatifleşme gerekliliği",
+        "content": {
+          "introduction": {
+            "p1": "Özellikle son yarım yüzyılda diğer tüm üretim alanları gibi gıda endüstrisi de küreselleşerek ciddi ölçüde ucuz hammaddeye, zehirli kimyasal girdilere ve makinelere bağımlı hale getirildi. Gücü gittikçe artan bir avuç küresel şirketin tekelindeki küresel gıda sistemi, kendi çıkarı gereği dünya halklarını açlığa ve sefalete sürüklemekte. Zehirli girdilere dayanan endüstriyel tarım sistemi, bir yandan üreticiyi kendisine bağımlı kılarken bir yandan da doğaya ve onun bir parçası olan insana ölümcül veya geri dönüşü olmayan zararlar veriyor. Tüketicinin, gıda üretimi süreçlerine olan ilgisizliği ve kopukluğu, kimyasalların ve katkı maddelerinin gittikçe daha yoğun kullanımıyla sonuç buluyor. Bunun paralelinde hastalıkların artışı; tarım kimyasallarının doğaya verdiği zarar; yerel gıda üretiminin üzerinde kurulan ölümcül baskı; bir yanda açlıkla boğuşan halklar varken diğer yanda muazzam bir israfın son derece normal karşılanması gibi örnekler gidişatın akıldışılığını ortaya seriyor.",
+            "p2": "Böylesi bir konjonktür elbette birdenbire ortaya çıkmadı. Gıda sisteminin dönüşümünün bir momenti olarak düşünebileceğimiz mevcut durum, küresel çapta yaşanan bir takım süreçlerin bir izdüşümü olarak okunabilir. Kamu kaynaklarının tarımsal sistemi koruma ve lojistik ağını organize etme süreçlerinden çekilmesi, küresel gümrük tarifelerinin asli belirleyen haline gelmesi, tarım-gıda sektöründe şirketlerin ve genel itibariyle şirket modelinin hâkim hale gelmesi, kamunun bu süreçte piyasayı şirketler lehine düzenleyici bir aktör olarak kendini sınırlandırması ile sonuçlandı. Böylece üreticiler ve tüketiciler, devletin, şirketlerin çıkarlarını korumak amacıyla oluşturduğu kurallar çerçevesinde şirketlerle baş başa kaldı. Yaşanan bu süreç küresel bir olgu olarak karşımıza çıkarken, Türkiye'de benzer bir süreci kendi özgün dinamikleri ile yaşamakta. İşte böylesi bir konjonktür, Gezi sonrası başka saiklerle bir araya gelmiş mahalle forumlarında bir arada durmaya çalışan insanları gıda meselesine yönelten asli unsurların başında geliyor.",
+            "p3": "İstanbul'un en kalabalık ilk 15 ilçesinden biri olan Kadıköy, yaklaşık 500 bin kişinin yaşadığı ve sosyo-ekonomik yapısı birçok farklılığı içinde barındıran bir ilçe. İlçenin ismiyle özdeşleşmiş olan tarihi merkezi ise son zamanlarda sosyal, politik, kültürel ve entelektüel ilgi odağına dönüştü. İlçenin kendine özgün politik ve sosyal dinamikleri, özellikle Gezi direnişi sonrası kendini daha fazla görünür kıldı, güçlü forumlar, işgal evleri, dayanışma pratikleri, kültürel topluluklar, yeni politika denemeleri ilçede filiz verdi."
+          },
+          "birth": {
+            "title": "Kadıköy Kooperatifi'nin Doğuşu",
+            "p1": "Kadıköy Kooperatifi de bu iklim içerisinde ortaya çıktı. 21. yüzyılın farklı türde örgütlenme pratiklerini çağırmasına ve Türkiye'de kooperatifçilik denilince akla genellikle olumsuz örnekler gelmesine rağmen neden kooperatif modeli seçildi ve bu model nasıl bir özgünlükte inşa edilecekti?",
+            "p2": "Türkiye'de kooperatifçiliğin uzun bir geçmişi ve ciddi bir tarihsel mirası bulunuyor. Ancak bu miras 80 sonrası tarım, kalkınma ve özelleştirme politikaları ile kesintiye uğradı. Yapı kooperatifçiliği özelinde yaşanan yolsuzluklar ve güvensizlikler, köy kalkınma kooperatiflerinin yaşadığı baskılar ve sonuçta bu kooperatiflerin çoğunun bir tür tabela kooperatifine dönüşmesi, tüketim kooperatiflerinin süpermarket temelli gıda tedarik sistemine alternatif olabilecek güçte bir fark yaratamaması; süpermarketleşme karşısında tutunamaması ve başkaca birçok faktör kooperatiflerin toplumda itibarsızlaşmasına sebep oldu. Aynı zamanda, mevcut kooperatifçilik yasasının da kooperatifleri bir tür şirkete dönüştürmüş olması bu itibarsızlaşmaya ciddi bir katkı sağladı.",
+            "p3": "Ancak yakın geçmişte kooperatifleşmeye dair bu algı karşısında farklı yerlerde çeşitli başarılı örnekler ortaya çıktığını gözlemledik. Özellikle tarım ve gıda alanında ortaya çıkan kooperatif deneyimleri, tarım ve gıdada yaşanan krizle birlikte ele alındığında kooperatifçiliği bir alternatif olarak yeniden gündeme getirdi. Kolektif çalışmayı ve dayanışmayı pekiştiren, güven ilişkilerini tesis eden, ortaklarının ve toplumun çıkarlarını koruyan ve geliştiren bir örgütlenme modeli olarak kooperatifçilik, tarım, gıda, ekoloji alanlarında ve farklı sektörlerde kolektif işletme deneyimleri olarak tartışılır hale geldi. Bu tartışma iklimi, Kadıköy Kooperatifi somut ve kurumsal bir deneyim haline gelmeden önce, ilgimizi çekmeyi başardı ve bizleri gıda konusunda bir inisiyatif olmaya sevk etti. Bu noktada önemli dönüm noktalarından bir tanesi de Kooperatifleşme Atölyesi oldu. Bu atölye tartışma metinlerinde kooperatif örgütlenme modeline yönelik olası yaklaşımları ve gelecek perspektifine dair beklenti ve tahayyüllümüzü ortaya koymuş olduk."
+          },
+          "workshop": {
+            "title": "Kooperatifçilik ve Kooperatifleşme Atölye Raporu",
+            "p1": "Kadıköy Kooperatifi tarafından 10 Haziran 2017 tarihinde Kadıköy'de Osmanağa Mah. Sosyal Dayanışma ve İletişim Derneği (SODİD)'de \"Kooperatifçilik ve Kooperatifleşme\" başlıklı atölye çalışması gerçekleştirdi. Yaklaşık üç saat süren atölyeye İstanbul'un çeşitli ilçelerinden yaklaşık 50 kişi katıldı.",
+            "p2": "Üç gruba ayrılarak ele alınan tartışmaların raporu şu şekilde oluştu:"
+          },
+          "whyNecessary": {
+            "title": "Kooperatif ve Kooperatif Hareketi Neden Gereklidir?",
+            "p1": "Küresel gıda krizinin her yerelde ortaklaşan ve kendine özgü yanlar barındıran etkileri görülüyor. Şirketlerin ve şirket mantığıyla çalışan devletlerin egemenliğindeki gıda sistemi gıdanın üreticisinden taşıyıcısına ve son tüketicisine toplumların çoğunluğunun yaşam şartlarını zorluyor. Giderek zorlaşan şartlara karşı örgütlenme çabasının bir yandan tarım arazilerinin şirketlerin tasarrufuna sevk edilmesini engelleyen, tarım arazilerindeki mevcut ve planlanan tüm monokültür temelli üretim teknolojilerine karşı tohum, ilaç ve gübre gibi girdileri kapsayan şirket egemenliğindeki teknolojilere karşı başka bir insan-doğa ilişkisini kurmamız gerekiyor. Öte yandan son tüketiciler olarak ne yediğini ve ne tükettiğini bilme hakkının, güvenilir, erişilebilir ve adil gıda için örgütlenmenin en önemli ayaklarından biri olduğunu unutmamak, gıdanın nasıl ve kim tarafından üretildiğinin kamusal iddiası olan özne ve kurumların inisiyatifinde olması gerektiği iddiasıyla hareket etmek gerekiyor."
+          },
+          "limits": {
+            "title": "Kooperatif ve Kooperatif Hareketinin Olası Sınırları",
+            "p1": "Tüketim ve üretim ilişkilerini dayanışma temelli bir örgütlenme ile dönüştürmek ve geliştirmek kooperatifleşme hareketinin temel hedefi olsa da mevcut ve olası sınırları göz önünde bulundurmak gerekiyor. Bu sınırlardan biri üreticilerin üretim süreçlerine, kendi ürünlerine hatta giderek üretirken kullandıkları araçların bir kısmına yabancı hale gelmesi. Köylülerin çoğu geleneksel tarım yöntemlerini unutmuş durumda. Kullandığı ilaçların doğru ve gerekli olduğuna ikna olan önemli bir çoğunluk var. Öte yandan Türkiye'de hala bilge köylü tarımı yapan üçte birlik bir kesim de var. Tüketicilerin örgütlülüğü ile çiftçilerin örgütlenmesi paralel gittiği sürece bilge köylü tarımı ekseninde bir üretici örgütlülüğü gelişecek gibi gözükmektedir. Tüketicilerin kooperasyon temelinde örgütlenmesi çiftçilerin örgütlenmesinin garantisi olmasa da tetikleyicisi olacaktır. Ancak dikkat edilmesi gereken üretici ve tüketici örgütlenmeleri arasındaki karşılıklı inisiyatifin bir taraftan diğerine kaynak aktarımından ibaret görülmemesidir. Çiftçilerin örgütlenmelerini ancak kendi öz sermayeleri ile yaratmalarını teşvik edecek yöntemler bu yapıların devamlılığını sağlayabilir, yabancılaşma olarak tespit ettiğimiz sorunları çözmeye çalışırken aynı hataları tekrar etmemize engel olabilir.",
+            "p2": "Gıdanın güvenliği ile ortaya yepyeni bir sektörün çıkması üretim ve tüketim ilişkilerini dönüştürmüş, gıdanın nasıl üretildiğine dair beklentilerimizi değiştirmiştir. Tükettiğimiz gıdanın temiz ve doğal olduğuna emin olmak için organik ürün etiketlerine, ambalajlardaki özel laboratuvar veya bakanlık onaylarına dikkat eden bir tür tüketici alışkanlığı oluşmaya başladı. Öte yandan sertifikalar, diplomalar, belgeler küçük üreticinin kaldıramayacağı maliyetler yaratan bu yeni sektörün ayakları. Eğer tüm bu sektörel faaliyetlere rağmen güvensizlik hüküm sürüyorsa güven ilişkisini başka bir yerden kuracak başka bir ilişki biçimini bu alışkanlıkların ve yükümlülüklerin yerine geliştirmemiz gerekiyor. Doğal bilge köylü tarımını destekleyen, üreticiye emeğinin karşılığını veren bir örgütlenme biçimini geliştirirken bu sınırları göz önünde bulundurmamız gerekiyor.",
+            "p3": "Bilge köylü tarımı ile üretim yapan üreticilerden son tüketiciye ulaşan ürünlerin fiyatlarının -organik etiketli ürünlerin olmasa da endüstriyel yöntemlerle üretilen ürünlerin- piyasa fiyatlarının üzerinde olduğu aşikâr. Bu gerçek, doğal gıdanın erişilebilirliğini an itibariyle orta ve üst sınıf tüketiciyle sınırlıyor. Dolayısıyla bu sınırlar henüz gelişme aşamasında olan gıda temini üzerine çalışan inisiyatiflerin yayılma ve genişlemesini belirli ölçülerde etkiliyor. Doğal ve adil gıdaya erişimin toplumda gücü sınırlı olan kesimlerin hakkı olduğunu kabul ederek yöntemlerimizi geliştirmeliyiz.",
+            "p4": "Kooperatifleşme oluşum ve girişimlerinin iç işleyişlerine dair gönüllü ve profesyonel başta olmak üzere ortaya konan emeğine niteliğine yönelik bazı sınırlar gözükmekte. Gönüllü emek, karşılıklı sorumluluk üzerinden verimli sonuçlar alsa da gündelik hayatın zorunluluklarının getirdiği sınırları aşmakta zorlanıldığı da bir gerçek. Belirli aşamalarda bunu aşmak için gönüllü emeğin önemini azaltmayacak ve profesyonelleşmenin getirebileceği sorunları engelleyecek istihdam yöntemleri geliştirmek kooperatifleşmenin dayanışma ilişkilerini geliştirmesine de katkı sağlayacaktır. Ancak istihdam imkanlarının adil ve insani çalışma koşullarını sağlayacak şekilde geliştirilmesi gerekecektir. Bir diğer örgütlenme için sınırlardan biri de farklı siyasi yaklaşımların kooperatif çalışmalarının üzerinde tahakküm kurma ihtimalidir. Her yaklaşımın ortaklaşabileceği karar alma mekanizmalarını geliştirecek örgütlenme yöntemlerinin kooperatifleşme çabalarının karşılaşabileceği sınırlara karşı dikkatli olması gereken konulardan biri olarak gözükmektedir."
+          },
+          "institutionalization": {
+            "title": "Kurumsallaşma",
+            "p1": "Kooperatifleşmenin bir diğer aşması gereken zorluğu ise kurumsallaşmaya dönük adımlara dönük engeller. İnisiyatif alan gruplar kooperatif veya kolektif prensipleriyle çalışma yürütseler de resmi bir kooperatif kurma konusunda yasal mevzuatların getirdiği bürokratik ve mali yükümlülüklerin insanları adım atma konusunda çekinceye sevk ettiği bir gerçek. Geçmiş ve mevcut kooperatif deyimleri ile ilişkilerin güçlendirilmesi, yasal mevzuatların ve mali yükümlülüklerin detaylarının cesaret kırmadan karşılıklı aktarımı burada önem taşıyor. Öte yandan tecrübe aktarımı önemli olmakla birlikte kooperatifleşme çabalarının devamlılığını sağlamak ve uzmanlaşmanın ve bilen-bilmeyen geriliminin önüne geçmek için sorumluluk paylaşımı ve iş bölümünde rotasyon gibi yöntemlerin teşvik edilmesi bir başka gereklilik."
+          },
+          "methods": {
+            "title": "Kooperatif Örgütlenmesinde Mevcut ve Olası Yöntemler",
+            "economicModel": {
+              "title": "Ekonomik Model",
+              "p1": "Lojistik ağını ortaklaştırmak kooperatifleşmenin ekonomik modelini geliştirmesinde önemli bir adım olabilir. Aracıları azaltmanın bir adım ötesine geçerek nakliye ve depolamayı çözecek kooperatifleri veya ortak kooperatif stratejileri geliştirmeyi düşünmek gerekecektir. Siparişlerin ortak ve üreticilerin üretim planlamasına belirsizlikler içinde başlamalarından önce verilmesi, ortak depo kullanımı hatta ürünlerin piyasa dolaşımına girmeden dayanışma ekonomisinin içerisinde dolaşabileceği kooperatifler arası bir takas sistemi üzerine kafa yormak geleceğe dair gerçekleştirilebilir hayaller olarak gözükmektedir.",
+              "p2": "Bunun yanında ihtiyaçların birlikte belirlenmesiyle neyin gündelik ve acil neyin tali ihtiyaç olduğu üzerine düşünülebilir ve lüks ürünlere daha fazla katkı payı eklenebilir. Orta ve üst gelir grubuna yönelik sayılabilecek ürünlerin üzerine daha fazla kooperatif payı eklenebilir. Kimi kolektif girişimler prensiplerini içerisindeki ekolojik tüketim ilkesini esneterek ürünlere erişimle ilgili kimi aşamaları uzun vadeye yayarak farklı uygulayabilir.",
+              "p3": "Uzun vadede ekonomik modelin ulaşmayı hedeflediği aşamalardan biri de koordineli bir şekilde mahalle ölçeğinde fırınından mutfağına, çeşitli ürünlerin işlendiği atölyelere tüketimi organize eden oluşumların yerleştiği, çiftçinin ve diğer küçük ve örgütlü üreticilerin ürününü kendi yereline yakın pazarlara satabildiği koşulların oluşmasıdır. Bölgelerin her türlü ihtiyacını karşılayabilecek taban örgütlenmelerinin gelişmesi önem taşımaktadır. Bu hayalin İstanbul'un kendi yerelindeki üretimle ne kadar beslenebileceğini de kapsaması iddiasını geliştirmesi açısından önemlidir."
+            },
+            "volunteering": {
+              "title": "Gönüllülük ve İstihdam",
+              "p1": "Tüketim kooperatiflerini, üretim kooperatiflerinden ayrı düşünmeden hareket etmek istihdam ilişkisini de bu kolektif çabaların içerisine sokacaktır. Kentlerin yerellerinde kurulabilecek üretim kooperatifleri bu ilişkinin önemli bir parçası olacaktır. Özellikle kadınların dahil olduğu mahalli üretim kooperatifleri kurulup yaygınlaşabilirse, tüketim kooperatifleri ve kolektifleri bu oluşumlarla birlikte çalışabilir. Gönüllü ve ücretli çalışma ilişkisine bir ara çözüm yurtdışındaki kooperatif deneyimlerinde aranabilir. Kooperatife ortak olma ve kooperatif hizmetinden faydalanabilmek için kooperatif işlerinde ayda asgari üç gün çalışma şartı gibi uygulamalar bu kolektiflerdeki gönüllü emek ilişkisinin karşılıklı sorumluluk üzerinden gelişmesini sağlayabilir."
+            },
+            "experience": {
+              "title": "Deneyim Aktarımı ve Dayanışma",
+              "p1": "Eğer kooperatifleşmenin yaygınlaşmasını istiyorsak öncelikle geçmiş deneyimlerden ders çıkarmak, mümkünse bu deneyimleri günümüzün ihtiyaçlarına ve gidişatına uygun bir şekilde yeniden canlandırmak gerekmektedir. Sonrasında mevcut deneyimlerin tecrübelerinin yeni çabalara aktarılması önem taşımaktadır. Üreticilerle bu deneyimlerin bir araya gelmesi için farklı alanlarda çalışan ekiplerin hem deneyimlerini aktarmaları hem de dayanışması gereklidir. Bunu hem kentte kurulan kolektiflere deneyim aktarımı hem de üreticilerin örgütlenmesini teşvik etmek için düşünmeliyiz. Dünyanın farklı yerellerindeki özgün deneyimlerin takip edilmesi çıkarılacak dersler ve örnek alınacak modeller için önem taşımaktadır.",
+              "p2": "Bu doğrultuda özyönetim prensibiyle çalışan, kooperatifini kurmak isteyen her yerele ve sektöre destek verilmeli. Kooperatif ve kolektifler arasındaki dayanışmanın gerçekleşmesinde her bir ürünün veya üretici grubunun organizasyonun sağlanmasını bir kolektifin üzerine alması gibi sorumluluk paylaşımı temelli denemeler yapılabilir. Öte yandan resmi kooperatifleşmeyi tercih etmeyen gıda topluluklarının devlet nezdinde görünmez olması ve bu oluşumların kooperatiflerle iş birliğinde nasıl tasarlanacağı üzerine kafa yormak verimli bir model oluşturmamızı sağlayabilir. Toplumsal dayanışmanın fikri olduğu kadar maddi olarak da geliştirilmesi için ürünlere veya ortaklık paylarına nasıl bir düzenleme getirileceğinin de ayrıca düşünülmesi gerekmektedir. Son olarak gerek dükkân gerek ürün dağıtım yeri gerekse ortak etkinlik alanı, dayanışmanın geliştirilmesi için ortak mekanların ne kadar önemli olduğunu deneyimlerimiz üzerinden göstermektedir. Kooperatifleşmenin kendi mekanlarını oluşturması gerekliliği dayanışma için önem taşıyacaktır."
+            },
+            "transformative": {
+              "title": "Dönüştürücü Etki",
+              "p1": "Kooperatifleşme çabasının sadece ortaklarına hizmet veren bir oluşum olmaması, toplumsal dayanışmayı geliştirmek için yöntemler geliştirmesi önemlidir. Benzer şekilde ürün temininin hitap ettiği kitlenin sadece müşteri olarak kalması dayanışma ilkesinin sadece üretici ile kurulan ilişkiden ibaret kalmasına sebep olacaktır.",
+              "p2": "Üreticileri örgütlenmeye yönlendirme küçük üreticiliğin birbiriyle rekabet etmesinden çok dayanışmasını teşvik etmeyi sağlayabilir. Burada örgütlenmenin belirli ilkeler etrafında devam etmesi de bir o kadar önemlidir. Örneğin tarımsal üretimde yerel, hibrit ve GDO'lu olmayan tohumların kullanımında taviz verilmemelidir ve kadın emeğini öne çıkaracak ilkelerde ısrarcı olunmalıdır. Üreticinin kentteki tüketici örgütleri tarafından dönüştürülmesinin hangi yöntemlerle sağlanacağı önemli bir noktadır.",
+              "p3": "Kooperatiflerin, üreticilerin bilgi ve tecrübesini geliştirmesi bir ihtiyaçsa da bunu üretici örgütlerinin kendilerine bırakmak daha tutarlı gözükmektedir. Örneğin çiftçiler Çiftçi-Sen bünyesinde agroekoloji okulları kuruyor. Bu okulların dört duvarsız, kara tahtasız okullar olması ve yaygınlaştırılarak gelişmesi öngörülüyor. Eğitici eğitimi ile her bilgiyi ve tecrübeyi edinenin bunları yakınındakine aktarması ve okulun agroekolojiyi adım adım yayması amaçlanıyor. Kentlerde de tüketimi örgütlemeye çalışan kolektiflerin yarı üretici/türeticiye dönüşecek bir perspektifte ilerlemeleri gerekecektir."
+            }
+          },
+          "conclusion": {
+            "title": "Sonuç Olarak",
+            "p1": "Kooperatifleşme çabasını sadece sağlıklı ve adil gıdaya ulaşacak örgütlenme modellerinin geliştirilmesi değil birlikte yaşamı sağlamlaştıracak ve alternatif dayanışma ağları olacak kooperatiflerin (yaşlı ve çocuk bakım kooperatifleri, üretim kooperatifleri v.s) kurulabileceği ilişkileri geliştirmek olarak görmek gerekiyor. İçinde bulunduğumuz çağın ruhunu yakalamayı başarabilen kalıcı örgütlenme modelleri çıkarabilmek, uzun vadeli hedefler belirleyebilen ve heyecanlı bir gelip geçicilik yerine örgütlü bir kalıcılığa dönüşme konusunda kayıtsız olmayan yeni yapılar kurmanın zamanı geliyor. Gezi'den çıkarmaya çalıştığımız dersleri ve kazanımları ancak bu şekilde devam ettirebiliriz. Başka bir hayatın mümkün olduğunu görmek, yaşamak dileğiyle."
+          }
+        }
+      },
+      "b": {
+        "title": "Adım Adım Yasal Süreç",
+        "description": "Kooperatif kurarken izlenecek yasal adımlar ve gerekli belgeler",
+        "subtitle": "Kooperatif kuruluşu için gereken adımlar ve belgeler",
+        "steps": {
+          "1": {
+            "title": "Mali Müşavire Giderken Götürülecekler",
+            "items": {
+              "1": "Mersis girişi yapılır. (Tüketim kooperatifleri seçilir, yerelindeki vergi dairesi seçilir)",
+              "2": "Vergi numarası alınır.",
+              "3": "Talep numarası alınır.",
+              "4": "Bu talep numarası ile notere gidilir.",
+              "5": "Kooperatif sermayesi için banka hesabı alınır. Noterden onaylı imza beyannamesi alınır."
+            }
+          },
+          "2": {
+            "title": "Notere Giderken Götürülecekler",
+            "items": {
+              "1": "Kooperatif ana sözleşmesi imzalanarak notere tasdik edilir. (Tüketim kooperatifleri sözleşmesi linki burada) En az 7 kurucu üye tarafından imzalanır. (3 üye yönetim, 2 üye denetim, 2 üye disiplin için)",
+              "2": "Üyelerin adli sicil kaydı",
+              "3": "Üyelerin nüfus cüzdanı fotokopileri",
+              "4": "Dilekçe ve kuruluş bilgi formu (linki burada)"
+            }
+          }
+        },
+        "tip": "Önemli Not: Kooperatif kurulumu sürecinde mali müşavir desteği almanız sürecin daha kolay ilerlemesini sağlayacaktır. Gerekli tüm belgelerin eksiksiz hazırlanmasına özen gösterilmelidir."
+      },
+      "d": {
+        "title": "Mevzuat",
+        "description": "Türkiye Kooperatifçilik Mevzuatı ve Tüketim Kooperatifi Anasözleşmesi",
+        "subtitle": "Türkiye kooperatifçilik mevzuatı ve tüketim kooperatifi anasözleşmesi",
+        "subsections": {
+          "turkiye-mevzuati": {
+            "title": "Türkiye Kooperatifçilik Mevzuatı",
+            "description": "1163 sayılı Kooperatifler Kanunu, 6102 sayılı TTK, vergi mevzuatı ve son değişiklikler",
+            "content": {
+              "history": {
+                "title": "Türkiye'de Kooperatifçilik Mevzuatının Tarihçesi",
+                "p1": "Türkiye'de kooperatifçilik alanında ilk düzenleme, Cumhuriyet'in ilanından kısa bir süre sonra, 1924 yılında 442 sayılı Köy Kanunu ile gerçekleştirilmiştir. Bu kanunla köylerin muhtaç oldukları iktisadi ihtiyaçları karşılamak üzere köy kooperatifleri kurulması öngörülmüştür.",
+                "p2": "1929 yılında kabul edilen 1470 sayılı Esnaf ve Ahali Bankaları Kanunu ile kooperatifler bankacılık sistemi içinde ele alınmış ve kredi kooperatifleri düzenlenmiştir.",
+                "p3": "1935 yılında 2834 sayılı Kanunla Tarım Kredi Kooperatifleri, 1936 yılında 3018 sayılı Kanunla Yapı Kooperatifleri ve 1938 yılında 3476 sayılı Kanunla Tüketim ve Satış Kooperatifleri ayrı ayrı düzenlenmiştir.",
+                "p4": "1960 yılında 7408 sayılı Kooperatifler Kanunu kabul edilmiş, ancak bu kanun uygulamada sorunlar yaratmıştır.",
+                "p5": "1969 yılında kabul edilen 1163 sayılı Kooperatifler Kanunu, Türkiye'de kooperatifçiliğin modern anlamda düzenlenmesini sağlayan temel kanun olmuştur. Bu kanun, kooperatiflerin kuruluşu, işleyişi, denetimi ve tasfiyesi gibi konuları kapsamlı bir şekilde düzenlemiştir. 1163 sayılı Kanun, günümüzde halen yürürlükte olan temel kanundur.",
+                "p6": "6102 sayılı Türk Ticaret Kanunu'nun 2012 yılında yürürlüğe girmesiyle birlikte, kooperatifler hakkında da önemli değişiklikler yapılmıştır. Yeni TTK, kooperatiflerin ticaret şirketlerine benzer şekilde düzenlenmesini öngörmüştür ve 1163 sayılı Kanunda hüküm bulunmayan hallerde TTK'nın anonim şirketlere ilişkin hükümleri uygulanmaktadır."
+              },
+              "law1163": {
+                "title": "1163 Sayılı Kooperatifler Kanunu",
+                "acceptanceDate": "Kabul Tarihi: 24.04.1969",
+                "publicationDate": "Yayım Tarihi: 10.05.1969 - Resmi Gazete Sayı: 13195",
+                "description": "1163 sayılı Kooperatifler Kanunu, Türkiye'de tüm kooperatiflerin kuruluş, işleyiş, denetim ve tasfiye işlemlerini düzenleyen ana kanundur. Kanun, değişir ortaklı ve değişir sermayeli kooperatif yapısını, ortaklık şartlarını, organların görev ve yetkilerini, denetim sistemini ve kooperatiflerin birlik kurma esaslarını belirler.",
+                "principles": {
+                  "title": "Kanunun Temel İlkeleri",
+                  "variableMembership": "Değişir Ortaklı Yapı: Kooperatiflerde ortak sayısı sabit değildir, ortaklığa giriş-çıkış serbesttir",
+                  "variableCapital": "Değişir Sermaye: Sermaye miktarı ortakların taahhüt ettikleri paylar toplamı kadardır ve değişkendir",
+                  "limitedLiability": "Sınırlı Sorumluluk: Ortaklar sadece taahhüt ettikleri pay tutarı kadar sorumludur",
+                  "democraticManagement": "Demokratik Yönetim: Her ortağın bir oy hakkı vardır (sermaye büyüklüğüne bakılmaksızın)",
+                  "memberTransactions": "Ortaklarla İşlem: Kooperatif öncelikle ortaklarının ihtiyaçlarını karşılar",
+                  "nonProfit": "Kâr Amacı Gütmeme: Kooperatifler kâr amacı gütmez, ortaklarına maliyet fiyatıyla hizmet sunar"
+                },
+                "types": {
+                  "title": "Kooperatif Türleri",
+                  "description": "1163 sayılı Kanuna göre Türkiye'de faaliyet gösteren başlıca kooperatif türleri:",
+                  "list": {
+                    "1": "Tüketim Kooperatifleri",
+                    "2": "Yapı Kooperatifleri",
+                    "3": "Kredi Kooperatifleri",
+                    "4": "Taşımacılık Kooperatifleri",
+                    "5": "Sulama Kooperatifleri",
+                    "6": "Elektrik Kooperatifleri",
+                    "7": "Üretim ve İşletme Kooperatifleri",
+                    "8": "Tarım Satış Kooperatifleri"
+                  }
+                }
+              },
+              "ttk6102": {
+                "title": "6102 Sayılı Türk Ticaret Kanunu",
+                "acceptanceDate": "Kabul Tarihi: 13.01.2011",
+                "effectiveDate": "Yürürlük Tarihi: 01.07.2012",
+                "description": "6102 sayılı Türk Ticaret Kanunu, kooperatifler hakkında 1163 sayılı Kanunda hüküm bulunmayan hallerde uygulanır. Özellikle defter tutma, finansal raporlama, denetim, şirket birleşme ve bölünmeleri gibi konularda TTK'nın anonim şirketlere ilişkin hükümleri kooperatiflere de uygulanmaktadır.",
+                "provisions": {
+                  "title": "Kooperatifleri İlgilendiren TTK Hükümleri",
+                  "books": "Ticari Defterler (Madde 64-82): Kooperatifler yevmiye defteri, defteri kebir, envanter defteri, pay defteri, yönetim kurulu ve genel kurul karar defterlerini tutmak zorundadır",
+                  "financialStatements": "Finansal Tablolar: Kooperatifler yıllık finansal tablolarını TTK hükümlerine göre hazırlamak zorundadır",
+                  "audit": "Bağımsız Denetim: Belirli büyüklükteki kooperatifler bağımsız denetime tabidir",
+                  "electronicGeneralAssembly": "Elektronik Genel Kurul: Kooperatifler elektronik ortamda genel kurul yapabilir",
+                  "mergerDivision": "Birleşme ve Bölünme: Kooperatifler TTK'nın birleşme ve bölünme hükümlerine göre işlem yapabilir"
+                }
+              },
+              "specialLaws": {
+                "title": "Özel Kanunlar",
+                "law1581": {
+                  "title": "1581 Sayılı Tarım Kredi Kooperatifleri ve Birlikleri Kanunu",
+                  "acceptanceDate": "Kabul Tarihi: 13.06.1972",
+                  "description": "Tarım kredi kooperatiflerinin kuruluş ve işleyişini düzenleyen özel kanundur. Bu kooperatifler, çiftçilere kredi sağlamak, tarımsal girdileri temin etmek ve tarım ürünlerini pazarlamak amacıyla kurulur. 1163 sayılı Kanunun genel hükümlerine ek olarak, tarım sektörüne özgü özel düzenlemeler içerir."
+                },
+                "law4572": {
+                  "title": "4572 Sayılı Tarım Satış Kooperatifleri ve Birlikleri Kanunu",
+                  "acceptanceDate": "Kabul Tarihi: 18.06.2000",
+                  "description": "Tarım ürünlerinin satışını yapan kooperatiflerin örgütlenmesini düzenleyen kanundur. Tarımsal ürünlerin pazarlanması, işlenmesi, depolanması ve değerlendirilmesi konusunda özel hükümler içerir. Üreticilerin ürünlerini daha iyi fiyatlarla satabilmeleri ve pazarlama gücünü artırmaları amaçlanır."
+                }
+              },
+              "taxLegislation": {
+                "title": "Vergi Mevzuatı",
+                "law5520": {
+                  "title": "5520 Sayılı Kurumlar Vergisi Kanunu",
+                  "effectiveDate": "Yürürlük Tarihi: 01.01.2006",
+                  "description": "Kooperatifler kurumlar vergisi mükellefidir. Ancak, kooperatiflerin ortaklarıyla yaptıkları işlemlerden elde ettikleri kazançlar özel düzenlemelere tabidir.",
+                  "article4": {
+                    "title": "Madde 4/1-m: Kooperatiflerde İstisna",
+                    "text": "Kooperatiflerin ortaklarına; ortaklık aidatları veya ortakları ile yaptıkları işlemlerden elde ettikleri kazançları, kooperatiflik ilkelerine uygun olarak ortaklarına dağıtmaları veya ortaklar ile olan işlemlerinde bu kazançları göz önünde tutarak uyguladıkları fiyat farklarının ortaklar lehine düzeltilmesi suretiyle iade etmeleri koşuluyla, kurumlar vergisinden istisnadır.",
+                    "note": {
+                      "title": "Önemli Not:",
+                      "text": "Bu istisna, yalnızca ortaklarla yapılan işlemlerden elde edilen kazançlar için geçerlidir. Ortak olmayan kişilerle yapılan işlemlerden elde edilen kazançlar kurumlar vergisine tabidir."
+                    }
+                  }
+                },
+                "law3065": {
+                  "title": "3065 Sayılı Katma Değer Vergisi Kanunu",
+                  "description1": "Kooperatiflerin ortaklarına yaptığı mal ve hizmet teslimleri KDV'ye tabidir. Kooperatifler, yaptıkları işlemler üzerinden KDV hesaplamak ve beyan etmek zorundadır.",
+                  "description2": "Ancak, bazı tarımsal ürünler ve hizmetler için KDV istisnası uygulanabilir. Ayrıca, kooperatiflerin ortaklarından aldığı aidatlar KDV'ye tabi değildir."
+                },
+                "law193": {
+                  "title": "193 Sayılı Gelir Vergisi Kanunu",
+                  "description1": "Kooperatiflerin çalışanlarına ödediği ücretler gelir vergisi stopajına tabidir. Kooperatif, ücret ödemesi yaptığında, ilgili vergi dilimlerine göre stopaj yaparak vergi dairesine ödemekle yükümlüdür.",
+                  "description2": "Ayrıca, kooperatif ortaklarına dağıtılan kâr payları da gelir vergisi kapsamındadır ve değer artış kazancı olarak vergilendirilir."
+                }
+              },
+              "recentChanges": {
+                "title": "Son Yasal Değişiklikler (2018 ve Sonrası)",
+                "law7153": {
+                  "title": "7153 Sayılı Kanun ile Yapılan Değişiklikler (2018)",
+                  "acceptanceDate": "Kabul Tarihi: 14.03.2018",
+                  "description": "7153 sayılı \"Kooperatifler Kanunu ile Bazı Kanun ve Kanun Hükmünde Kararnamelerde Değişiklik Yapılmasına Dair Kanun\" ile 1163 sayılı Kooperatifler Kanununda önemli değişiklikler yapılmıştır:",
+                  "changes": {
+                    "1": "Kooperatiflerin denetim sisteminde köklü değişiklikler yapılmıştır",
+                    "2": "Gümrük ve Ticaret Bakanlığı'nın (şimdiki adıyla Ticaret Bakanlığı) denetim yetkileri genişletilmiştir",
+                    "3": "Kooperatif üst kuruluşlarının yapısı ve görevleri yeniden düzenlenmiştir",
+                    "4": "Bağımsız denetim kuruluşlarının kooperatifleri denetlemesi sistemi getirilmiştir",
+                    "5": "Cezai yaptırımlar güncellenmiş ve arttırılmıştır",
+                    "6": "Kooperatiflerin finansal raporlama yükümlülükleri detaylandırılmıştır"
+                  }
+                },
+                "digitalTransformation": {
+                  "title": "Dijital Dönüşüm ve Yeni Düzenlemeler",
+                  "description": "2020 sonrası dönemde, COVID-19 pandemisinin de etkisiyle, kooperatiflerin dijital dönüşümü hızlandırılmıştır:",
+                  "changes": {
+                    "1": "Elektronik Genel Kurul: Kooperatifler, ortaklarının fiziksel olarak bir araya gelmesine gerek kalmadan, elektronik ortamda genel kurul yapabilmektedir",
+                    "2": "Dijital İmza Kullanımı: Kooperatif işlemlerinde dijital imza kullanımı yaygınlaşmıştır",
+                    "3": "E-Devlet Entegrasyonu: Kooperatiflerin kuruluş ve tescil işlemleri elektronik ortamda yapılabilmektedir",
+                    "4": "Online İşlemler: Ortaklar, kooperatif ile olan işlemlerini online platformlar üzerinden gerçekleştirebilmektedir"
+                  }
+                },
+                "ministryAudit": {
+                  "title": "Bakanlık Denetimi ve Raporlama",
+                  "description": "Ticaret Bakanlığı, kooperatiflerin düzenli denetimini sağlamak amacıyla yeni düzenlemeler getirmiştir:",
+                  "changes": {
+                    "1": "Kooperatifler yıllık faaliyet raporlarını Bakanlığa elektronik ortamda göndermektedir",
+                    "2": "Risk bazlı denetim sistemi getirilmiştir",
+                    "3": "Kooperatif üst kuruluşları, üye kooperatiflerin denetiminden sorumlu tutulmuştur",
+                    "4": "Bağımsız denetim kuruluşlarının yetkilendirilmesi sistemi oluşturulmuştur"
+                  }
+                }
+              },
+              "note": {
+                "text": "Not: Bu sayfa, Türkiye Kooperatifçilik Mevzuatının özet bilgilerini içermektedir. Detaylı ve güncel bilgi için Resmi Gazete yayınlarına, T.C. Ticaret Bakanlığı Kooperatifçilik Genel Müdürlüğü'nün resmi web sitesine ve ilgili kanunların tam metinlerine başvurulmalıdır.",
+                "source": "* Kaynak: Genç İşi Kooperatif - https://www.gencisi.org/ ve T.C. Ticaret Bakanlığı Kooperatifçilik Genel Müdürlüğü"
+              },
+              "backToLegislation": "Mevzuat Bölümüne Dön"
+            }
+          },
+          "anasoalesme": {
+            "title": "Tüketim Kooperatifi Anasözleşmesi",
+            "description": "T.C. Gümrük ve Ticaret Bakanlığı tarafından hazırlanmış resmi anasözleşme (93 Madde)"
+          }
+        }
+      },
+      "e": {
+        "title": "Ürün & Üretici Formları",
+        "description": "Gıda ve gıda dışı ürünler için bilgi formları"
+      }
+    }
+  },
+  "about": {
+    "title": "Kadıköy Kooperatifi Kendisini Anlatıyor",
+    "subtitle": "Kooperatifimizin yapısı, ilkeleri ve çalışma biçimi",
+    "read": "Oku",
+    "sections": {
+      "a": {
+        "title": "KKKA Sunumu",
+        "description": "Kadıköy Kooperatifi'nin kendisini tanıtan sunum"
+      },
+      "b": {
+        "title": "Temeller",
+        "description": "Kadıköy Kooperatifi'nin kuruluş hikâyesi ve ruhu"
+      },
+      "c": {
+        "title": "Genel Perspektif ve Temel İlkeler",
+        "description": "Kooperatifin genel bakış açısı ve temel ilkeleri"
+      },
+      "d": {
+        "title": "El Kitapçığı",
+        "description": "Kadıköy Kooperatifi el kitapçığı"
+      },
+      "e": {
+        "title": "Sık Sorulan Sorular",
+        "description": "Kooperatif hakkında merak edilenler"
+      },
+      "f": {
+        "title": "Deneyimler, Tartışmalar, Alternatifler",
+        "description": "Krize Karşı Kooperatifler kitabı için kaleme aldığımız yazı"
+      }
+    }
+  },
+  "volunteering": {
+    "title": "Gönüllülük",
+    "subtitle": "Gönüllü katılım, eğitim materyalleri ve pratik bilgiler",
+    "sections": {
+      "egitim-envanteri": {
+        "title": "Eğitim Envanteri",
+        "description": "Nöbet nasıl tutulur ve yeni gönüllü katılım dosyası"
+      },
+      "egitim-sunumu": {
+        "title": "Eğitim Sunumu",
+        "description": "Kadıköy Kooperatifi eğitim sunumu (2020)"
+      }
+    },
+    "explore": "İncele",
+    "backToHome": "Ana Sayfaya Dön"
+  },
+  "operations": {
+    "title": "İşleyiş",
+    "subtitle": "Kooperatif modeli ve birim yönergeleri",
+    "sections": {
+      "model": {
+        "title": "Model",
+        "description": "Kooperatif modeli ve işleyiş yapısı"
+      },
+      "birim-yonergeleri": {
+        "title": "Birim Yönergeleri",
+        "description": "Kooperatif birimlerinin çalışma yönergeleri"
+      }
+    },
+    "explore": "İncele",
+    "backToHome": "Ana Sayfaya Dön"
+  },
+  "thoughts": {
+    "title": "Üzerine Düşündüklerimiz",
+    "subtitle": "Kooperatifin zihni, çalıştay raporları ve kavramlar sözlüğü",
+    "backToHome": "Ana Sayfaya Dön",
+    "workshopReports": {
+      "title": "Çalıştay Raporları",
+      "items": {
+        "gida-krizi-egemenlik": {
+          "title": "Gıda Krizi ve Gıda Egemenliği",
+          "date": "22 Ocak 2017 - Yeldeğirmeni Mahallesi",
+          "type": "Atölye çalışması raporu"
+        },
+        "ekolojik-tarim-aracisiz-tuketim": {
+          "title": "Ekolojik Tarım Aracısız Tüketim",
+          "date": "7 Mayıs 2017 - Caferağa Mahallesi",
+          "type": "Atölye çalışması raporu"
+        },
+        "kooperatifcilik-kooperatiflesme": {
+          "title": "Kooperatifçilik ve Kooperatifleşme",
+          "date": "10 Haziran 2017 - Osmanağa Mahallesi",
+          "type": "Atölye çalışması raporu"
+        }
+      }
+    },
+    "conceptsDictionary": {
+      "title": "Kavramlar Sözlüğü",
+      "description": "Kooperatifçilik ve gıda egemenliği üzerine 26 kavramın detaylı açıklamaları",
+      "conceptCount": "26 kavram",
+      "viewAll": "Tümünü Gör",
+      "examples": {
+        "ekolojik-tarim": "Ekolojik Tarım",
+        "temiz-gida": "Temiz Gıda",
+        "kooperatifcilik": "Kooperatifçilik",
+        "tohum": "Tohum"
+      }
+    }
+  },
+  "inspiration": {
+    "title": "İlham Verenler",
+    "subtitle": "Kooperatifçilik ve gıda egemenliği üzerine okuma listesi",
+    "backToHome": "Ana Sayfaya Dön",
+    "sections": {
+      "books": {
+        "title": "Kitaplar",
+        "count": "kitap"
+      },
+      "articles": {
+        "title": "Makaleler / Köşe Yazıları / Sunumlar",
+        "count": "makale"
+      },
+      "digitalPlatforms": {
+        "title": "Dijital Platformlar",
+        "count": "platform"
+      }
+    }
+  },
+  "conversations": {
+    "title": "Kooperatifçilik Sohbetleri",
+    "subtitle": "Podcast kayıtları ve sohbet arşivi",
+    "backToHome": "Ana Sayfaya Dön",
+    "podcast": {
+      "title": "Kadıköy Kooperatifi",
+      "description": "Kadıköy Kooperatifi'nde kooperatifçilik, gıda politikaları, deneyimler, aracısız ekolojik üretim, tüketim, dükkân ve birçok konuda konuşuyoruz.",
+      "listenOnSpotify": "Spotify'ta Dinle"
+    },
+    "allEpisodes": "Tüm Bölümler"
+  },
+  "publications": {
+    "title": "Kooperatifi Anlatan Yazılar",
+    "subtitle": "Kadıköy Kooperatifi hakkında yazılmış yazılar ve medyada çıkan haberler",
+    "breadcrumb": "Kooperatif Yayında",
+    "backToHome": "Ana Sayfaya Dön",
+    "articles": {
+      "ekoloji-kolektifi": {
+        "title": "Ekoloji Kolektifi Röportajı"
+      },
+      "aytk-bulteni": {
+        "title": "AYTK Bültenine Kadıköy Kooperatifi"
+      },
+      "ayrinti-dergi": {
+        "title": "Ayrıntı Dergi Güz 32. Sayı - Mülkiyet"
+      },
+      "spektrum": {
+        "title": "Spektrum Kadıköy Kooperatifi"
+      }
+    },
+    "mediaNews": {
+      "title": "Medyada Çıkan Haberler",
+      "description": "Kadıköy Kooperatifi hakkında gazete ve dergilerde çıkan haberler",
+      "categories": {
+        "newspaper": "Gazete Haberleri",
+        "magazine": "Dergi Yazıları",
+        "print": "Basılı Medya"
+      },
+      "printMedia": "Basılı medya haberleri",
+      "viewAll": "Tümünü Gör"
+    }
+  },
+  "memory": {
+    "title": "Kolektif Hafıza",
+    "backToHome": "Ana Sayfaya Dön",
+    "viewGallery": "Galeriyi Görüntüle",
+    "galleries": {
+      "brosur": {
+        "title": "Broşür",
+        "description": "Kooperatif broşürleri ve tanıtım materyalleri"
+      },
+      "haftalik-toplanti-duyuru-afisleri": {
+        "title": "Haftalık Toplantı Duyuru Afişleri",
+        "description": "Haftalık toplantılar için hazırlanan duyuru afişleri"
+      },
+      "kkka-toplanti-duyuru-afisleri": {
+        "title": "KKKA Toplantı Duyuru Afişleri",
+        "description": "Kooperatif Kendini Anlatıyor toplantı duyuru afişleri"
+      },
+      "paylasim-gorselleri": {
+        "title": "Paylaşım Görselleri",
+        "description": "Sosyal medya ve iletişim için hazırlanan görseller"
+      },
+      "gorseller": {
+        "title": "Görseller",
+        "description": "Kooperatif etkinlikleri, ürün fotoğrafları ve görsel arşiv"
+      },
+      "logo": {
+        "title": "Logo",
+        "description": "Kadıköy Kooperatifi logo ve marka görselleri"
+      }
+    }
+  }
+}
+

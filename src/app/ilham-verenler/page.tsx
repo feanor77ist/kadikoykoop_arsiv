@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import { useTranslations } from 'next-intl';
 
 export default function IlhamVerenler() {
+  const t = useTranslations('inspiration');
   const kitaplar = [
     "GIDA KRİZİ - Tarım, Ekoloji ve Egemenlik - Abdullah Aysu (syf. 271-287)",
     "TERRA MADRE - Carlo Petrini (syf.13-23)",
@@ -278,16 +282,16 @@ export default function IlhamVerenler() {
           <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          Ana Sayfaya Dön
+          {t('backToHome')}
         </Link>
 
         <div className="mb-12 text-center">
           <div className="text-6xl mb-6">📚✨</div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            İlham Verenler
+            {t('title')}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            Kooperatifçilik ve gıda egemenliği üzerine okuma listesi
+            {t('subtitle')}
           </p>
         </div>
 
@@ -300,10 +304,10 @@ export default function IlhamVerenler() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  Kitaplar
+                  {t('sections.books.title')}
                 </h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                  {kitaplar.length} kitap
+                  {kitaplar.length} {t('sections.books.count')}
                 </p>
               </div>
             </div>
@@ -331,10 +335,10 @@ export default function IlhamVerenler() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  Makaleler / Köşe Yazıları / Sunumlar
+                  {t('sections.articles.title')}
                 </h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                  {makaleler.length} makale
+                  {makaleler.length} {t('sections.articles.count')}
                 </p>
               </div>
             </div>
@@ -385,10 +389,10 @@ export default function IlhamVerenler() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  Dijital Platformlar
+                  {t('sections.digitalPlatforms.title')}
                 </h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                  {dijitalPlatformlar.length} platform
+                  {dijitalPlatformlar.length} {t('sections.digitalPlatforms.count')}
                 </p>
               </div>
             </div>

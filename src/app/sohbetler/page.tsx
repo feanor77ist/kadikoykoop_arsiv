@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import { useTranslations } from 'next-intl';
 
 export default function Bolum7() {
+  const t = useTranslations('conversations');
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 relative">
       {/* Arka plan görseli */}
@@ -24,16 +28,16 @@ export default function Bolum7() {
           <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          Ana Sayfaya Dön
+          {t('backToHome')}
         </Link>
 
         <div className="mb-12 text-center">
           <div className="text-6xl mb-6">🎙️🎧</div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Kooperatifçilik Sohbetleri
+            {t('title')}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            Podcast kayıtları ve sohbet arşivi
+            {t('subtitle')}
           </p>
         </div>
 
@@ -48,10 +52,10 @@ export default function Bolum7() {
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  Kadıköy Kooperatifi
+                  {t('podcast.title')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-3">
-                  Kadıköy Kooperatifi'nde kooperatifçilik, gıda politikaları, deneyimler, aracısız ekolojik üretim, tüketim, dükkân ve birçok konuda konuşuyoruz.
+                  {t('podcast.description')}
                 </p>
                 <a 
                   href="https://open.spotify.com/show/0L02yRyQ4vww8SwBhwx3Nr" 
@@ -59,7 +63,7 @@ export default function Bolum7() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium transition-colors"
                 >
-                  Spotify'ta Dinle
+                  {t('podcast.listenOnSpotify')}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -71,7 +75,7 @@ export default function Bolum7() {
           {/* Bölümler Listesi */}
           <div>
             <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-              Tüm Bölümler
+              {t('allEpisodes')}
             </h4>
               <div className="space-y-4">
                 {/* Bölüm 5 */}
@@ -92,7 +96,7 @@ export default function Bolum7() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium transition-colors"
                     >
-                      Spotify'ta Dinle
+                      {t('podcast.listenOnSpotify')}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
@@ -130,7 +134,7 @@ export default function Bolum7() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium transition-colors"
                     >
-                      Spotify'ta Dinle
+                      {t('podcast.listenOnSpotify')}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
@@ -168,7 +172,7 @@ export default function Bolum7() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium transition-colors"
                     >
-                      Spotify'ta Dinle
+                      {t('podcast.listenOnSpotify')}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
@@ -206,7 +210,7 @@ export default function Bolum7() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium transition-colors"
                     >
-                      Spotify'ta Dinle
+                      {t('podcast.listenOnSpotify')}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
@@ -244,7 +248,7 @@ export default function Bolum7() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium transition-colors"
                     >
-                      Spotify'ta Dinle
+                      {t('podcast.listenOnSpotify')}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>

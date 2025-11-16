@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import { useTranslations } from 'next-intl';
 
 export default function Bolum5() {
+  const t = useTranslations('thoughts');
+  const tCommon = useTranslations('common');
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 relative">
       {/* Arka plan görseli */}
@@ -24,21 +29,21 @@ export default function Bolum5() {
           <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          Ana Sayfaya Dön
+          {t('backToHome')}
         </Link>
 
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Üzerine Düşündüklerimiz
+            {t('title')}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            Kooperatifin zihni, çalıştay raporları ve kavramlar sözlüğü
+            {t('subtitle')}
           </p>
         </div>
 
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            Çalıştay Raporları
+            {t('workshopReports.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Link
@@ -47,13 +52,13 @@ export default function Bolum5() {
             >
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🌾</div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Gıda Krizi ve Gıda Egemenliği
+                {t('workshopReports.items.gida-krizi-egemenlik.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-2">
-                22 Ocak 2017 - Yeldeğirmeni Mahallesi
+                {t('workshopReports.items.gida-krizi-egemenlik.date')}
               </p>
               <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">
-                Atölye çalışması raporu
+                {t('workshopReports.items.gida-krizi-egemenlik.type')}
               </p>
             </Link>
 
@@ -63,13 +68,13 @@ export default function Bolum5() {
             >
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🌱</div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Ekolojik Tarım Aracısız Tüketim
+                {t('workshopReports.items.ekolojik-tarim-aracisiz-tuketim.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-2">
-                7 Mayıs 2017 - Caferağa Mahallesi
+                {t('workshopReports.items.ekolojik-tarim-aracisiz-tuketim.date')}
               </p>
               <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">
-                Atölye çalışması raporu
+                {t('workshopReports.items.ekolojik-tarim-aracisiz-tuketim.type')}
               </p>
             </Link>
 
@@ -79,13 +84,13 @@ export default function Bolum5() {
             >
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🤝</div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Kooperatifçilik ve Kooperatifleşme
+                {t('workshopReports.items.kooperatifcilik-kooperatiflesme.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-2">
-                10 Haziran 2017 - Osmanağa Mahallesi
+                {t('workshopReports.items.kooperatifcilik-kooperatiflesme.date')}
               </p>
               <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">
-                Atölye çalışması raporu
+                {t('workshopReports.items.kooperatifcilik-kooperatiflesme.type')}
               </p>
             </Link>
           </div>
@@ -93,7 +98,7 @@ export default function Bolum5() {
 
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            Kavramlar Sözlüğü
+            {t('conceptsDictionary.title')}
           </h2>
           <Link
             href="/dusunduklerimiz/kavramlar-sozlugu"
@@ -108,29 +113,29 @@ export default function Bolum5() {
               
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  Kavramlar Sözlüğü
+                  {t('conceptsDictionary.title')}
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-4">
-                  Kooperatifçilik ve gıda egemenliği üzerine 26 kavramın detaylı açıklamaları
+                  {t('conceptsDictionary.description')}
                 </p>
                 
                 {/* Örnek Kavram İkonları */}
                 <div className="flex flex-wrap gap-3 mb-4">
                   <span className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm">
                     <span className="text-lg">🌾</span>
-                    <span>Ekolojik Tarım</span>
+                    <span>{t('conceptsDictionary.examples.ekolojik-tarim')}</span>
                   </span>
                   <span className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm">
                     <span className="text-lg">🥗</span>
-                    <span>Temiz Gıda</span>
+                    <span>{t('conceptsDictionary.examples.temiz-gida')}</span>
                   </span>
                   <span className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm">
                     <span className="text-lg">🤝</span>
-                    <span>Kooperatifçilik</span>
+                    <span>{t('conceptsDictionary.examples.kooperatifcilik')}</span>
                   </span>
                   <span className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm">
                     <span className="text-lg">🌱</span>
-                    <span>Tohum</span>
+                    <span>{t('conceptsDictionary.examples.tohum')}</span>
                   </span>
                 </div>
                 
@@ -139,11 +144,11 @@ export default function Bolum5() {
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
-                    <span className="text-sm font-medium">26 kavram</span>
+                    <span className="text-sm font-medium">{t('conceptsDictionary.conceptCount')}</span>
                   </div>
                   
                   <div className="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold text-base group-hover:translate-x-2 transition-transform">
-                    <span>Tümünü Gör</span>
+                    <span>{t('conceptsDictionary.viewAll')}</span>
                     <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>

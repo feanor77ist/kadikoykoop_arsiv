@@ -1,19 +1,25 @@
+"use client";
+
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import { useTranslations } from 'next-intl';
 
 export default function Isleyis() {
+  const t = useTranslations('operations');
+  const tCommon = useTranslations('common');
+
   const subSections = [
     {
       id: "model",
-      title: "Model",
-      description: "Kooperatif modeli ve işleyiş yapısı",
+      title: t('sections.model.title'),
+      description: t('sections.model.description'),
       href: "/isleyis/model",
       icon: "📋"
     },
     {
       id: "birim-yonergeleri",
-      title: "Birim Yönergeleri",
-      description: "Kooperatif birimlerinin çalışma yönergeleri",
+      title: t('sections.birim-yonergeleri.title'),
+      description: t('sections.birim-yonergeleri.description'),
       href: "/isleyis/birim-yonergeleri",
       icon: "📝"
     }
@@ -36,18 +42,18 @@ export default function Isleyis() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-8">
-          <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Ana Sayfa</Link>
+          <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">{tCommon('home')}</Link>
           <span>/</span>
-          <span className="text-gray-900 dark:text-white font-medium">İşleyiş</span>
+          <span className="text-gray-900 dark:text-white font-medium">{t('title')}</span>
         </div>
 
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            İşleyiş
+            {t('title')}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            Kooperatif modeli ve birim yönergeleri
+            {t('subtitle')}
           </p>
         </div>
 
@@ -69,7 +75,7 @@ export default function Isleyis() {
                 {section.description}
               </p>
               <div className="mt-4 flex items-center text-blue-600 dark:text-blue-400 font-medium text-sm group-hover:translate-x-2 transition-transform">
-                <span>İncele</span>
+                <span>{t('explore')}</span>
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -87,7 +93,7 @@ export default function Isleyis() {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Ana Sayfaya Dön
+            {t('backToHome')}
           </Link>
         </div>
       </main>

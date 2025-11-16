@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navigation from "../components/Navigation";
 import { useState, useEffect, useRef, useCallback } from "react";
 import Script from "next/script";
+import { useTranslations } from 'next-intl';
 import etkinliklerData from "../../../public/etkinlikler/etkinlikler.json";
 
 interface Etkinlik {
@@ -22,6 +23,8 @@ interface SocialMediaPost {
 }
 
 export default function Etkinlikler() {
+  const t = useTranslations('events');
+  const tCommon = useTranslations('common');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12; // Her sayfada gösterilecek öğe sayısı
   const [loadedEmbeds, setLoadedEmbeds] = useState<Set<string>>(new Set());
@@ -417,9 +420,9 @@ export default function Etkinlikler() {
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 overflow-x-hidden">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-8 break-words flex-wrap">
-            <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Ana Sayfa</Link>
+            <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">{tCommon('home')}</Link>
             <span>/</span>
-            <span className="text-gray-900 dark:text-white font-medium">Bir Araya Gelince</span>
+            <span className="text-gray-900 dark:text-white font-medium">{t('breadcrumb')}</span>
           </div>
 
           {/* Header */}
@@ -427,10 +430,10 @@ export default function Etkinlikler() {
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
               <div>
                 <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-3">
-                  Bir Araya Gelince...
+                  {t('title')}
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400">
-                  Kooperatif etkinlikleri ve bir arada olma anları
+                  {t('subtitle')}
                 </p>
               </div>
               <div className="flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-lg border border-green-200 dark:border-green-800">
@@ -438,7 +441,7 @@ export default function Etkinlikler() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 <span className="text-sm font-semibold text-green-700 dark:text-green-300">
-                  {allItems.length} etkinlik
+                  {allItems.length} {t('count')}
                 </span>
               </div>
             </div>
@@ -489,12 +492,12 @@ export default function Etkinlikler() {
                           {etkinlik.content && (
                             <span className="inline-flex items-center gap-1">
                               {etkinlik.content_type === 'pdf' ? '📄' : '📝'}
-                              {etkinlik.content_type === 'pdf' ? 'PDF' : 'Metin'}
+                              {etkinlik.content_type === 'pdf' ? 'PDF' : t('text')}
                             </span>
                           )}
                           {etkinlik.images.length > 0 && (
                             <span className="inline-flex items-center gap-1">
-                              📸 {etkinlik.images.length} görsel
+                              📸 {etkinlik.images.length} {t('images')}
                             </span>
                           )}
                         </div>
@@ -519,7 +522,7 @@ export default function Etkinlikler() {
                           </div>
                           <div className="flex-1 min-w-0">
                             <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">
-                              {post.type === "instagram" ? "Instagram Duyurusu" : "Facebook Duyurusu"}
+                              {post.type === "instagram" ? t('instagramPost') : t('facebookPost')}
                             </h3>
                           </div>
                         </div>
@@ -575,7 +578,7 @@ export default function Etkinlikler() {
                             )
                           ) : (
                             <div className="text-center text-gray-400 dark:text-gray-500">
-                              <div className="text-sm">Kaydırınca yüklenecek...</div>
+                              <div className="text-sm">{tCommon('scrollToLoad')}</div>
                             </div>
                           )}
                         </div>
@@ -596,7 +599,7 @@ export default function Etkinlikler() {
             {totalPages > 1 && (
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Sayfa {currentPage} / {totalPages} (Toplam {allItems.length} öğe)
+                  {tCommon('page')} {currentPage} {tCommon('of')} {totalPages} ({tCommon('total')} {allItems.length} {tCommon('items')})
                 </div>
                 
                 <div className="flex items-center gap-2">
@@ -606,7 +609,7 @@ export default function Etkinlikler() {
                     disabled={currentPage === 1}
                     className="px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium cursor-pointer"
                   >
-                    Önceki
+                    {tCommon('previous')}
                   </button>
                   
                   {/* Sayfa Numaraları */}
@@ -651,7 +654,7 @@ export default function Etkinlikler() {
                     disabled={currentPage === totalPages}
                     className="px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium cursor-pointer"
                   >
-                    Sonraki
+                    {tCommon('next')}
                   </button>
                 </div>
               </div>
@@ -667,7 +670,7 @@ export default function Etkinlikler() {
               <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              Ana Sayfaya Dön
+              {tCommon('backToHome')}
             </Link>
           </div>
         </main>

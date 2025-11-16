@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import { useTranslations } from 'next-intl';
 
 export default function Yayinlar() {
+  const t = useTranslations('publications');
+  const tCommon = useTranslations('common');
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 relative">
       {/* Arka plan görseli */}
@@ -19,18 +24,18 @@ export default function Yayinlar() {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-8 break-words flex-wrap">
-          <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Ana Sayfa</Link>
+          <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">{tCommon('home')}</Link>
           <span>/</span>
-          <span className="text-gray-900 dark:text-white font-medium">Kooperatif Yayında</span>
+          <span className="text-gray-900 dark:text-white font-medium">{t('breadcrumb')}</span>
         </div>
 
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Kooperatifi Anlatan Yazılar
+            {t('title')}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            Kadıköy Kooperatifi hakkında yazılmış yazılar ve medyada çıkan haberler
+            {t('subtitle')}
           </p>
         </div>
 
@@ -42,7 +47,7 @@ export default function Yayinlar() {
           >
             <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🌿</div>
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-              Ekoloji Kolektifi Röportajı
+              {t('articles.ekoloji-kolektifi.title')}
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-2">
               Temmuz 2017
@@ -58,7 +63,7 @@ export default function Yayinlar() {
           >
             <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">📰</div>
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-              AYTK Bültenine Kadıköy Kooperatifi
+              {t('articles.aytk-bulteni.title')}
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-2">
               Aralık 2018
@@ -74,7 +79,7 @@ export default function Yayinlar() {
           >
             <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">📖</div>
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-              Ayrıntı Dergi Güz 32. Sayı - Mülkiyet
+              {t('articles.ayrinti-dergi.title')}
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-2">
               2019
@@ -90,7 +95,7 @@ export default function Yayinlar() {
           >
             <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">✍️</div>
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-              Spektrum Kadıköy Kooperatifi
+              {t('articles.spektrum.title')}
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-2">
               Spektrum Dergisi
@@ -104,7 +109,7 @@ export default function Yayinlar() {
         {/* Medyada Çıkan Haberler */}
         <div className="mb-12 mt-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            Medyada Çıkan Haberler
+            {t('mediaNews.title')}
           </h2>
           <Link
             href="/yayinlar/medyada-cikanlar"
@@ -119,25 +124,25 @@ export default function Yayinlar() {
               
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
-                  Medyada Çıkan Haberler
+                  {t('mediaNews.title')}
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-4">
-                  Kadıköy Kooperatifi hakkında gazete ve dergilerde çıkan haberler
+                  {t('mediaNews.description')}
                 </p>
                 
                 {/* Örnek Kategoriler */}
                 <div className="flex flex-wrap gap-3 mb-4">
                   <span className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm">
                     <span className="text-lg">📰</span>
-                    <span>Gazete Haberleri</span>
+                    <span>{t('mediaNews.categories.newspaper')}</span>
                   </span>
                   <span className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm">
                     <span className="text-lg">📖</span>
-                    <span>Dergi Yazıları</span>
+                    <span>{t('mediaNews.categories.magazine')}</span>
                   </span>
                   <span className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm">
                     <span className="text-lg">📄</span>
-                    <span>Basılı Medya</span>
+                    <span>{t('mediaNews.categories.print')}</span>
                   </span>
                 </div>
                 
@@ -146,11 +151,11 @@ export default function Yayinlar() {
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                     </svg>
-                    <span className="text-sm font-medium">Basılı medya haberleri</span>
+                    <span className="text-sm font-medium">{t('mediaNews.printMedia')}</span>
                   </div>
                   
                   <div className="inline-flex items-center text-green-600 dark:text-green-400 font-semibold text-base group-hover:translate-x-2 transition-transform">
-                    <span>Tümünü Gör</span>
+                    <span>{t('mediaNews.viewAll')}</span>
                     <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
@@ -170,7 +175,7 @@ export default function Yayinlar() {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Ana Sayfaya Dön
+            {t('backToHome')}
           </Link>
         </div>
       </main>

@@ -1,0 +1,536 @@
+{
+  "common": {
+    "home": "Home",
+    "explore": "Explore",
+    "back": "Back",
+    "backToHome": "Back to Home",
+    "page": "Page",
+    "of": "of",
+    "previous": "Previous",
+    "next": "Next",
+    "total": "Total",
+    "items": "items",
+    "loading": "Loading...",
+    "scrollToLoad": "Scroll to load...",
+    "translationNotice": "Some contents are under construction, thank you for your patience."
+  },
+  "nav": {
+    "cooperativism": "Cooperativism",
+    "about": "About Us",
+    "volunteering": "Volunteering",
+    "operations": "Operations",
+    "thoughts": "Our Thoughts",
+    "inspiration": "Inspiration",
+    "conversations": "Podcasts",
+    "events": "Events",
+    "publications": "Publications",
+    "memory": "Memory"
+  },
+  "home": {
+    "title": "Kadıköy Cooperative Archive",
+    "description": "Access documents, publications, and cooperativism resources from Kadıköy Cooperative here.",
+    "modalMessage": "We know our story doesn't end here. We believe that the values we built together, the spirit of solidarity, and collective labor will sprout again in new grounds wherever we go.",
+    "aboutArchive": "About the Archive",
+    "aboutArchiveText": "This archive contains documents, publications, and resources collected by Kadıköy Cooperative about cooperativism. You can access the content organized under 10 main sections by clicking on the cards. In each section, you can reach related subtopics and documents.",
+    "sections": {
+      "1": {
+        "title": "Why and How Cooperativism?",
+        "description": "Fundamentals of cooperativism, legal process, legislation and forms"
+      },
+      "2": {
+        "title": "Kadıköy Cooperative Tells Its Story",
+        "description": "History, foundations, principles and documentation of the cooperative"
+      },
+      "3": {
+        "title": "Volunteering",
+        "description": "Volunteer participation, training materials and practical information"
+      },
+      "4": {
+        "title": "Operations",
+        "description": "Cooperative model and unit guidelines"
+      },
+      "5": {
+        "title": "Our Thoughts",
+        "description": "Workshop reports and concepts dictionary"
+      },
+      "6": {
+        "title": "Inspiration",
+        "description": "Reading list and source materials"
+      },
+      "7": {
+        "title": "Cooperativism Conversations",
+        "description": "Podcasts and audio recordings"
+      },
+      "8": {
+        "title": "When We Come Together",
+        "description": "Events and organizations"
+      },
+      "9": {
+        "title": "Cooperative in the Media",
+        "description": "Publications and news in the media"
+      },
+      "10": {
+        "title": "Collective Memory",
+        "description": "Images and document archive"
+      }
+    }
+  },
+  "events": {
+    "title": "When We Come Together...",
+    "subtitle": "Cooperative events and moments of togetherness",
+    "count": "events",
+    "instagramPost": "Instagram Announcement",
+    "facebookPost": "Facebook Announcement",
+    "text": "Text",
+    "images": "images",
+    "breadcrumb": "When We Come Together"
+  },
+  "cooperativism": {
+    "title": "Why and How Cooperativism?",
+    "subtitle": "Fundamentals and practical applications of cooperativism",
+    "read": "Read",
+    "back": "Back",
+    "backToSection": "Back to Cooperativism Section",
+    "sections": {
+      "a": {
+        "title": "Why Cooperativism?",
+        "description": "Global food crisis, the necessity of cooperativism and the birth of Kadıköy Cooperative",
+        "subtitle": "Global food system and the necessity of cooperativization",
+        "content": {
+          "introduction": {
+            "p1": "Especially in the last half century, like all other production areas, the food industry has been globalized and made heavily dependent on cheap raw materials, toxic chemical inputs, and machines. The global food system, dominated by a handful of increasingly powerful global companies, is driving the world's peoples into hunger and misery for its own benefit. The industrial agricultural system based on toxic inputs, while making the producer dependent on it, is causing fatal or irreversible damage to nature and humans as part of it. The consumer's indifference and disconnection from food production processes results in the increasingly intensive use of chemicals and additives. In parallel, examples such as the increase in diseases; the damage caused by agricultural chemicals to nature; the deadly pressure on local food production; the fact that while some peoples struggle with hunger, enormous waste is considered extremely normal reveal the irrationality of the course.",
+            "p2": "Such a conjuncture did not emerge suddenly. The current situation, which we can think of as a moment of the transformation of the food system, can be read as a projection of a series of processes experienced globally. The withdrawal of public resources from the processes of protecting the agricultural system and organizing the logistics network, the emergence of global customs tariffs as the primary determinant, the dominance of companies and the company model in general in the agriculture-food sector, resulted in the public limiting itself as a regulatory actor in favor of companies in this process. Thus, producers and consumers were left alone with companies within the framework of rules created by the state to protect the interests of companies. While this process emerges as a global phenomenon, Turkey is experiencing a similar process with its own unique dynamics. Such a conjuncture is one of the primary elements that directs people who came together with different motivations in neighborhood forums after Gezi to the food issue.",
+            "p3": "Kadıköy, one of the 15 most populous districts of Istanbul, is a district where approximately 500,000 people live and has a socio-economic structure that contains many differences. The historic center, identified with the name of the district, has recently become a focus of social, political, cultural and intellectual interest. The unique political and social dynamics of the district became more visible especially after the Gezi resistance, and strong forums, occupied houses, solidarity practices, cultural communities, and new policy experiments sprouted in the district."
+          },
+          "birth": {
+            "title": "The Birth of Kadıköy Cooperative",
+            "p1": "Kadıköy Cooperative also emerged in this climate. Despite the 21st century calling for different types of organizational practices and the fact that cooperativism in Turkey generally brings negative examples to mind, why was the cooperative model chosen and how would this model be built with what kind of uniqueness?",
+            "p2": "Cooperativism in Turkey has a long history and a serious historical heritage. However, this heritage was interrupted by post-1980 agricultural, development and privatization policies. The corruption and distrust experienced specifically in housing cooperativism, the pressures experienced by village development cooperatives and the fact that most of these cooperatives turned into a kind of signboard cooperative, the inability of consumer cooperatives to make a difference strong enough to be an alternative to the supermarket-based food supply system; their inability to hold on against supermarketization and many other factors caused cooperatives to lose prestige in society. At the same time, the fact that the existing cooperativism law has also transformed cooperatives into a kind of company contributed significantly to this loss of prestige.",
+            "p3": "However, we observed that in the recent past, various successful examples have emerged in different places against this perception of cooperativization. Especially the cooperative experiences that emerged in the field of agriculture and food, when considered together with the crisis experienced in agriculture and food, brought cooperativism back to the agenda as an alternative. Cooperativism, as an organizational model that strengthens collective work and solidarity, establishes trust relationships, protects and develops the interests of its partners and society, has become discussed as collective business experiences in the fields of agriculture, food, ecology and different sectors. This discussion climate managed to attract our attention before Kadıköy Cooperative became a concrete and institutional experience, and led us to become an initiative on food. At this point, one of the important turning points was the Cooperativization Workshop. In the discussion texts of this workshop, we revealed the possible approaches to the cooperative organizational model and our expectations and imaginations regarding the future perspective."
+          },
+          "workshop": {
+            "title": "Cooperativism and Cooperativization Workshop Report",
+            "p1": "Kadıköy Cooperative held a workshop titled \"Cooperativism and Cooperativization\" on June 10, 2017 at the Social Solidarity and Communication Association (SODİD) in Osmanağa Neighborhood, Kadıköy. Approximately 50 people from various districts of Istanbul attended the workshop, which lasted about three hours.",
+            "p2": "The report of the discussions handled by dividing into three groups was formed as follows:"
+          },
+          "whyNecessary": {
+            "title": "Why are Cooperatives and the Cooperative Movement Necessary?",
+            "p1": "The effects of the global food crisis, which have common and unique aspects in every locality, are visible. The food system, dominated by companies and states working with company logic, is making life difficult for the majority of societies from the producer to the carrier and the final consumer. Against increasingly difficult conditions, we need to establish a different human-nature relationship against the efforts to prevent agricultural lands from being sent to the disposal of companies, against all existing and planned monoculture-based production technologies on agricultural lands, against company-dominated technologies covering inputs such as seeds, pesticides and fertilizers. On the other hand, we must not forget that as final consumers, the right to know what we eat and consume is one of the most important pillars of organizing for reliable, accessible and fair food, and we must act with the claim that how and by whom food is produced should be in the initiative of subjects and institutions that have a public claim."
+          },
+          "limits": {
+            "title": "Possible Limits of Cooperatives and the Cooperative Movement",
+            "p1": "Although transforming and developing consumption and production relations through solidarity-based organization is the main goal of the cooperativization movement, it is necessary to consider existing and possible limits. One of these limits is that producers become alienated from their production processes, their own products, and even some of the tools they use while producing. Most peasants have forgotten traditional farming methods. There is a significant majority convinced that the pesticides they use are correct and necessary. On the other hand, there is still a one-third segment in Turkey that practices wise peasant agriculture. As long as consumer organization and farmer organization go in parallel, a producer organization centered on wise peasant agriculture seems to develop. Consumer organization on a cooperative basis will be a trigger, if not a guarantee, for farmer organization. However, what needs to be paid attention to is that the mutual initiative between producer and consumer organizations should not be seen as merely a resource transfer from one side to the other. Methods that will encourage farmers to create their organizations only with their own capital can ensure the continuity of these structures and prevent us from repeating the same mistakes while trying to solve the problems we identify as alienation.",
+            "p2": "The emergence of a brand new sector with food safety has transformed production and consumption relations and changed our expectations about how food is produced. A kind of consumer habit has begun to form that pays attention to organic product labels, special laboratory or ministry approvals on packages to ensure that the food we consume is clean and natural. On the other hand, certificates, diplomas, documents are the feet of this new sector that creates costs that small producers cannot bear. If distrust prevails despite all these sectoral activities, we need to develop another form of relationship that will establish trust from another place, instead of these habits and obligations. While developing an organizational form that supports natural wise peasant agriculture and gives the producer the value of their labor, we need to keep these limits in mind.",
+            "p3": "It is obvious that the prices of products reaching the final consumer from producers producing with wise peasant agriculture - if not organic labeled products, products produced with industrial methods - are above market prices. This reality currently limits the accessibility of natural food to middle and upper class consumers. Therefore, these limits affect the spread and expansion of initiatives working on food supply that are still in the development stage to a certain extent. We must develop our methods by accepting that access to natural and fair food is the right of segments with limited power in society.",
+            "p4": "There seem to be some limits regarding the quality of labor put forward, especially voluntary and professional, regarding the internal functioning of cooperativization formations and initiatives. Although voluntary labor achieves productive results through mutual responsibility, it is also a fact that it is difficult to overcome the limits brought by the necessities of daily life. To overcome this at certain stages, developing employment methods that will not reduce the importance of voluntary labor and prevent the problems that professionalization may bring will also contribute to the development of solidarity relations of cooperativization. However, employment opportunities will need to be developed in a way that ensures fair and humane working conditions. Another limit for organization is the possibility of different political approaches dominating cooperative work. Developing organizational methods that will develop decision-making mechanisms where every approach can come together seems to be one of the issues that need to be careful against the limits that cooperativization efforts may encounter."
+          },
+          "institutionalization": {
+            "title": "Institutionalization",
+            "p1": "Another difficulty that cooperativization needs to overcome is the obstacles to steps towards institutionalization. Although initiative groups work with cooperative or collective principles, it is a fact that the bureaucratic and financial obligations brought by legal regulations on establishing an official cooperative lead people to hesitate to take steps. Strengthening relations with past and existing cooperative experiences, mutual transfer of details of legal regulations and financial obligations without discouraging is important here. On the other hand, while experience transfer is important, encouraging methods such as responsibility sharing and rotation in work division is another necessity to ensure the continuity of cooperativization efforts and prevent specialization and the tension between those who know and those who don't."
+          },
+          "methods": {
+            "title": "Existing and Possible Methods in Cooperative Organization",
+            "economicModel": {
+              "title": "Economic Model",
+              "p1": "Sharing the logistics network can be an important step in developing the economic model of cooperativization. Beyond reducing intermediaries, it will be necessary to think about developing cooperatives or joint cooperative strategies that will solve transportation and storage. Thinking about a barter system between cooperatives where orders are given jointly and before producers start their production planning with uncertainties, using joint warehouses, and even products can circulate within the solidarity economy without entering market circulation seems to be achievable dreams for the future.",
+              "p2": "In addition, by determining needs together, it can be thought about what is daily and urgent and what is a secondary need, and more contribution share can be added to luxury products. More cooperative share can be added to products that can be considered for middle and upper income groups. Some collective initiatives can apply differently by stretching the ecological consumption principle within their principles and spreading some stages related to product access over the long term.",
+              "p3": "One of the stages that the economic model aims to reach in the long term is the creation of conditions where formations that organize consumption from their bakery to their kitchen, to workshops where various products are processed at the neighborhood scale in a coordinated manner are established, and farmers and other small and organized producers can sell their products to markets close to their locality. The development of grassroots organizations that can meet all kinds of needs of regions is important. It is important for this dream to include the claim of how much Istanbul can feed itself with its own local production in terms of developing its claim."
+            },
+            "volunteering": {
+              "title": "Volunteering and Employment",
+              "p1": "Moving without thinking of consumer cooperatives separately from production cooperatives will also bring the employment relationship into these collective efforts. Production cooperatives that can be established in the localities of cities will be an important part of this relationship. If local production cooperatives, especially those involving women, can be established and spread, consumer cooperatives and collectives can work together with these formations. An intermediate solution for the relationship between voluntary and paid work can be sought in cooperative experiences abroad. Practices such as the requirement to work at least three days a month in cooperative work to become a partner in the cooperative and benefit from cooperative services can enable the voluntary labor relationship in these collectives to develop through mutual responsibility."
+            },
+            "experience": {
+              "title": "Experience Transfer and Solidarity",
+              "p1": "If we want the spread of cooperativization, we must first learn from past experiences and, if possible, revive these experiences in a way that suits today's needs and course. Afterwards, it is important to transfer the experiences of existing experiences to new efforts. For these experiences to come together with producers, teams working in different fields need to both transfer their experiences and show solidarity. We should think about this both for experience transfer to collectives established in the city and to encourage producer organization. Following unique experiences in different localities of the world is important for lessons to be drawn and models to be taken as examples.",
+              "p2": "In this direction, support should be given to every locality and sector that wants to establish their cooperative, working with the principle of self-management. In the realization of solidarity between cooperatives and collectives, responsibility-sharing-based experiments can be made, such as a collective taking on the organization of each product or producer group. On the other hand, thinking about how food communities that do not prefer official cooperativization are invisible to the state and how these formations will be designed in cooperation with cooperatives can enable us to create a productive model. How to regulate products or partnership shares for the development of social solidarity both ideologically and materially also needs to be thought about separately. Finally, whether it is a shop, a product distribution place, or a common activity area, our experiences show how important common spaces are for the development of solidarity. The necessity of cooperativization to create its own spaces will be important for solidarity."
+            },
+            "transformative": {
+              "title": "Transformative Effect",
+              "p1": "It is important that the cooperativization effort is not just a formation that serves its partners, but develops methods to develop social solidarity. Similarly, the fact that the audience addressed by product supply remains only as customers will cause the solidarity principle to remain only in the relationship established with the producer.",
+              "p2": "Directing producers to organize can enable small production to encourage solidarity rather than compete with each other. Here, it is equally important that the organization continues around certain principles. For example, no compromise should be made in the use of local, non-hybrid and non-GMO seeds in agricultural production, and principles that highlight women's labor should be insisted upon. How the transformation of the producer by consumer organizations in the city will be achieved is an important point.",
+              "p3": "Although it is a need for cooperatives to develop the knowledge and experience of producers, it seems more consistent to leave this to producer organizations themselves. For example, farmers are establishing agroecology schools within Çiftçi-Sen. It is foreseen that these schools will be schools without four walls and blackboards and will develop by spreading. It is aimed that with trainer training, everyone who acquires knowledge and experience transfers these to those nearby and the school spreads agroecology step by step. In cities, collectives trying to organize consumption will also need to progress in a perspective that will turn into semi-producer/prosumer."
+            }
+          },
+          "conclusion": {
+            "title": "In Conclusion",
+            "p1": "We need to see the cooperativization effort not only as the development of organizational models that will reach healthy and fair food, but also as developing relationships where cooperatives that will strengthen life together and be alternative solidarity networks (elderly and child care cooperatives, production cooperatives, etc.) can be established. The time has come to create permanent organizational models that can capture the spirit of the age we are in, establish new structures that can set long-term goals and are not indifferent to turning from an exciting transience to an organized permanence. We can only continue the lessons and gains we are trying to draw from Gezi in this way. With the wish to see and live that another life is possible."
+          }
+        }
+      },
+      "b": {
+        "title": "Step by Step Legal Process",
+        "description": "Legal steps and required documents when establishing a cooperative",
+        "subtitle": "Steps and documents required for cooperative establishment",
+        "steps": {
+          "1": {
+            "title": "What to Bring When Going to the Tax Advisor",
+            "items": {
+              "1": "MERSIS entry is made. (Consumer cooperatives are selected, local tax office is selected)",
+              "2": "Tax number is obtained.",
+              "3": "Request number is obtained.",
+              "4": "Go to the notary with this request number.",
+              "5": "Bank account is opened for cooperative capital. Notarized signature declaration is obtained from the notary."
+            }
+          },
+          "2": {
+            "title": "What to Bring When Going to the Notary",
+            "items": {
+              "1": "Cooperative articles of association are signed and certified by the notary. (Consumer cooperatives agreement link here) Signed by at least 7 founding members. (3 members for management, 2 members for audit, 2 members for discipline)",
+              "2": "Members' criminal record",
+              "3": "Members' ID card copies",
+              "4": "Petition and establishment information form (link here)"
+            }
+          }
+        },
+        "tip": "Important Note: Getting support from a tax advisor during the cooperative establishment process will make the process easier. Care should be taken to prepare all required documents completely."
+      },
+      "d": {
+        "title": "Legislation",
+        "description": "Turkey Cooperativism Legislation and Consumer Cooperative Articles of Association",
+        "subtitle": "Turkey cooperativism legislation and consumer cooperative articles of association",
+        "subsections": {
+          "turkiye-mevzuati": {
+            "title": "Turkey Cooperativism Legislation",
+            "description": "Law No. 1163 on Cooperatives, TTK No. 6102, tax legislation and recent amendments",
+            "content": {
+              "history": {
+                "title": "History of Cooperativism Legislation in Turkey",
+                "p1": "The first regulation in the field of cooperativism in Turkey was made shortly after the proclamation of the Republic, in 1924, with Law No. 442 on Villages. This law provided for the establishment of village cooperatives to meet the economic needs of villages.",
+                "p2": "With Law No. 1470 on Artisan and Public Banks adopted in 1929, cooperatives were addressed within the banking system and credit cooperatives were regulated.",
+                "p3": "Agricultural Credit Cooperatives were regulated separately with Law No. 2834 in 1935, Housing Cooperatives with Law No. 3018 in 1936, and Consumer and Sales Cooperatives with Law No. 3476 in 1938.",
+                "p4": "Law No. 7408 on Cooperatives was adopted in 1960, but this law created problems in practice.",
+                "p5": "Law No. 1163 on Cooperatives, adopted in 1969, became the fundamental law that enabled the modern regulation of cooperativism in Turkey. This law comprehensively regulated matters such as the establishment, operation, supervision, and liquidation of cooperatives. Law No. 1163 is still the fundamental law in force today.",
+                "p6": "With the entry into force of the Turkish Commercial Code No. 6102 in 2012, important changes were also made regarding cooperatives. The new TCC provided for cooperatives to be regulated similar to commercial companies, and in cases where there is no provision in Law No. 1163, the provisions of the TCC regarding joint stock companies are applied."
+              },
+              "law1163": {
+                "title": "Law No. 1163 on Cooperatives",
+                "acceptanceDate": "Date of Adoption: 24.04.1969",
+                "publicationDate": "Date of Publication: 10.05.1969 - Official Gazette No: 13195",
+                "description": "Law No. 1163 on Cooperatives is the main law regulating the establishment, operation, supervision, and liquidation procedures of all cooperatives in Turkey. The law determines the variable membership and variable capital cooperative structure, membership conditions, duties and powers of organs, supervision system, and principles for cooperatives to establish unions.",
+                "principles": {
+                  "title": "Fundamental Principles of the Law",
+                  "variableMembership": "Variable Membership Structure: The number of members in cooperatives is not fixed, entry and exit from membership is free",
+                  "variableCapital": "Variable Capital: The amount of capital is equal to the total of shares committed by members and is variable",
+                  "limitedLiability": "Limited Liability: Members are liable only to the extent of the share amount they have committed",
+                  "democraticManagement": "Democratic Management: Each member has one vote (regardless of capital size)",
+                  "memberTransactions": "Transactions with Members: The cooperative primarily meets the needs of its members",
+                  "nonProfit": "Non-Profit Purpose: Cooperatives do not pursue profit, they provide services to their members at cost price"
+                },
+                "types": {
+                  "title": "Types of Cooperatives",
+                  "description": "Main types of cooperatives operating in Turkey according to Law No. 1163:",
+                  "list": {
+                    "1": "Consumer Cooperatives",
+                    "2": "Housing Cooperatives",
+                    "3": "Credit Cooperatives",
+                    "4": "Transportation Cooperatives",
+                    "5": "Irrigation Cooperatives",
+                    "6": "Electricity Cooperatives",
+                    "7": "Production and Operating Cooperatives",
+                    "8": "Agricultural Sales Cooperatives"
+                  }
+                }
+              },
+              "ttk6102": {
+                "title": "Turkish Commercial Code No. 6102",
+                "acceptanceDate": "Date of Adoption: 13.01.2011",
+                "effectiveDate": "Effective Date: 01.07.2012",
+                "description": "The Turkish Commercial Code No. 6102 applies to cooperatives in cases where there is no provision in Law No. 1163. Particularly in matters such as bookkeeping, financial reporting, auditing, company mergers and divisions, the provisions of the TCC regarding joint stock companies are also applied to cooperatives.",
+                "provisions": {
+                  "title": "TCC Provisions Concerning Cooperatives",
+                  "books": "Commercial Books (Articles 64-82): Cooperatives must keep journal, ledger, inventory book, share book, board of directors and general assembly decision books",
+                  "financialStatements": "Financial Statements: Cooperatives must prepare their annual financial statements according to TCC provisions",
+                  "audit": "Independent Audit: Cooperatives of certain size are subject to independent audit",
+                  "electronicGeneralAssembly": "Electronic General Assembly: Cooperatives can hold general assembly in electronic environment",
+                  "mergerDivision": "Merger and Division: Cooperatives can conduct transactions according to TCC provisions on merger and division"
+                }
+              },
+              "specialLaws": {
+                "title": "Special Laws",
+                "law1581": {
+                  "title": "Law No. 1581 on Agricultural Credit Cooperatives and Unions",
+                  "acceptanceDate": "Date of Adoption: 13.06.1972",
+                  "description": "This is a special law regulating the establishment and operation of agricultural credit cooperatives. These cooperatives are established to provide credit to farmers, supply agricultural inputs, and market agricultural products. In addition to the general provisions of Law No. 1163, it contains special regulations specific to the agricultural sector."
+                },
+                "law4572": {
+                  "title": "Law No. 4572 on Agricultural Sales Cooperatives and Unions",
+                  "acceptanceDate": "Date of Adoption: 18.06.2000",
+                  "description": "This is the law regulating the organization of cooperatives that sell agricultural products. It contains special provisions on the marketing, processing, storage, and evaluation of agricultural products. It aims to enable producers to sell their products at better prices and increase their marketing power."
+                }
+              },
+              "taxLegislation": {
+                "title": "Tax Legislation",
+                "law5520": {
+                  "title": "Corporate Tax Law No. 5520",
+                  "effectiveDate": "Effective Date: 01.01.2006",
+                  "description": "Cooperatives are subject to corporate tax. However, profits obtained by cooperatives from transactions with their members are subject to special regulations.",
+                  "article4": {
+                    "title": "Article 4/1-m: Exemption for Cooperatives",
+                    "text": "Cooperatives are exempt from corporate tax on condition that they distribute to their members the membership fees or profits obtained from transactions with their members in accordance with cooperative principles, or refund them by correcting the price differences they applied in transactions with members in favor of members, taking these profits into account.",
+                    "note": {
+                      "title": "Important Note:",
+                      "text": "This exemption applies only to profits obtained from transactions with members. Profits obtained from transactions with non-members are subject to corporate tax."
+                    }
+                  }
+                },
+                "law3065": {
+                  "title": "Value Added Tax Law No. 3065",
+                  "description1": "Deliveries of goods and services made by cooperatives to their members are subject to VAT. Cooperatives must calculate and declare VAT on their transactions.",
+                  "description2": "However, VAT exemption may be applied for some agricultural products and services. In addition, fees received by cooperatives from their members are not subject to VAT."
+                },
+                "law193": {
+                  "title": "Income Tax Law No. 193",
+                  "description1": "Wages paid by cooperatives to their employees are subject to income tax withholding. When the cooperative makes wage payments, it is obliged to make withholding according to the relevant tax brackets and pay to the tax office.",
+                  "description2": "In addition, profit shares distributed to cooperative members are also within the scope of income tax and are taxed as capital gains."
+                }
+              },
+              "recentChanges": {
+                "title": "Recent Legal Changes (2018 and After)",
+                "law7153": {
+                  "title": "Changes Made with Law No. 7153 (2018)",
+                  "acceptanceDate": "Date of Adoption: 14.03.2018",
+                  "description": "Important changes were made to Law No. 1163 on Cooperatives with Law No. 7153 \"Law on Amending the Law on Cooperatives and Some Laws and Decree Laws\":",
+                  "changes": {
+                    "1": "Fundamental changes were made in the supervision system of cooperatives",
+                    "2": "The supervision powers of the Ministry of Customs and Trade (now Ministry of Trade) were expanded",
+                    "3": "The structure and duties of cooperative upper organizations were reorganized",
+                    "4": "A system for independent audit organizations to audit cooperatives was introduced",
+                    "5": "Criminal sanctions were updated and increased",
+                    "6": "Financial reporting obligations of cooperatives were detailed"
+                  }
+                },
+                "digitalTransformation": {
+                  "title": "Digital Transformation and New Regulations",
+                  "description": "In the period after 2020, with the effect of the COVID-19 pandemic, the digital transformation of cooperatives has been accelerated:",
+                  "changes": {
+                    "1": "Electronic General Assembly: Cooperatives can hold general assembly in electronic environment without the need for members to physically come together",
+                    "2": "Use of Digital Signature: The use of digital signature in cooperative transactions has become widespread",
+                    "3": "E-Government Integration: Establishment and registration procedures of cooperatives can be carried out in electronic environment",
+                    "4": "Online Transactions: Members can conduct their transactions with the cooperative through online platforms"
+                  }
+                },
+                "ministryAudit": {
+                  "title": "Ministry Supervision and Reporting",
+                  "description": "The Ministry of Trade has introduced new regulations to ensure regular supervision of cooperatives:",
+                  "changes": {
+                    "1": "Cooperatives send their annual activity reports to the Ministry electronically",
+                    "2": "A risk-based supervision system has been introduced",
+                    "3": "Cooperative upper organizations have been made responsible for the supervision of member cooperatives",
+                    "4": "A system for authorization of independent audit organizations has been established"
+                  }
+                }
+              },
+              "note": {
+                "text": "Note: This page contains summary information on Turkey Cooperativism Legislation. For detailed and current information, please refer to Official Gazette publications, the official website of the Republic of Turkey Ministry of Trade General Directorate of Cooperativism, and the full texts of relevant laws.",
+                "source": "* Source: Genç İşi Cooperative - https://www.gencisi.org/ and Republic of Turkey Ministry of Trade General Directorate of Cooperativism"
+              },
+              "backToLegislation": "Back to Legislation Section"
+            }
+          },
+          "anasoalesme": {
+            "title": "Consumer Cooperative Articles of Association",
+            "description": "Official articles of association prepared by the Republic of Turkey Ministry of Customs and Trade (93 Articles)"
+          }
+        }
+      },
+      "e": {
+        "title": "Product & Producer Forms",
+        "description": "Information forms for food and non-food products"
+      }
+    }
+  },
+  "about": {
+    "title": "Kadıköy Cooperative Tells Its Story",
+    "subtitle": "Our cooperative's structure, principles and working methods",
+    "read": "Read",
+    "sections": {
+      "a": {
+        "title": "KKKA Presentation",
+        "description": "Kadıköy Cooperative's self-introduction presentation"
+      },
+      "b": {
+        "title": "Foundations",
+        "description": "The founding story and spirit of Kadıköy Cooperative"
+      },
+      "c": {
+        "title": "General Perspective and Core Principles",
+        "description": "The cooperative's general perspective and core principles"
+      },
+      "d": {
+        "title": "Handbook",
+        "description": "Kadıköy Cooperative handbook"
+      },
+      "e": {
+        "title": "Frequently Asked Questions",
+        "description": "Questions about the cooperative"
+      },
+      "f": {
+        "title": "Experiences, Discussions, Alternatives",
+        "description": "Article we wrote for the book 'Cooperatives Against Crisis'"
+      }
+    }
+  },
+  "volunteering": {
+    "title": "Volunteering",
+    "subtitle": "Volunteer participation, training materials and practical information",
+    "sections": {
+      "egitim-envanteri": {
+        "title": "Training Inventory",
+        "description": "How to take shifts and new volunteer participation file"
+      },
+      "egitim-sunumu": {
+        "title": "Training Presentation",
+        "description": "Kadıköy Cooperative training presentation (2020)"
+      }
+    },
+    "explore": "Explore",
+    "backToHome": "Back to Home"
+  },
+  "operations": {
+    "title": "Operations",
+    "subtitle": "Cooperative model and unit directives",
+    "sections": {
+      "model": {
+        "title": "Model",
+        "description": "Cooperative model and operational structure"
+      },
+      "birim-yonergeleri": {
+        "title": "Unit Directives",
+        "description": "Working directives of cooperative units"
+      }
+    },
+    "explore": "Explore",
+    "backToHome": "Back to Home"
+  },
+  "thoughts": {
+    "title": "What We Think About",
+    "subtitle": "The cooperative's mindset, workshop reports and concepts dictionary",
+    "backToHome": "Back to Home",
+    "workshopReports": {
+      "title": "Workshop Reports",
+      "items": {
+        "gida-krizi-egemenlik": {
+          "title": "Food Crisis and Food Sovereignty",
+          "date": "January 22, 2017 - Yeldeğirmeni Neighborhood",
+          "type": "Workshop report"
+        },
+        "ekolojik-tarim-aracisiz-tuketim": {
+          "title": "Ecological Agriculture and Direct Consumption",
+          "date": "May 7, 2017 - Caferağa Neighborhood",
+          "type": "Workshop report"
+        },
+        "kooperatifcilik-kooperatiflesme": {
+          "title": "Cooperativism and Cooperativization",
+          "date": "June 10, 2017 - Osmanağa Neighborhood",
+          "type": "Workshop report"
+        }
+      }
+    },
+    "conceptsDictionary": {
+      "title": "Concepts Dictionary",
+      "description": "Detailed explanations of 26 concepts on cooperativism and food sovereignty",
+      "conceptCount": "26 concepts",
+      "viewAll": "View All",
+      "examples": {
+        "ekolojik-tarim": "Ecological Agriculture",
+        "temiz-gida": "Clean Food",
+        "kooperatifcilik": "Cooperativism",
+        "tohum": "Seed"
+      }
+    }
+  },
+  "inspiration": {
+    "title": "Sources of Inspiration",
+    "subtitle": "Reading list on cooperativism and food sovereignty",
+    "backToHome": "Back to Home",
+    "sections": {
+      "books": {
+        "title": "Books",
+        "count": "books"
+      },
+      "articles": {
+        "title": "Articles / Columns / Presentations",
+        "count": "articles"
+      },
+      "digitalPlatforms": {
+        "title": "Digital Platforms",
+        "count": "platforms"
+      }
+    }
+  },
+  "conversations": {
+    "title": "Cooperativism Conversations",
+    "subtitle": "Podcast recordings and conversation archive",
+    "backToHome": "Back to Home",
+    "podcast": {
+      "title": "Kadıköy Cooperative",
+      "description": "We talk about cooperativism, food policies, experiences, direct ecological production, consumption, the shop and many topics at Kadıköy Cooperative.",
+      "listenOnSpotify": "Listen on Spotify"
+    },
+    "allEpisodes": "All Episodes"
+  },
+  "publications": {
+    "title": "Articles About the Cooperative",
+    "subtitle": "Articles written about Kadıköy Cooperative and news in the media",
+    "breadcrumb": "Cooperative in Publications",
+    "backToHome": "Back to Home",
+    "articles": {
+      "ekoloji-kolektifi": {
+        "title": "Ecology Collective Interview"
+      },
+      "aytk-bulteni": {
+        "title": "Kadıköy Cooperative in AYTK Bulletin"
+      },
+      "ayrinti-dergi": {
+        "title": "Ayrıntı Magazine Fall Issue 32 - Property"
+      },
+      "spektrum": {
+        "title": "Spektrum Kadıköy Cooperative"
+      }
+    },
+    "mediaNews": {
+      "title": "News in the Media",
+      "description": "News about Kadıköy Cooperative in newspapers and magazines",
+      "categories": {
+        "newspaper": "Newspaper News",
+        "magazine": "Magazine Articles",
+        "print": "Print Media"
+      },
+      "printMedia": "Print media news",
+      "viewAll": "View All"
+    }
+  },
+  "memory": {
+    "title": "Collective Memory",
+    "backToHome": "Back to Home",
+    "viewGallery": "View Gallery",
+    "galleries": {
+      "brosur": {
+        "title": "Brochure",
+        "description": "Cooperative brochures and promotional materials"
+      },
+      "haftalik-toplanti-duyuru-afisleri": {
+        "title": "Weekly Meeting Announcement Posters",
+        "description": "Announcement posters prepared for weekly meetings"
+      },
+      "kkka-toplanti-duyuru-afisleri": {
+        "title": "KKKA Meeting Announcement Posters",
+        "description": "Cooperative Tells Its Story meeting announcement posters"
+      },
+      "paylasim-gorselleri": {
+        "title": "Sharing Images",
+        "description": "Images prepared for social media and communication"
+      },
+      "gorseller": {
+        "title": "Images",
+        "description": "Cooperative events, product photos and visual archive"
+      },
+      "logo": {
+        "title": "Logo",
+        "description": "Kadıköy Cooperative logo and brand visuals"
+      }
+    }
+  }
+}
+

@@ -3,8 +3,11 @@
 import Link from "next/link";
 import Navigation from "./components/Navigation";
 import { useState, useEffect } from "react";
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
+  const t = useTranslations('home');
+  const tCommon = useTranslations('common');
   const [showMessage, setShowMessage] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -77,83 +80,84 @@ export default function Home() {
       clearTimeout(hideTimer);
     };
   }, []);
+  
   const mainSections = [
     {
       number: "1",
-      title: "Neden ve Nasıl Kooperatifçilik?",
-      description: "Kooperatifçiliğin temelleri, yasal süreç, mevzuat ve formlar",
+      title: t('sections.1.title'),
+      description: t('sections.1.description'),
       href: "/kooperatifcilik",
       icon: "📚",
       color: "blue"
     },
     {
       number: "2",
-      title: "Kadıköy Kooperatifi Kendisini Anlatıyor",
-      description: "Kooperatifin tarihçesi, temelleri, ilkeleri ve dokümantasyonu",
+      title: t('sections.2.title'),
+      description: t('sections.2.description'),
       href: "/kendisini-anlatiyor",
       icon: "🏛️",
       color: "purple"
     },
     {
       number: "3",
-      title: "Gönüllülük",
-      description: "Gönüllü katılım, eğitim materyalleri ve pratik bilgiler",
+      title: t('sections.3.title'),
+      description: t('sections.3.description'),
       href: "/gonulluluk",
       icon: "🤝",
       color: "green"
     },
     {
       number: "4",
-      title: "İşleyiş",
-      description: "Kooperatif modeli ve birim yönergeleri",
+      title: t('sections.4.title'),
+      description: t('sections.4.description'),
       href: "/isleyis",
       icon: "⚙️",
       color: "orange"
     },
     {
       number: "5",
-      title: "Üzerine Düşündüklerimiz",
-      description: "Çalıştay raporları ve kavramlar sözlüğü",
+      title: t('sections.5.title'),
+      description: t('sections.5.description'),
       href: "/dusunduklerimiz",
       icon: "💭",
       color: "pink"
     },
     {
       number: "6",
-      title: "İlham Verenler",
-      description: "Okuma listesi ve kaynak materyaller",
+      title: t('sections.6.title'),
+      description: t('sections.6.description'),
       href: "/ilham-verenler",
       icon: "✨",
       color: "yellow"
     },
     {
       number: "7",
-      title: "Kooperatifçilik Sohbetleri",
-      description: "Podcast ve ses kayıtları",
+      title: t('sections.7.title'),
+      description: t('sections.7.description'),
       href: "/sohbetler",
       icon: "🎙️",
       color: "red"
     },
     {
       number: "8",
-      title: "Bir Araya Gelince",
-      description: "Etkinlikler ve organizasyonlar",
+      title: t('sections.8.title'),
+      description: t('sections.8.description'),
       href: "/etkinlikler",
       icon: "🎉",
       color: "indigo"
     },
     {
       number: "9",
-      title: "Kooperatif Yayında",
-      description: "Yayınlar ve medyada çıkan haberler",
+      title: t('sections.9.title'),
+      description: t('sections.9.description'),
       href: "/yayinlar",
       icon: "📰",
       color: "teal"
     },
     {
       number: "10",
-      title: "Kolektif Hafıza",
-      description: "Görseller ve belge arşivi",
+      title: t('sections.10.title'),
+      description: t('sections.10.description'),
       href: "/hafiza",
       icon: "📸",
       color: "cyan"
@@ -273,7 +277,7 @@ export default function Home() {
             <div className="text-center space-y-4">
               <div className="text-5xl sm:text-6xl mb-4 animate-pulse">🌱</div>
               <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-800 dark:text-gray-200 leading-relaxed">
-                Biliyoruz ki hikâyemiz burada bitmiyor. Birlikte kurduğumuz değerlerin, dayanışma ruhunun ve kolektif emeğin gittiğimiz her yerde başka zeminlerde yeniden filizleneceğine inanıyoruz.
+                {t('modalMessage')}
               </p>
             </div>
           </div>
@@ -284,10 +288,10 @@ export default function Home() {
         {/* Hero Section */}
         <div className="mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-            Kadıköy Kooperatifi Arşivi
+            {t('title')}
           </h1>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-            Kadıköy Kooperatifi'nin belgeleri, yayınları ve kooperatifçilik kaynaklarına buradan erişebilirsiniz.
+            {t('description')}
           </p>
         </div>
 
@@ -416,7 +420,7 @@ export default function Home() {
 
               {/* Arrow */}
               <div className="mt-4 flex items-center text-blue-600 dark:text-blue-400 font-medium text-sm group-hover:translate-x-2 transition-transform">
-                <span>İncele</span>
+                <span>{tCommon('explore')}</span>
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -428,12 +432,10 @@ export default function Home() {
         {/* Info Section */}
         <div className="mt-8 sm:mt-12 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-4 sm:p-6 border border-blue-200 dark:border-blue-800">
           <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">
-            📖 Arşiv Hakkında
+            📖 {t('aboutArchive')}
           </h3>
           <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-            Bu arşiv, Kadıköy Kooperatifi'nin belgelerini, yayınlarını ve kooperatifçilik hakkında topladığı kaynakları içermektedir. 
-            10 ana bölüm altında düzenlenmiş olan içeriklere kartlara tıklayarak erişebilirsiniz. Her bölümde ilgili alt başlıklar ve 
-            dokümanlara ulaşabilirsiniz.
+            {t('aboutArchiveText')}
           </p>
         </div>
       </main>

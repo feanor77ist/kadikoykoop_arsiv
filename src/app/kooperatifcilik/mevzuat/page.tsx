@@ -1,20 +1,26 @@
+"use client";
+
 import Link from "next/link";
 import Navigation from "../../components/Navigation";
+import { useTranslations } from 'next-intl';
 
 export default function MevzuatPage() {
+  const t = useTranslations('cooperativism');
+  const tCommon = useTranslations('common');
+  
   const mevzuatSections = [
     {
       id: "turkiye-mevzuati",
-      title: "Türkiye Kooperatifçilik Mevzuatı",
-      description: "1163 sayılı Kooperatifler Kanunu, 6102 sayılı TTK, vergi mevzuatı ve son değişiklikler",
+      title: t('sections.d.subsections.turkiye-mevzuati.title'),
+      description: t('sections.d.subsections.turkiye-mevzuati.description'),
       href: "/kooperatifcilik/mevzuat/turkiye-mevzuati",
       icon: "⚖️",
       color: "blue"
     },
     {
       id: "anasoalesme",
-      title: "Tüketim Kooperatifi Anasözleşmesi",
-      description: "T.C. Gümrük ve Ticaret Bakanlığı tarafından hazırlanmış resmi anasözleşme (93 Madde)",
+      title: t('sections.d.subsections.anasoalesme.title'),
+      description: t('sections.d.subsections.anasoalesme.description'),
       href: "/kooperatifcilik/mevzuat/anasoalesme",
       icon: "📜",
       color: "purple"
@@ -28,20 +34,20 @@ export default function MevzuatPage() {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
         {/* Breadcrumb */}
         <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
-          <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Ana Sayfa</Link>
+          <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">{tCommon('home')}</Link>
           <span>/</span>
-          <Link href="/kooperatifcilik" className="hover:text-blue-600 dark:hover:text-blue-400">Neden ve Nasıl Kooperatifçilik?</Link>
+          <Link href="/kooperatifcilik" className="hover:text-blue-600 dark:hover:text-blue-400">{t('title')}</Link>
           <span>/</span>
-          <span className="text-gray-900 dark:text-white font-medium">Mevzuat</span>
+          <span className="text-gray-900 dark:text-white font-medium">{t('sections.d.title')}</span>
         </div>
 
         {/* Hero Section */}
         <div className="mb-8 sm:mb-12">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-            Mevzuat
+            {t('sections.d.title')}
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300">
-            Türkiye kooperatifçilik mevzuatı ve tüketim kooperatifi anasözleşmesi
+            {t('sections.d.subtitle')}
           </p>
         </div>
 
@@ -87,7 +93,7 @@ export default function MevzuatPage() {
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Kooperatifçilik Bölümüne Dön
+            {t('backToSection')}
           </Link>
         </div>
       </main>

@@ -1,33 +1,39 @@
+"use client";
+
 import Link from "next/link";
 import Navigation from "../components/Navigation";
+import { useTranslations } from 'next-intl';
 
 export default function Bolum1() {
+  const t = useTranslations('cooperativism');
+  const tCommon = useTranslations('common');
+  
   const subSections = [
     {
       id: "a",
-      title: "Neden Kooperatifçilik?",
-      description: "Küresel gıda krizi, kooperatifçiliğin gerekliliği ve Kadıköy Kooperatifi'nin doğuşu",
+      title: t('sections.a.title'),
+      description: t('sections.a.description'),
       href: "/kooperatifcilik/neden-kooperatifcilik",
       icon: "🌍"
     },
     {
       id: "b",
-      title: "Adım Adım Yasal Süreç",
-      description: "Kooperatif kurarken izlenecek yasal adımlar ve gerekli belgeler",
+      title: t('sections.b.title'),
+      description: t('sections.b.description'),
       href: "/kooperatifcilik/yasal-surec",
       icon: "📋"
     },
     {
       id: "d",
-      title: "Mevzuat",
-      description: "Türkiye Kooperatifçilik Mevzuatı ve Tüketim Kooperatifi Anasözleşmesi",
+      title: t('sections.d.title'),
+      description: t('sections.d.description'),
       href: "/kooperatifcilik/mevzuat",
       icon: "⚖️"
     },
     {
       id: "e",
-      title: "Ürün & Üretici Formları",
-      description: "Gıda ve gıda dışı ürünler için bilgi formları",
+      title: t('sections.e.title'),
+      description: t('sections.e.description'),
       href: "/kooperatifcilik/urun-uretici-formlari",
       icon: "📝"
     }
@@ -55,16 +61,16 @@ export default function Bolum1() {
           <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          Ana Sayfaya Dön
+          {tCommon('backToHome')}
         </Link>
 
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Neden ve Nasıl Kooperatifçilik?
+            {t('title')}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">
-            Kooperatifçiliğin temelleri ve pratik uygulamalar
+            {t('subtitle')}
           </p>
         </div>
 
@@ -93,7 +99,7 @@ export default function Bolum1() {
 
               {/* Arrow */}
               <div className="flex items-center text-blue-600 dark:text-blue-400 font-medium text-sm group-hover:translate-x-2 transition-transform">
-                <span>Oku</span>
+                <span>{t('read')}</span>
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
