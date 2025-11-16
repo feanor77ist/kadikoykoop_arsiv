@@ -2,9 +2,17 @@ import { getRequestConfig } from 'next-intl/server';
 import { cookies } from 'next/headers';
 
 export default getRequestConfig(async () => {
-  // Get locale from cookie, default to 'tr'
-  const cookieStore = await cookies();
-  const locale = cookieStore.get('locale')?.value || 'tr';
+  let locale = 'tr'; // Default locale
+  
+  try {
+    // Try to get locale from cookie (runtime)
+    const cookieStore = await cookies();
+    locale = cookieStore.get('locale')?.value || 'tr';
+  } catch (error) {
+    // During build time, cookies might not be available
+    // Use default locale 'tr'
+    locale = 'tr';
+  }
 
   // Ensure that a valid locale is used
   const validLocales = ['tr', 'en'];
