@@ -12,10 +12,24 @@ export async function GET(
   try {
     const resolvedParams = await params;
     const galleryId = resolvedParams.id;
-    const thumbPath = join(process.cwd(), 'public', 'hafiza', galleryId, 'thumb');
     
-    console.log('Galeri ID:', galleryId);
+    // Debug için tüm dizinleri kontrol et
+    const cwd = process.cwd();
+    const { existsSync } = await import('fs');
+    const { readdirSync } = await import('fs');
+    
+    console.log('=== DEBUG INFO ===');
+    console.log('CWD:', cwd);
+    console.log('Gallery ID:', galleryId);
+    console.log('Public exists?', existsSync(join(cwd, 'public')));
+    
+    if (existsSync(cwd)) {
+      console.log('Root contents:', readdirSync(cwd));
+    }
+    
+    const thumbPath = join(cwd, 'public', 'hafiza', galleryId, 'thumb');
     console.log('Thumb path:', thumbPath);
+    console.log('Thumb exists?', existsSync(thumbPath));
     
     // Thumbnail klasöründeki görselleri listele
     const files = await readdir(thumbPath);
